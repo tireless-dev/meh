@@ -2,29 +2,36 @@
 // Copyright 2025 tireless.dev
 package dev.tireless.meh
 
-import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.foundation.text.BasicText
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import dev.tireless.meh.generated.resources.Res
+import dev.tireless.meh.generated.resources.meh_default
+import dev.tireless.meh.preview.PreviewTheme
+import dev.tireless.meh.theme.MehTheme
+import org.jetbrains.compose.resources.stringResource
 import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
 fun Meh(
   modifier: Modifier = Modifier,
-  text: String = "Meh",
+  text: String? = null,
 ) {
-  Box(
-    modifier = modifier.fillMaxSize(),
-    contentAlignment = Alignment.Center,
-  ) {
-    BasicText(text = text)
+  val resolvedText = text ?: stringResource(Res.string.meh_default)
+  MehTheme {
+    Column(
+      modifier = modifier.fillMaxSize(),
+    ) {
+      Text(text = resolvedText)
+    }
   }
 }
 
-@Preview
+@Preview(showBackground = true)
 @Composable
 private fun MehPreview() {
-  Meh()
+  PreviewTheme {
+    Meh()
+  }
 }

@@ -7,6 +7,7 @@ plugins {
   alias(libs.plugins.android.library)
   alias(libs.plugins.spotless)
   id("maven-publish")
+  id("dev.tireless.preview-strip-plugin")
 }
 
 kotlin {
@@ -40,6 +41,7 @@ kotlin {
       implementation(compose.foundation)
       implementation(compose.ui)
       implementation(compose.components.uiToolingPreview)
+      implementation(compose.components.resources)
     }
 
     androidMain.dependencies {
@@ -47,6 +49,16 @@ kotlin {
       implementation(compose.uiTooling)
     }
   }
+}
+
+compose.resources {
+  packageOfResClass = "dev.tireless.meh.generated.resources"
+  publicResClass = true
+  generateResClass = always
+}
+
+previewResourceStripping {
+  resourcePackage.set("dev.tireless.meh.generated.resources")
 }
 
 android {
@@ -70,7 +82,11 @@ spotless {
   kotlin {
     target("src/**/*.kt")
     ktlint()
-      .customRuleSets(listOf("io.nlopez.compose.rules:ktlint:0.4.28"))
+      .editorConfigOverride(
+        mapOf(
+          "compose_allowed_composition_locals" to "LocalColors,LocalSpacing,LocalSizes,LocalFontFamily",
+        ),
+      ).customRuleSets(listOf("io.nlopez.compose.rules:ktlint:0.4.28"))
     licenseHeader(
       """
       // SPDX-License-Identifier: Apache-2.0
