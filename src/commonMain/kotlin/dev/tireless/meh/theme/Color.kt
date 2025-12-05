@@ -33,7 +33,6 @@ val blue20 = Color(0xffd0e2ff)
 data class Colors(
   // background
   val background: Color,
-  val backgroundOnMap: Color,
   // layer
   val layer01: Color,
   val layer01OnMap: Color,
@@ -91,7 +90,6 @@ val whiteColors get() =
   Colors(
     // background
     background = white,
-    backgroundOnMap = white.copy(alpha = 0.9f),
     // layer
     layer01 = gray10,
     layer01OnMap = gray10.copy(alpha = 0.9f),
@@ -149,7 +147,6 @@ val gray90Colors get() =
   Colors(
     // background
     background = gray90,
-    backgroundOnMap = gray90.copy(alpha = 0.9f),
     // layer
     layer01 = gray80,
     layer01OnMap = gray80.copy(alpha = 0.9f),
