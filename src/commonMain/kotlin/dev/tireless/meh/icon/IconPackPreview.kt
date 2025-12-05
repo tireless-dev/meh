@@ -29,8 +29,11 @@ private data class IconPreviewEntry(
 )
 
 private val iconPreviewEntries = listOf(
+  IconPreviewEntry("Home", Icons.Home),
   IconPreviewEntry("RadioButton", Icons.RadioButton),
   IconPreviewEntry("RadioButtonChecked", Icons.RadioButtonChecked),
+  IconPreviewEntry("Task", Icons.Task),
+  IconPreviewEntry("UserSettings", Icons.UserSettings),
 )
 
 private const val ICONS_PER_ROW = 8
