@@ -21,6 +21,7 @@ object Typography {
         fontSize = 14.sp,
         lineHeight = 20.sp,
         fontFamily = fontFamily,
+        fontWeight = FontWeight.Normal,
       )
 
   val bodyCompact01: TextStyle
@@ -30,6 +31,7 @@ object Typography {
         fontSize = 14.sp,
         lineHeight = 18.sp,
         fontFamily = fontFamily,
+        fontWeight = FontWeight.Normal,
       )
 
   val label01: TextStyle
@@ -39,6 +41,7 @@ object Typography {
         fontSize = 12.sp,
         lineHeight = 16.sp,
         fontFamily = fontFamily,
+        fontWeight = FontWeight.Normal,
       )
 
   val label02: TextStyle
@@ -48,6 +51,7 @@ object Typography {
         fontSize = 14.sp,
         lineHeight = 18.sp,
         fontFamily = fontFamily,
+        fontWeight = FontWeight.Normal,
       )
 
   val headingCompact01: TextStyle
@@ -77,6 +81,7 @@ object Typography {
         fontSize = 14.sp,
         lineHeight = 20.sp,
         fontFamily = fontFamily,
+        fontWeight = FontWeight.Normal,
       )
 
   val heading02: TextStyle
@@ -86,6 +91,7 @@ object Typography {
         fontSize = 16.sp,
         lineHeight = 24.sp,
         fontFamily = fontFamily,
+        fontWeight = FontWeight.Normal,
       )
 
   val heading03: TextStyle
@@ -95,6 +101,7 @@ object Typography {
         fontSize = 20.sp,
         lineHeight = 28.sp,
         fontFamily = fontFamily,
+        fontWeight = FontWeight.Normal,
       )
 
   val heading04: TextStyle
@@ -104,5 +111,6 @@ object Typography {
         fontSize = 28.sp,
         lineHeight = 36.sp,
         fontFamily = fontFamily,
+        fontWeight = FontWeight.Normal,
       )
 }
