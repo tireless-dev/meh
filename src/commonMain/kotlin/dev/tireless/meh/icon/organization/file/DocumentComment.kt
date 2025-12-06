@@ -1,0 +1,205 @@
+package dev.tireless.meh.icon.organization.file
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.path
+import androidx.compose.ui.unit.dp
+
+val DocumentComment: ImageVector
+    get() {
+        val current = _documentComment
+        if (current != null) return current
+
+        return ImageVector.Builder(
+            name = "MehTheme.DocumentComment",
+            defaultWidth = 32.0.dp,
+            defaultHeight = 32.0.dp,
+            viewportWidth = 32.0f,
+            viewportHeight = 32.0f,
+        ).apply {
+            // M26 17 H16 a2 2 0 0 0 -2 2 v6 a2 2 0 0 0 2 2 h4 v-2 h-4 v-6 h10 v6 h-2.54 l-2.59 3.9 1.67 1.1 2 -3 H26 a2 2 0 0 0 2 -2 v-6 a2 2 0 0 0 -2 -2
+            path(
+                strokeLineWidth = 0.0f,
+                fill = SolidColor(Color(0xFF000000)),
+            ) {
+                // M 26 17
+                moveTo(x = 26.0f, y = 17.0f)
+                // H 16
+                horizontalLineTo(x = 16.0f)
+                // a 2 2 0 0 0 -2 2
+                arcToRelative(
+                    a = 2.0f,
+                    b = 2.0f,
+                    theta = 0.0f,
+                    isMoreThanHalf = false,
+                    isPositiveArc = false,
+                    dx1 = -2.0f,
+                    dy1 = 2.0f,
+                )
+                // v 6
+                verticalLineToRelative(dy = 6.0f)
+                // a 2 2 0 0 0 2 2
+                arcToRelative(
+                    a = 2.0f,
+                    b = 2.0f,
+                    theta = 0.0f,
+                    isMoreThanHalf = false,
+                    isPositiveArc = false,
+                    dx1 = 2.0f,
+                    dy1 = 2.0f,
+                )
+                // h 4
+                horizontalLineToRelative(dx = 4.0f)
+                // v -2
+                verticalLineToRelative(dy = -2.0f)
+                // h -4
+                horizontalLineToRelative(dx = -4.0f)
+                // v -6
+                verticalLineToRelative(dy = -6.0f)
+                // h 10
+                horizontalLineToRelative(dx = 10.0f)
+                // v 6
+                verticalLineToRelative(dy = 6.0f)
+                // h -2.54
+                horizontalLineToRelative(dx = -2.54f)
+                // l -2.59 3.9
+                lineToRelative(dx = -2.59f, dy = 3.9f)
+                // l 1.67 1.1
+                lineToRelative(dx = 1.67f, dy = 1.1f)
+                // l 2 -3
+                lineToRelative(dx = 2.0f, dy = -3.0f)
+                // H 26
+                horizontalLineTo(x = 26.0f)
+                // a 2 2 0 0 0 2 -2
+                arcToRelative(
+                    a = 2.0f,
+                    b = 2.0f,
+                    theta = 0.0f,
+                    isMoreThanHalf = false,
+                    isPositiveArc = false,
+                    dx1 = 2.0f,
+                    dy1 = -2.0f,
+                )
+                // v -6
+                verticalLineToRelative(dy = -6.0f)
+                // a 2 2 0 0 0 -2 -2
+                arcToRelative(
+                    a = 2.0f,
+                    b = 2.0f,
+                    theta = 0.0f,
+                    isMoreThanHalf = false,
+                    isPositiveArc = false,
+                    dx1 = -2.0f,
+                    dy1 = -2.0f,
+                )
+            }
+            // M22 14 h2 v-4 c0 -.3 -.1 -.5 -.3 -.7 l-7 -7 A1 1 0 0 0 16 2 H6 a2 2 0 0 0 -2 2 v24 a2 2 0 0 0 2 2 h6 v-2 H6 V4 h8 v6 a2 2 0 0 0 2 2 h6z m-6 -4 V4.4 l5.6 5.6z
+            path(
+                strokeLineWidth = 0.0f,
+                fill = SolidColor(Color(0xFF000000)),
+            ) {
+                // M 22 14
+                moveTo(x = 22.0f, y = 14.0f)
+                // h 2
+                horizontalLineToRelative(dx = 2.0f)
+                // v -4
+                verticalLineToRelative(dy = -4.0f)
+                // c 0 -0.3 -0.1 -0.5 -0.3 -0.7
+                curveToRelative(
+                    dx1 = 0.0f,
+                    dy1 = -0.3f,
+                    dx2 = -0.1f,
+                    dy2 = -0.5f,
+                    dx3 = -0.3f,
+                    dy3 = -0.7f,
+                )
+                // l -7 -7
+                lineToRelative(dx = -7.0f, dy = -7.0f)
+                // A 1 1 0 0 0 16 2
+                arcTo(
+                    horizontalEllipseRadius = 1.0f,
+                    verticalEllipseRadius = 1.0f,
+                    theta = 0.0f,
+                    isMoreThanHalf = false,
+                    isPositiveArc = false,
+                    x1 = 16.0f,
+                    y1 = 2.0f,
+                )
+                // H 6
+                horizontalLineTo(x = 6.0f)
+                // a 2 2 0 0 0 -2 2
+                arcToRelative(
+                    a = 2.0f,
+                    b = 2.0f,
+                    theta = 0.0f,
+                    isMoreThanHalf = false,
+                    isPositiveArc = false,
+                    dx1 = -2.0f,
+                    dy1 = 2.0f,
+                )
+                // v 24
+                verticalLineToRelative(dy = 24.0f)
+                // a 2 2 0 0 0 2 2
+                arcToRelative(
+                    a = 2.0f,
+                    b = 2.0f,
+                    theta = 0.0f,
+                    isMoreThanHalf = false,
+                    isPositiveArc = false,
+                    dx1 = 2.0f,
+                    dy1 = 2.0f,
+                )
+                // h 6
+                horizontalLineToRelative(dx = 6.0f)
+                // v -2
+                verticalLineToRelative(dy = -2.0f)
+                // H 6
+                horizontalLineTo(x = 6.0f)
+                // V 4
+                verticalLineTo(y = 4.0f)
+                // h 8
+                horizontalLineToRelative(dx = 8.0f)
+                // v 6
+                verticalLineToRelative(dy = 6.0f)
+                // a 2 2 0 0 0 2 2
+                arcToRelative(
+                    a = 2.0f,
+                    b = 2.0f,
+                    theta = 0.0f,
+                    isMoreThanHalf = false,
+                    isPositiveArc = false,
+                    dx1 = 2.0f,
+                    dy1 = 2.0f,
+                )
+                // h 6z
+                horizontalLineToRelative(dx = 6.0f)
+                close()
+                // m -6 -4
+                moveToRelative(dx = -6.0f, dy = -4.0f)
+                // V 4.4
+                verticalLineTo(y = 4.4f)
+                // l 5.6 5.6z
+                lineToRelative(dx = 5.6f, dy = 5.6f)
+                close()
+            }
+            // <rect width="32" height="32" fill="#000" style="fill:none;stroke-width:0" stroke-width="0" />
+            path(
+                fill = SolidColor(Color.Transparent),
+                strokeLineWidth = 0.0f,
+            ) {
+                // M 0 0
+                moveTo(x = 0.0f, y = 0.0f)
+                // h 32
+                horizontalLineToRelative(dx = 32.0f)
+                // v 32
+                verticalLineToRelative(dy = 32.0f)
+                // h -32z
+                horizontalLineToRelative(dx = -32.0f)
+                close()
+            }
+        }.build().also { _documentComment = it }
+    }
+
+@Suppress("ObjectPropertyName")
+private var _documentComment: ImageVector? = null

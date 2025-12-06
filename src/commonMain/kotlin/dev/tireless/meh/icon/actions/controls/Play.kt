@@ -1,0 +1,99 @@
+package dev.tireless.meh.icon.actions.controls
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.path
+import androidx.compose.ui.unit.dp
+
+val Play: ImageVector
+    get() {
+        val current = _play
+        if (current != null) return current
+
+        return ImageVector.Builder(
+            name = "MehTheme.Play",
+            defaultWidth = 32.0.dp,
+            defaultHeight = 32.0.dp,
+            viewportWidth = 32.0f,
+            viewportHeight = 32.0f,
+        ).apply {
+            // M7 28 a1 1 0 0 1 -1 -1 V5 a1 1 0 0 1 1.48 -.88 l20 11 a1 1 0 0 1 0 1.76 l-20 11 A1 1 0 0 1 7 28 M8 6.7 v18.6 L24.92 16Z
+            path(
+                fill = SolidColor(Color(0xFF000000)),
+            ) {
+                // M 7 28
+                moveTo(x = 7.0f, y = 28.0f)
+                // a 1 1 0 0 1 -1 -1
+                arcToRelative(
+                    a = 1.0f,
+                    b = 1.0f,
+                    theta = 0.0f,
+                    isMoreThanHalf = false,
+                    isPositiveArc = true,
+                    dx1 = -1.0f,
+                    dy1 = -1.0f,
+                )
+                // V 5
+                verticalLineTo(y = 5.0f)
+                // a 1 1 0 0 1 1.48 -0.88
+                arcToRelative(
+                    a = 1.0f,
+                    b = 1.0f,
+                    theta = 0.0f,
+                    isMoreThanHalf = false,
+                    isPositiveArc = true,
+                    dx1 = 1.48f,
+                    dy1 = -0.88f,
+                )
+                // l 20 11
+                lineToRelative(dx = 20.0f, dy = 11.0f)
+                // a 1 1 0 0 1 0 1.76
+                arcToRelative(
+                    a = 1.0f,
+                    b = 1.0f,
+                    theta = 0.0f,
+                    isMoreThanHalf = false,
+                    isPositiveArc = true,
+                    dx1 = 0.0f,
+                    dy1 = 1.76f,
+                )
+                // l -20 11
+                lineToRelative(dx = -20.0f, dy = 11.0f)
+                // A 1 1 0 0 1 7 28
+                arcTo(
+                    horizontalEllipseRadius = 1.0f,
+                    verticalEllipseRadius = 1.0f,
+                    theta = 0.0f,
+                    isMoreThanHalf = false,
+                    isPositiveArc = true,
+                    x1 = 7.0f,
+                    y1 = 28.0f,
+                )
+                // M 8 6.7
+                moveTo(x = 8.0f, y = 6.7f)
+                // v 18.6
+                verticalLineToRelative(dy = 18.6f)
+                // L 24.92 16z
+                lineTo(x = 24.92f, y = 16.0f)
+                close()
+            }
+            // <rect width="32" height="32" fill="#000" style="fill:none" />
+            path(
+                fill = SolidColor(Color.Transparent),
+            ) {
+                // M 0 0
+                moveTo(x = 0.0f, y = 0.0f)
+                // h 32
+                horizontalLineToRelative(dx = 32.0f)
+                // v 32
+                verticalLineToRelative(dy = 32.0f)
+                // h -32z
+                horizontalLineToRelative(dx = -32.0f)
+                close()
+            }
+        }.build().also { _play = it }
+    }
+
+@Suppress("ObjectPropertyName")
+private var _play: ImageVector? = null

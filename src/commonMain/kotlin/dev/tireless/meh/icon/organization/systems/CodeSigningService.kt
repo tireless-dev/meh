@@ -1,0 +1,401 @@
+package dev.tireless.meh.icon.organization.systems
+
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.SolidColor
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.graphics.vector.path
+import androidx.compose.ui.unit.dp
+
+val CodeSigningService: ImageVector
+    get() {
+        val current = _codeSigningService
+        if (current != null) return current
+
+        return ImageVector.Builder(
+            name = "MehTheme.CodeSigningService",
+            defaultWidth = 32.0.dp,
+            defaultHeight = 32.0.dp,
+            viewportWidth = 32.0f,
+            viewportHeight = 32.0f,
+        ).apply {
+            // <circle cx="25.0" cy="20.0" radius="1.0" fill="#000" />
+            path(
+                fill = SolidColor(Color(0xFF000000)),
+            ) {
+                // M 25 20
+                moveTo(x = 25.0f, y = 20.0f)
+                // m -1 0
+                moveToRelative(dx = -1.0f, dy = 0.0f)
+                // a 1 1 0 1 1 2 0
+                arcToRelative(
+                    a = 1.0f,
+                    b = 1.0f,
+                    theta = 0.0f,
+                    isMoreThanHalf = true,
+                    isPositiveArc = true,
+                    dx1 = 2.0f,
+                    dy1 = 0.0f,
+                )
+                // a 1 1 0 1 1 -2 0z
+                arcToRelative(
+                    a = 1.0f,
+                    b = 1.0f,
+                    theta = 0.0f,
+                    isMoreThanHalf = true,
+                    isPositiveArc = true,
+                    dx1 = -2.0f,
+                    dy1 = 0.0f,
+                )
+                close()
+            }
+            // M19.41 30 H15 v-4.41 l5.03 -5.04 L20 20 a5 5 0 1 1 4.45 4.97Z M17 28 h1.59 l5.2 -5.2 .54 .12 a3.04 3.04 0 1 0 -2.25 -2.25 l.13 .54 L17 26.4Z
+            path(
+                fill = SolidColor(Color(0xFF000000)),
+            ) {
+                // M 19.41 30
+                moveTo(x = 19.41f, y = 30.0f)
+                // H 15
+                horizontalLineTo(x = 15.0f)
+                // v -4.41
+                verticalLineToRelative(dy = -4.41f)
+                // l 5.03 -5.04
+                lineToRelative(dx = 5.03f, dy = -5.04f)
+                // L 20 20
+                lineTo(x = 20.0f, y = 20.0f)
+                // a 5 5 0 1 1 4.45 4.97z
+                arcToRelative(
+                    a = 5.0f,
+                    b = 5.0f,
+                    theta = 0.0f,
+                    isMoreThanHalf = true,
+                    isPositiveArc = true,
+                    dx1 = 4.45f,
+                    dy1 = 4.97f,
+                )
+                close()
+                // M 17 28
+                moveTo(x = 17.0f, y = 28.0f)
+                // h 1.59
+                horizontalLineToRelative(dx = 1.59f)
+                // l 5.2 -5.2
+                lineToRelative(dx = 5.2f, dy = -5.2f)
+                // l 0.54 0.12
+                lineToRelative(dx = 0.54f, dy = 0.12f)
+                // a 3.04 3.04 0 1 0 -2.25 -2.25
+                arcToRelative(
+                    a = 3.04f,
+                    b = 3.04f,
+                    theta = 0.0f,
+                    isMoreThanHalf = true,
+                    isPositiveArc = false,
+                    dx1 = -2.25f,
+                    dy1 = -2.25f,
+                )
+                // l 0.13 0.54
+                lineToRelative(dx = 0.13f, dy = 0.54f)
+                // L 17 26.4z
+                lineTo(x = 17.0f, y = 26.4f)
+                close()
+            }
+            // <rect width="2" height="8" x="6.0" y="8.0" fill="#000" />
+            path(
+                fill = SolidColor(Color(0xFF000000)),
+            ) {
+                // M 6 8
+                moveTo(x = 6.0f, y = 8.0f)
+                // h 2
+                horizontalLineToRelative(dx = 2.0f)
+                // v 8
+                verticalLineToRelative(dy = 8.0f)
+                // h -2z
+                horizontalLineToRelative(dx = -2.0f)
+                close()
+            }
+            // <rect width="2" height="8" x="2.0" y="8.0" fill="#000" />
+            path(
+                fill = SolidColor(Color(0xFF000000)),
+            ) {
+                // M 2 8
+                moveTo(x = 2.0f, y = 8.0f)
+                // h 2
+                horizontalLineToRelative(dx = 2.0f)
+                // v 8
+                verticalLineToRelative(dy = 8.0f)
+                // h -2z
+                horizontalLineToRelative(dx = -2.0f)
+                close()
+            }
+            // <rect width="2" height="6" x="18.0" y="8.0" fill="#000" />
+            path(
+                fill = SolidColor(Color(0xFF000000)),
+            ) {
+                // M 18 8
+                moveTo(x = 18.0f, y = 8.0f)
+                // h 2
+                horizontalLineToRelative(dx = 2.0f)
+                // v 6
+                verticalLineToRelative(dy = 6.0f)
+                // h -2z
+                horizontalLineToRelative(dx = -2.0f)
+                close()
+            }
+            // M14 16 h-2 a2 2 0 0 1 -2 -2 v-4 a2 2 0 0 1 2 -2 h2 a2 2 0 0 1 2 2 v4 a2 2 0 0 1 -2 2 m-2 -2 h2 v-4 h-2Z
+            path(
+                fill = SolidColor(Color(0xFF000000)),
+            ) {
+                // M 14 16
+                moveTo(x = 14.0f, y = 16.0f)
+                // h -2
+                horizontalLineToRelative(dx = -2.0f)
+                // a 2 2 0 0 1 -2 -2
+                arcToRelative(
+                    a = 2.0f,
+                    b = 2.0f,
+                    theta = 0.0f,
+                    isMoreThanHalf = false,
+                    isPositiveArc = true,
+                    dx1 = -2.0f,
+                    dy1 = -2.0f,
+                )
+                // v -4
+                verticalLineToRelative(dy = -4.0f)
+                // a 2 2 0 0 1 2 -2
+                arcToRelative(
+                    a = 2.0f,
+                    b = 2.0f,
+                    theta = 0.0f,
+                    isMoreThanHalf = false,
+                    isPositiveArc = true,
+                    dx1 = 2.0f,
+                    dy1 = -2.0f,
+                )
+                // h 2
+                horizontalLineToRelative(dx = 2.0f)
+                // a 2 2 0 0 1 2 2
+                arcToRelative(
+                    a = 2.0f,
+                    b = 2.0f,
+                    theta = 0.0f,
+                    isMoreThanHalf = false,
+                    isPositiveArc = true,
+                    dx1 = 2.0f,
+                    dy1 = 2.0f,
+                )
+                // v 4
+                verticalLineToRelative(dy = 4.0f)
+                // a 2 2 0 0 1 -2 2
+                arcToRelative(
+                    a = 2.0f,
+                    b = 2.0f,
+                    theta = 0.0f,
+                    isMoreThanHalf = false,
+                    isPositiveArc = true,
+                    dx1 = -2.0f,
+                    dy1 = 2.0f,
+                )
+                // m -2 -2
+                moveToRelative(dx = -2.0f, dy = -2.0f)
+                // h 2
+                horizontalLineToRelative(dx = 2.0f)
+                // v -4
+                verticalLineToRelative(dy = -4.0f)
+                // h -2z
+                horizontalLineToRelative(dx = -2.0f)
+                close()
+            }
+            // <rect width="2" height="8" x="2.0" y="18.0" fill="#000" />
+            path(
+                fill = SolidColor(Color(0xFF000000)),
+            ) {
+                // M 2 18
+                moveTo(x = 2.0f, y = 18.0f)
+                // h 2
+                horizontalLineToRelative(dx = 2.0f)
+                // v 8
+                verticalLineToRelative(dy = 8.0f)
+                // h -2z
+                horizontalLineToRelative(dx = -2.0f)
+                close()
+            }
+            // <rect width="2" height="4" x="14.0" y="18.0" fill="#000" />
+            path(
+                fill = SolidColor(Color(0xFF000000)),
+            ) {
+                // M 14 18
+                moveTo(x = 14.0f, y = 18.0f)
+                // h 2
+                horizontalLineToRelative(dx = 2.0f)
+                // v 4
+                verticalLineToRelative(dy = 4.0f)
+                // h -2z
+                horizontalLineToRelative(dx = -2.0f)
+                close()
+            }
+            // M10 26 H8 a2 2 0 0 1 -2 -2 v-4 a2 2 0 0 1 2 -2 h2 a2 2 0 0 1 2 2 v4 a2 2 0 0 1 -2 2 m-2 -2 h2 v-4 H8Z
+            path(
+                fill = SolidColor(Color(0xFF000000)),
+            ) {
+                // M 10 26
+                moveTo(x = 10.0f, y = 26.0f)
+                // H 8
+                horizontalLineTo(x = 8.0f)
+                // a 2 2 0 0 1 -2 -2
+                arcToRelative(
+                    a = 2.0f,
+                    b = 2.0f,
+                    theta = 0.0f,
+                    isMoreThanHalf = false,
+                    isPositiveArc = true,
+                    dx1 = -2.0f,
+                    dy1 = -2.0f,
+                )
+                // v -4
+                verticalLineToRelative(dy = -4.0f)
+                // a 2 2 0 0 1 2 -2
+                arcToRelative(
+                    a = 2.0f,
+                    b = 2.0f,
+                    theta = 0.0f,
+                    isMoreThanHalf = false,
+                    isPositiveArc = true,
+                    dx1 = 2.0f,
+                    dy1 = -2.0f,
+                )
+                // h 2
+                horizontalLineToRelative(dx = 2.0f)
+                // a 2 2 0 0 1 2 2
+                arcToRelative(
+                    a = 2.0f,
+                    b = 2.0f,
+                    theta = 0.0f,
+                    isMoreThanHalf = false,
+                    isPositiveArc = true,
+                    dx1 = 2.0f,
+                    dy1 = 2.0f,
+                )
+                // v 4
+                verticalLineToRelative(dy = 4.0f)
+                // a 2 2 0 0 1 -2 2
+                arcToRelative(
+                    a = 2.0f,
+                    b = 2.0f,
+                    theta = 0.0f,
+                    isMoreThanHalf = false,
+                    isPositiveArc = true,
+                    dx1 = -2.0f,
+                    dy1 = 2.0f,
+                )
+                // m -2 -2
+                moveToRelative(dx = -2.0f, dy = -2.0f)
+                // h 2
+                horizontalLineToRelative(dx = 2.0f)
+                // v -4
+                verticalLineToRelative(dy = -4.0f)
+                // H 8z
+                horizontalLineTo(x = 8.0f)
+                close()
+            }
+            // <rect width="2" height="4" x="2.0" y="2.0" fill="#000" />
+            path(
+                fill = SolidColor(Color(0xFF000000)),
+            ) {
+                // M 2 2
+                moveTo(x = 2.0f, y = 2.0f)
+                // h 2
+                horizontalLineToRelative(dx = 2.0f)
+                // v 4
+                verticalLineToRelative(dy = 4.0f)
+                // h -2z
+                horizontalLineToRelative(dx = -2.0f)
+                close()
+            }
+            // <rect width="2" height="4" x="14.0" y="2.0" fill="#000" />
+            path(
+                fill = SolidColor(Color(0xFF000000)),
+            ) {
+                // M 14 2
+                moveTo(x = 14.0f, y = 2.0f)
+                // h 2
+                horizontalLineToRelative(dx = 2.0f)
+                // v 4
+                verticalLineToRelative(dy = 4.0f)
+                // h -2z
+                horizontalLineToRelative(dx = -2.0f)
+                close()
+            }
+            // <rect width="2" height="4" x="18.0" y="2.0" fill="#000" />
+            path(
+                fill = SolidColor(Color(0xFF000000)),
+            ) {
+                // M 18 2
+                moveTo(x = 18.0f, y = 2.0f)
+                // h 2
+                horizontalLineToRelative(dx = 2.0f)
+                // v 4
+                verticalLineToRelative(dy = 4.0f)
+                // h -2z
+                horizontalLineToRelative(dx = -2.0f)
+                close()
+            }
+            // M10 6 H8 a2 2 0 0 1 -2 -2 V2 h2 v2 h2 V2 h2 v2 a2 2 0 0 1 -2 2
+            path(
+                fill = SolidColor(Color(0xFF000000)),
+            ) {
+                // M 10 6
+                moveTo(x = 10.0f, y = 6.0f)
+                // H 8
+                horizontalLineTo(x = 8.0f)
+                // a 2 2 0 0 1 -2 -2
+                arcToRelative(
+                    a = 2.0f,
+                    b = 2.0f,
+                    theta = 0.0f,
+                    isMoreThanHalf = false,
+                    isPositiveArc = true,
+                    dx1 = -2.0f,
+                    dy1 = -2.0f,
+                )
+                // V 2
+                verticalLineTo(y = 2.0f)
+                // h 2
+                horizontalLineToRelative(dx = 2.0f)
+                // v 2
+                verticalLineToRelative(dy = 2.0f)
+                // h 2
+                horizontalLineToRelative(dx = 2.0f)
+                // V 2
+                verticalLineTo(y = 2.0f)
+                // h 2
+                horizontalLineToRelative(dx = 2.0f)
+                // v 2
+                verticalLineToRelative(dy = 2.0f)
+                // a 2 2 0 0 1 -2 2
+                arcToRelative(
+                    a = 2.0f,
+                    b = 2.0f,
+                    theta = 0.0f,
+                    isMoreThanHalf = false,
+                    isPositiveArc = true,
+                    dx1 = -2.0f,
+                    dy1 = 2.0f,
+                )
+            }
+            // <rect width="32" height="32" fill="#000" style="fill:none" />
+            path(
+                fill = SolidColor(Color.Transparent),
+            ) {
+                // M 0 0
+                moveTo(x = 0.0f, y = 0.0f)
+                // h 32
+                horizontalLineToRelative(dx = 32.0f)
+                // v 32
+                verticalLineToRelative(dy = 32.0f)
+                // h -32z
+                horizontalLineToRelative(dx = -32.0f)
+                close()
+            }
+        }.build().also { _codeSigningService = it }
+    }
+
+@Suppress("ObjectPropertyName")
+private var _codeSigningService: ImageVector? = null
