@@ -270,6 +270,8 @@ interface IconPack {
   val CategoryAnd: ImageVector
   val CategoryNew: ImageVector
   val CategoryNewEach: ImageVector
+  val Caution: ImageVector
+  val CautionInverted: ImageVector
   val CellTower: ImageVector
   val CenterCircle: ImageVector
   val CenterSquare: ImageVector
@@ -398,10 +400,12 @@ interface IconPack {
   val CicsRegionRouting: ImageVector
   val CicsRegionTarget: ImageVector
   val CircleDash: ImageVector
+  val CircleFill: ImageVector
   val CircleFilled: ImageVector
   val CircleOutline: ImageVector
   val CirclePacking: ImageVector
   val CircleSolid: ImageVector
+  val CircleStroke: ImageVector
   val ClassicBatch: ImageVector
   val Classification: ImageVector
   val ClassifierLanguage: ImageVector
@@ -506,6 +510,8 @@ interface IconPack {
   val Covariate: ImageVector
   val CreateLink: ImageVector
   val Credentials: ImageVector
+  val Critical: ImageVector
+  val CriticalSeverity: ImageVector
   val Crop: ImageVector
   val CropGrowth: ImageVector
   val CropHealth: ImageVector
@@ -628,6 +634,7 @@ interface IconPack {
   val DfsortIbmZSort: ImageVector
   val Diagram: ImageVector
   val DiagramReference: ImageVector
+  val DiamondFill: ImageVector
   val DiamondOutline: ImageVector
   val DiamondSolid: ImageVector
   val DigitalIdentity: ImageVector
@@ -1193,6 +1200,7 @@ interface IconPack {
   val Logout: ImageVector
   val Loop: ImageVector
   val LoopAlt: ImageVector
+  val LowSeverity: ImageVector
   val MAC: ImageVector
   val MOV: ImageVector
   val MP3: ImageVector
@@ -1783,6 +1791,7 @@ interface IconPack {
   val SprayPaint: ImageVector
   val Sprout: ImageVector
   val SpyreAccelerator: ImageVector
+  val SquareFill: ImageVector
   val SquareOutline: ImageVector
   val SquareSolid: ImageVector
   val StackLimitation: ImageVector
@@ -3013,6 +3022,12 @@ internal object DefaultIconPack : IconPack {
   override val CategoryNewEach: ImageVector
     get() = dev.tireless.meh.icon.CategoryNewEach
 
+  override val Caution: ImageVector
+    get() = dev.tireless.meh.icon.Caution
+
+  override val CautionInverted: ImageVector
+    get() = dev.tireless.meh.icon.CautionInverted
+
   override val CellTower: ImageVector
     get() = dev.tireless.meh.icon.CellTower
 
@@ -3397,6 +3412,9 @@ internal object DefaultIconPack : IconPack {
   override val CircleDash: ImageVector
     get() = dev.tireless.meh.icon.CircleDash
 
+  override val CircleFill: ImageVector
+    get() = dev.tireless.meh.icon.CircleFill
+
   override val CircleFilled: ImageVector
     get() = dev.tireless.meh.icon.CircleFilled
 
@@ -3408,6 +3426,9 @@ internal object DefaultIconPack : IconPack {
 
   override val CircleSolid: ImageVector
     get() = dev.tireless.meh.icon.CircleSolid
+
+  override val CircleStroke: ImageVector
+    get() = dev.tireless.meh.icon.CircleStroke
 
   override val ClassicBatch: ImageVector
     get() = dev.tireless.meh.icon.ClassicBatch
@@ -3720,6 +3741,12 @@ internal object DefaultIconPack : IconPack {
 
   override val Credentials: ImageVector
     get() = dev.tireless.meh.icon.Credentials
+
+  override val Critical: ImageVector
+    get() = dev.tireless.meh.icon.Critical
+
+  override val CriticalSeverity: ImageVector
+    get() = dev.tireless.meh.icon.CriticalSeverity
 
   override val Crop: ImageVector
     get() = dev.tireless.meh.icon.Crop
@@ -4086,6 +4113,9 @@ internal object DefaultIconPack : IconPack {
 
   override val DiagramReference: ImageVector
     get() = dev.tireless.meh.icon.DiagramReference
+
+  override val DiamondFill: ImageVector
+    get() = dev.tireless.meh.icon.DiamondFill
 
   override val DiamondOutline: ImageVector
     get() = dev.tireless.meh.icon.DiamondOutline
@@ -5781,6 +5811,9 @@ internal object DefaultIconPack : IconPack {
 
   override val LoopAlt: ImageVector
     get() = dev.tireless.meh.icon.LoopAlt
+
+  override val LowSeverity: ImageVector
+    get() = dev.tireless.meh.icon.LowSeverity
 
   override val MAC: ImageVector
     get() = dev.tireless.meh.icon.MAC
@@ -7552,6 +7585,9 @@ internal object DefaultIconPack : IconPack {
   override val SpyreAccelerator: ImageVector
     get() = dev.tireless.meh.icon.SpyreAccelerator
 
+  override val SquareFill: ImageVector
+    get() = dev.tireless.meh.icon.SquareFill
+
   override val SquareOutline: ImageVector
     get() = dev.tireless.meh.icon.SquareOutline
 
@@ -9120,6 +9156,8 @@ internal object DefaultIconPack : IconPack {
       "CategoryAnd" to CategoryAnd,
       "CategoryNew" to CategoryNew,
       "CategoryNewEach" to CategoryNewEach,
+      "Caution" to Caution,
+      "CautionInverted" to CautionInverted,
       "CellTower" to CellTower,
       "CenterCircle" to CenterCircle,
       "CenterSquare" to CenterSquare,
@@ -9248,10 +9286,12 @@ internal object DefaultIconPack : IconPack {
       "CicsRegionRouting" to CicsRegionRouting,
       "CicsRegionTarget" to CicsRegionTarget,
       "CircleDash" to CircleDash,
+      "CircleFill" to CircleFill,
       "CircleFilled" to CircleFilled,
       "CircleOutline" to CircleOutline,
       "CirclePacking" to CirclePacking,
       "CircleSolid" to CircleSolid,
+      "CircleStroke" to CircleStroke,
       "ClassicBatch" to ClassicBatch,
       "Classification" to Classification,
       "ClassifierLanguage" to ClassifierLanguage,
@@ -9356,6 +9396,8 @@ internal object DefaultIconPack : IconPack {
       "Covariate" to Covariate,
       "CreateLink" to CreateLink,
       "Credentials" to Credentials,
+      "Critical" to Critical,
+      "CriticalSeverity" to CriticalSeverity,
       "Crop" to Crop,
       "CropGrowth" to CropGrowth,
       "CropHealth" to CropHealth,
@@ -9478,6 +9520,7 @@ internal object DefaultIconPack : IconPack {
       "DfsortIbmZSort" to DfsortIbmZSort,
       "Diagram" to Diagram,
       "DiagramReference" to DiagramReference,
+      "DiamondFill" to DiamondFill,
       "DiamondOutline" to DiamondOutline,
       "DiamondSolid" to DiamondSolid,
       "DigitalIdentity" to DigitalIdentity,
@@ -10043,6 +10086,7 @@ internal object DefaultIconPack : IconPack {
       "Logout" to Logout,
       "Loop" to Loop,
       "LoopAlt" to LoopAlt,
+      "LowSeverity" to LowSeverity,
       "MAC" to MAC,
       "MOV" to MOV,
       "MP3" to MP3,
@@ -10633,6 +10677,7 @@ internal object DefaultIconPack : IconPack {
       "SprayPaint" to SprayPaint,
       "Sprout" to Sprout,
       "SpyreAccelerator" to SpyreAccelerator,
+      "SquareFill" to SquareFill,
       "SquareOutline" to SquareOutline,
       "SquareSolid" to SquareSolid,
       "StackLimitation" to StackLimitation,

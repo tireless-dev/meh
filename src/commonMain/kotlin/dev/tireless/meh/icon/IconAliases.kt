@@ -797,6 +797,12 @@ val CategoryNew: ImageVector
 val CategoryNewEach: ImageVector
   get() = dev.tireless.meh.icon.organization.file.CategoryNewEach
 
+val Caution: ImageVector
+  get() = dev.tireless.meh.icon.organization.status.Caution
+
+val CautionInverted: ImageVector
+  get() = dev.tireless.meh.icon.organization.status.CautionInverted
+
 val CellTower: ImageVector
   get() = dev.tireless.meh.icon.tools.technology.CellTower
 
@@ -1181,6 +1187,9 @@ val CicsRegionTarget: ImageVector
 val CircleDash: ImageVector
   get() = dev.tireless.meh.icon.actions.operations.CircleDash
 
+val CircleFill: ImageVector
+  get() = dev.tireless.meh.icon.organization.status.CircleFill
+
 val CircleFilled: ImageVector
   get() = dev.tireless.meh.icon.organization.data.CircleFilled
 
@@ -1192,6 +1201,9 @@ val CirclePacking: ImageVector
 
 val CircleSolid: ImageVector
   get() = dev.tireless.meh.icon.actions.formatting.CircleSolid
+
+val CircleStroke: ImageVector
+  get() = dev.tireless.meh.icon.organization.status.CircleStroke
 
 val ClassicBatch: ImageVector
   get() = dev.tireless.meh.icon.organization.systems.ClassicBatch
@@ -1504,6 +1516,12 @@ val CreateLink: ImageVector
 
 val Credentials: ImageVector
   get() = dev.tireless.meh.icon.person.user.Credentials
+
+val Critical: ImageVector
+  get() = dev.tireless.meh.icon.organization.status.Critical
+
+val CriticalSeverity: ImageVector
+  get() = dev.tireless.meh.icon.organization.status.CriticalSeverity
 
 val Crop: ImageVector
   get() = dev.tireless.meh.icon.actions.formatting.Crop
@@ -1870,6 +1888,9 @@ val Diagram: ImageVector
 
 val DiagramReference: ImageVector
   get() = dev.tireless.meh.icon.organization.data.DiagramReference
+
+val DiamondFill: ImageVector
+  get() = dev.tireless.meh.icon.organization.status.DiamondFill
 
 val DiamondOutline: ImageVector
   get() = dev.tireless.meh.icon.actions.formatting.DiamondOutline
@@ -3565,6 +3586,9 @@ val Loop: ImageVector
 
 val LoopAlt: ImageVector
   get() = dev.tireless.meh.icon.organization.systems.LoopAlt
+
+val LowSeverity: ImageVector
+  get() = dev.tireless.meh.icon.organization.status.LowSeverity
 
 val MAC: ImageVector
   get() = dev.tireless.meh.icon.organization.file.MAC
@@ -5335,6 +5359,9 @@ val Sprout: ImageVector
 
 val SpyreAccelerator: ImageVector
   get() = dev.tireless.meh.icon.organization.systems.SpyreAccelerator
+
+val SquareFill: ImageVector
+  get() = dev.tireless.meh.icon.organization.status.SquareFill
 
 val SquareOutline: ImageVector
   get() = dev.tireless.meh.icon.actions.formatting.SquareOutline
