@@ -1,11 +1,8 @@
 // SPDX-License-Identifier: Apache-2.0
 // Copyright 2025 tireless.dev
-package dev.tireless.meh
+package dev.tireless.meh.component
 
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.Spacer
-import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.text.BasicText
 import androidx.compose.runtime.Composable
@@ -14,12 +11,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
-import androidx.compose.ui.unit.dp
-import dev.tireless.meh.preview.PreviewTheme
 import dev.tireless.meh.theme.ControlSize
 import dev.tireless.meh.theme.MehTheme
 import dev.tireless.meh.theme.dp
-import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
 fun Text(
@@ -35,25 +29,25 @@ fun Text(
   val mergedStyle =
     style.copy(
       color =
-      if (enabled) {
-        if (color == Color.Unspecified) {
-          MehTheme.colors.textPrimary
+        if (enabled) {
+          if (color == Color.Unspecified) {
+            MehTheme.colors.textPrimary
+          } else {
+            color
+          }
         } else {
-          color
-        }
-      } else {
-        MehTheme.colors.textDisabled
-      },
+          MehTheme.colors.textDisabled
+        },
       textAlign = textAlign,
     )
 
   Box(
     modifier =
-    if (size == ControlSize.Unspecified) {
-      modifier
-    } else {
-      modifier.height(size.dp)
-    },
+      if (size == ControlSize.Unspecified) {
+        modifier
+      } else {
+        modifier.height(size.dp)
+      },
     contentAlignment = alignment,
   ) {
     BasicText(
@@ -93,21 +87,4 @@ fun FormHelper(
     color = MehTheme.colors.textHelper,
     alignment = Alignment.CenterStart,
   )
-}
-
-@Preview(showBackground = true)
-@Composable
-private fun TextPreview() {
-  PreviewTheme {
-    Column(
-      modifier = Modifier.fillMaxWidth(),
-      horizontalAlignment = Alignment.Start,
-    ) {
-      Text("Body 01")
-      Text(text = "Disabled body", enabled = false)
-      Spacer(Modifier.height(8.dp))
-      FormLabel(text = "Label")
-      FormHelper(text = "Helper text that wraps to multiple lines for inspection.")
-    }
-  }
 }

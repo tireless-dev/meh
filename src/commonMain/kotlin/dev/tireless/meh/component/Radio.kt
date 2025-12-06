@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: Apache-2.0
 // Copyright 2025 tireless.dev
-package dev.tireless.meh
+package dev.tireless.meh.component
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -8,18 +8,15 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import dev.tireless.meh.preview.PreviewTheme
 import dev.tireless.meh.theme.IconSize
 import dev.tireless.meh.theme.Icons
 import dev.tireless.meh.theme.MehTheme
 import dev.tireless.meh.theme.Typography.bodyCompact01
-import org.jetbrains.compose.ui.tooling.preview.Preview
 
 @Composable
 fun Radio(
@@ -65,43 +62,6 @@ fun Radio(
     helper?.let {
       FormHelper(text = it)
     }
-  }
-}
-
-@Preview(name = "Radio – Horizontal", showBackground = true)
-@Composable
-private fun RadioPreviewHorizontal() {
-  PreviewTheme {
-    Radio(
-      value = 1,
-      onValueChange = {},
-      values = listOf("Email", "Push", "SMS"),
-      label = "Notification channel",
-      helper = "Choose the default channel",
-      layout = GroupLayout.Horizontal,
-      modifier = Modifier
-        .fillMaxWidth()
-        .padding(MehTheme.spacing.spacing04),
-    )
-  }
-}
-
-@Preview(name = "Radio – Vertical", showBackground = true)
-@Composable
-private fun RadioPreviewVertical() {
-  PreviewTheme {
-    Radio(
-      value = 0,
-      onValueChange = {},
-      values = listOf("Daily", "Weekly", "Monthly"),
-      label = "Digest frequency",
-      helper = "Disabled layout example",
-      layout = GroupLayout.Vertical,
-      enabled = false,
-      modifier = Modifier
-        .fillMaxWidth()
-        .padding(MehTheme.spacing.spacing04),
-    )
   }
 }
 

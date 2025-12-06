@@ -1,6 +1,6 @@
 // SPDX-License-Identifier: Apache-2.0
 // Copyright 2025 tireless.dev
-package dev.tireless.meh
+package dev.tireless.meh.component
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.size

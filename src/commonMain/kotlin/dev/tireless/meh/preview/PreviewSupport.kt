@@ -8,6 +8,9 @@ import androidx.compose.ui.text.font.FontWeight
 import dev.tireless.meh.generated.resources.IBMPlexSansSC_Light
 import dev.tireless.meh.generated.resources.IBMPlexSansSC_Regular
 import dev.tireless.meh.generated.resources.IBMPlexSansSC_SemiBold
+import dev.tireless.meh.generated.resources.IBMPlexSansTC_Light
+import dev.tireless.meh.generated.resources.IBMPlexSansTC_Regular
+import dev.tireless.meh.generated.resources.IBMPlexSansTC_SemiBold
 import dev.tireless.meh.generated.resources.Res
 import dev.tireless.meh.theme.MehTheme
 import org.jetbrains.compose.resources.Font
@@ -17,13 +20,28 @@ import org.jetbrains.compose.resources.Font
  * These functions are stripped from release artifacts, so the extra resources stay preview-only.
  */
 @Composable
-internal fun previewFontFamily(): FontFamily = FontFamily(
-  Font(Res.font.IBMPlexSansSC_Light, weight = FontWeight.Light),
-  Font(Res.font.IBMPlexSansSC_Regular, weight = FontWeight.Normal),
-  Font(Res.font.IBMPlexSansSC_SemiBold, weight = FontWeight.SemiBold),
-)
+internal fun previewFontFamilySc(): FontFamily =
+  FontFamily(
+    Font(Res.font.IBMPlexSansSC_Light, weight = FontWeight.Light),
+    Font(Res.font.IBMPlexSansSC_Regular, weight = FontWeight.Normal),
+    Font(Res.font.IBMPlexSansSC_SemiBold, weight = FontWeight.SemiBold),
+  )
 
 @Composable
-internal fun PreviewTheme(content: @Composable () -> Unit) {
-  MehTheme(fontFamily = previewFontFamily(), content = content)
+internal fun previewFontFamilyTc(): FontFamily =
+  FontFamily(
+    Font(Res.font.IBMPlexSansTC_Light, weight = FontWeight.Light),
+    Font(Res.font.IBMPlexSansTC_Regular, weight = FontWeight.Normal),
+    Font(Res.font.IBMPlexSansTC_SemiBold, weight = FontWeight.SemiBold),
+  )
+
+@Composable
+internal fun previewFontFamily(): FontFamily = previewFontFamilySc()
+
+@Composable
+internal fun PreviewTheme(
+  fontFamily: FontFamily = previewFontFamily(),
+  content: @Composable () -> Unit,
+) {
+  MehTheme(fontFamily = fontFamily, content = content)
 }

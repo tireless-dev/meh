@@ -17,13 +17,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
-import dev.tireless.meh.Icon
-import dev.tireless.meh.Text
+import dev.tireless.meh.component.Icon
+import dev.tireless.meh.component.Text
 import dev.tireless.meh.icon.iconCatalog
+import dev.tireless.meh.preview.PreviewTheme
 import dev.tireless.meh.theme.IconSize
 import dev.tireless.meh.theme.Icons
 import dev.tireless.meh.theme.MehTheme
-import dev.tireless.meh.preview.PreviewTheme
 
 internal data class IconPreviewEntry(
   val name: String,
@@ -43,8 +43,10 @@ internal fun iconEntriesFor(
   subcategoryName: String,
 ): List<IconPreviewEntry> {
   val subcategory =
-    iconCatalog.firstOrNull { it.name == categoryName }
-      ?.subcategories?.firstOrNull { it.name == subcategoryName }
+    iconCatalog
+      .firstOrNull { it.name == categoryName }
+      ?.subcategories
+      ?.firstOrNull { it.name == subcategoryName }
       ?: return emptyList()
 
   val iconMap = Icons.entries
