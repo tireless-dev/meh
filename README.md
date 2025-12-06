@@ -77,3 +77,23 @@ Licensed under the Apache License, Version 2.0
 ```
 
 See [LICENSE](LICENSE) for details.
+
+## Acknowledgment & Copyright Notice (Carbon Design System)
+
+Some resources used in this project—such as icons—are sourced from the Carbon Design System.
+The Carbon icons and design assets are licensed under the Apache License 2.0.
+All copyrights for Carbon assets are owned by IBM.
+
+- Carbon Icons Copyright © IBM
+- Licensed under: Apache License, Version 2.0
+- Official website: https://carbondesignsystem.com/
+
+Please make sure to comply with the terms of the Apache 2.0 License and retain this attribution in
+any distribution of this project.
+
+## Unofficial Implementation Disclaimer
+
+This project is an **independent**, **unofficial implementation** that provides Jetpack Compose
+components following the Carbon Design System guidelines.
+It is **not affiliated with, endorsed by, or associated with IBM or the official Carbon Design
+System team**.

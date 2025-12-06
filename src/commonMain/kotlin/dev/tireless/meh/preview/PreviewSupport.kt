@@ -25,7 +25,7 @@ internal fun previewFontFamilySc(): FontFamily =
     Font(Res.font.IBMPlexSansSC_Light, weight = FontWeight.Light),
     Font(Res.font.IBMPlexSansSC_Regular, weight = FontWeight.Normal),
     Font(Res.font.IBMPlexSansSC_SemiBold, weight = FontWeight.SemiBold),
-  )
+)
 
 @Composable
 internal fun previewFontFamilyTc(): FontFamily =
@@ -33,7 +33,7 @@ internal fun previewFontFamilyTc(): FontFamily =
     Font(Res.font.IBMPlexSansTC_Light, weight = FontWeight.Light),
     Font(Res.font.IBMPlexSansTC_Regular, weight = FontWeight.Normal),
     Font(Res.font.IBMPlexSansTC_SemiBold, weight = FontWeight.SemiBold),
-  )
+)
 
 @Composable
 internal fun previewFontFamily(): FontFamily = previewFontFamilySc()

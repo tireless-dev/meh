@@ -4,7 +4,6 @@ package dev.tireless.meh.icon
 
 import androidx.compose.ui.graphics.vector.ImageVector
 
-
 val FourK: ImageVector
   get() = dev.tireless.meh.icon.organization.file.FourK
 
