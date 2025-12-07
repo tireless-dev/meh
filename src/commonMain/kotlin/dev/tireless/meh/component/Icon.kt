@@ -16,22 +16,20 @@ import dev.tireless.meh.theme.dp
 @Composable
 fun Icon(
   image: ImageVector,
-  contentDescription: String?,
   modifier: Modifier = Modifier,
+  contentDescription: String? = null,
   size: IconSize = IconSize.Medium,
   tint: Color = Color.Unspecified,
 ) {
-  val sizedModifier =
-    if (size == IconSize.Unspecified) {
-      modifier
-    } else {
-      modifier.size(size.dp)
-    }
-
   Image(
     painter = rememberVectorPainter(image),
     contentDescription = contentDescription,
-    modifier = sizedModifier,
+    modifier =
+      if (size == IconSize.Unspecified) {
+        modifier
+      } else {
+        modifier.size(size.dp)
+      },
     colorFilter = if (tint == Color.Unspecified) null else ColorFilter.tint(tint),
   )
 }
