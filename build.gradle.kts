@@ -70,7 +70,7 @@ spotless {
   kotlin {
     target("src/**/*.kt")
     ktlint()
-      .customRuleSets(listOf("io.nlopez.compose.rules:ktlint:0.4.28"))
+      .customRuleSets(listOf("io.nlopez.compose.rules:ktlint:0.5.2"))
     licenseHeader(
       """
       // SPDX-License-Identifier: Apache-2.0
