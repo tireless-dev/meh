@@ -64,7 +64,7 @@ previewResourceStripping {
 }
 
 group = "dev.tireless"
-version = "0.2512.0-SNAPTHOT"
+version = "0.2603.0-SNAPTHOT"
 
 // Ensure required license/notice files end up in every jar (desktop, metadata, Android classes.jar, etc.)
 val bundledLicenseFiles =
@@ -123,7 +123,7 @@ spotless {
     licenseHeader(
       """
       // SPDX-License-Identifier: Apache-2.0
-      // Copyright 2025 tireless.dev
+      // Copyright 2026 tireless.dev
 
       """.trimIndent(),
     )
