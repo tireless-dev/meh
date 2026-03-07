@@ -9,6 +9,7 @@ plugins {
   alias(libs.plugins.compose.multiplatform)
   alias(libs.plugins.android.kotlin.multiplatform.library)
   alias(libs.plugins.spotless)
+  alias(libs.plugins.roborazzi)
   id("maven-publish")
   id("dev.tireless.preview-strip-plugin")
 }
@@ -18,6 +19,10 @@ kotlin {
     namespace = "dev.tireless.meh"
     compileSdk = 36
     minSdk = 24
+
+    withHostTest {
+      isIncludeAndroidResources = true
+    }
 
     compilerOptions {
       jvmTarget.set(JvmTarget.JVM_17)
@@ -50,7 +55,21 @@ kotlin {
       implementation(compose.preview)
       implementation(compose.uiTooling)
     }
+
+    getByName("androidHostTest") {
+      dependencies {
+        implementation(libs.roborazzi)
+        implementation(libs.roborazzi.compose)
+        implementation(libs.robolectric)
+        implementation(libs.compose.ui.test.junit4)
+        implementation(libs.compose.ui.test.manifest)
+      }
+    }
   }
+}
+
+roborazzi {
+  outputDir.set(file("src/androidHostTest/snapshots"))
 }
 
 compose.resources {
