@@ -1,5 +1,5 @@
 [versions]
-agp = "8.13.1"
+agp = "9.1.0"
 kotlin = "2.2.21"
 compose-multiplatform = "1.9.3"
 spotless = "7.0.2"
@@ -8,7 +8,7 @@ spotless = "7.0.2"
 # No library dependencies needed - Compose Multiplatform plugin provides them
 
 [plugins]
-android-library = { id = "com.android.library", version.ref = "agp" }
+android-kotlin-multiplatform-library = { id = "com.android.kotlin.multiplatform.library", version.ref = "agp" }
 kotlin-multiplatform = { id = "org.jetbrains.kotlin.multiplatform", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 compose-multiplatform = { id = "org.jetbrains.compose", version.ref = "compose-multiplatform" }
