@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.organization.data
 
 import androidx.compose.ui.graphics.Color
@@ -560,45 +560,45 @@ val Linux: ImageVector
             b = 1.0f,
             theta = 0.0f,
             isMoreThanHalf = false,
-          isPositiveArc = true,
-          dx1 = -1.28f,
-          dy1 = 0.22f,
-        )
-        // l -2.04 -1.23
-        lineToRelative(dx = -2.04f, dy = -1.23f)
-        // a 1 1 0 0 1 -0.4 -1.27
-        arcToRelative(
-          a = 1.0f,
-          b = 1.0f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = true,
-          dx1 = -0.4f,
-          dy1 = -1.27f,
-        )
-        // L 22.69 21
-        lineTo(x = 22.69f, y = 21.0f)
-        // h 3.7
-        horizontalLineToRelative(dx = 3.7f)
-        // l 1.45 2.9z
-        lineToRelative(dx = 1.45f, dy = 2.9f)
-        close()
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+            isPositiveArc = true,
+            dx1 = -1.28f,
+            dy1 = 0.22f,
+          )
+          // l -2.04 -1.23
+          lineToRelative(dx = -2.04f, dy = -1.23f)
+          // a 1 1 0 0 1 -0.4 -1.27
+          arcToRelative(
+            a = 1.0f,
+            b = 1.0f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = true,
+            dx1 = -0.4f,
+            dy1 = -1.27f,
+          )
+          // L 22.69 21
+          lineTo(x = 22.69f, y = 21.0f)
+          // h 3.7
+          horizontalLineToRelative(dx = 3.7f)
+          // l 1.45 2.9z
+          lineToRelative(dx = 1.45f, dy = 2.9f)
+          close()
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _linux = it }
   }
 

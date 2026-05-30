@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.component
 
 import androidx.compose.foundation.Image
@@ -25,11 +25,11 @@ fun Icon(
     painter = rememberVectorPainter(image),
     contentDescription = contentDescription,
     modifier =
-      if (size == IconSize.Unspecified) {
-        modifier
-      } else {
-        modifier.size(size.dp)
-      },
+    if (size == IconSize.Unspecified) {
+      modifier
+    } else {
+      modifier.size(size.dp)
+    },
     colorFilter = if (tint == Color.Unspecified) null else ColorFilter.tint(tint),
   )
 }

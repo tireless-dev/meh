@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.planning.travel
 
 import androidx.compose.ui.graphics.Color
@@ -377,32 +377,32 @@ val PlaneSea: ImageVector
           horizontalLineToRelative(dx = 18.2f)
           // l -1.12 1.12
           lineToRelative(dx = -1.12f, dy = 1.12f)
-        // A 3 3 0 0 1 22.34 14
-        arcTo(
-          horizontalEllipseRadius = 3.0f,
-          verticalEllipseRadius = 3.0f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = true,
-          x1 = 22.34f,
-          y1 = 14.0f,
-        )
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+          // A 3 3 0 0 1 22.34 14
+          arcTo(
+            horizontalEllipseRadius = 3.0f,
+            verticalEllipseRadius = 3.0f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = true,
+            x1 = 22.34f,
+            y1 = 14.0f,
+          )
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _planeSea = it }
   }
 

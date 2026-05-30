@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.planning.travel
 
 import androidx.compose.ui.graphics.Color
@@ -104,11 +104,11 @@ val DirectionLoopRight: ImageVector
           lineToRelative(dx = -32.0f, dy = 0.0f)
           // l 0 -32
           lineToRelative(dx = 0.0f, dy = -32.0f)
-        // l 32 -0z
-        lineToRelative(dx = 32.0f, dy = -0.0f)
-        close()
-      }
-    }.build()
+          // l 32 -0z
+          lineToRelative(dx = 32.0f, dy = -0.0f)
+          close()
+        }
+      }.build()
       .also { _directionLoopRight = it }
   }
 

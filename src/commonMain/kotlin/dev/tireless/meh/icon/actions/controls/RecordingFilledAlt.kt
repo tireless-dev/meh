@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.actions.controls
 
 import androidx.compose.ui.graphics.Color
@@ -98,13 +98,13 @@ val RecordingFilledAlt: ImageVector
           )
           // s -2.7 6 -6 6
           reflectiveCurveToRelative(
-          dx1 = -2.7f,
-          dy1 = 6.0f,
-          dx2 = -6.0f,
-          dy2 = 6.0f,
-        )
-      }
-    }.build()
+            dx1 = -2.7f,
+            dy1 = 6.0f,
+            dx2 = -6.0f,
+            dy2 = 6.0f,
+          )
+        }
+      }.build()
       .also { _recordingFilledAlt = it }
   }
 

@@ -1,12 +1,16 @@
 // SPDX-License-Identifier: Apache-2.0
 // Copyright 2026 tireless.dev
-
 package dev.tireless.meh.snapshot
 
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onRoot
 import com.github.takahirom.roborazzi.captureRoboImage
-import dev.tireless.meh.preview.theme.*
+import dev.tireless.meh.preview.theme.ColorsPreview
+import dev.tireless.meh.preview.theme.SizePreview
+import dev.tireless.meh.preview.theme.SpacingPreview
+import dev.tireless.meh.preview.theme.TypographyPreviewLatin
+import dev.tireless.meh.preview.theme.TypographyPreviewSc
+import dev.tireless.meh.preview.theme.TypographyPreviewTc
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith

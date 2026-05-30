@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.brand.designanddevelopment
 
 import androidx.compose.ui.graphics.Color
@@ -908,74 +908,74 @@ val LogoRedHatAiInstructlabOnIbmCloud: ImageVector
             b = 2.0f,
             theta = 0.0f,
             isMoreThanHalf = false,
-          isPositiveArc = true,
-          dx1 = -0.59f,
-          dy1 = -0.4f,
-        )
-        // c 0.37 -0.03 0.8 -0.05 1.05 -0.28
-        curveToRelative(
-          dx1 = 0.37f,
-          dy1 = -0.03f,
-          dx2 = 0.8f,
-          dy2 = -0.05f,
-          dx3 = 1.05f,
-          dy3 = -0.28f,
-        )
-        // c 0.26 0.23 0.68 0.25 1.05 0.29
-        curveToRelative(
-          dx1 = 0.26f,
-          dy1 = 0.23f,
-          dx2 = 0.68f,
-          dy2 = 0.25f,
-          dx3 = 1.05f,
-          dy3 = 0.29f,
-        )
-        // a 2 2 0 0 1 -0.59 0.39
-        arcToRelative(
-          a = 2.0f,
-          b = 2.0f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = true,
-          dx1 = -0.59f,
-          dy1 = 0.39f,
-        )
-        // m 3.47 -6.52
-        moveToRelative(dx = 3.47f, dy = -6.52f)
-        // c -1.28 -0.07 -1.32 2.74 -0.08 2.81
-        curveToRelative(
-          dx1 = -1.28f,
-          dy1 = -0.07f,
-          dx2 = -1.32f,
-          dy2 = 2.74f,
-          dx3 = -0.08f,
-          dy3 = 2.81f,
-        )
-        // c 1.32 0.08 1.5 -2.73 0.08 -2.8
-        curveToRelative(
-          dx1 = 1.32f,
-          dy1 = 0.08f,
-          dx2 = 1.5f,
-          dy2 = -2.73f,
-          dx3 = 0.08f,
-          dy3 = -2.8f,
-        )
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+            isPositiveArc = true,
+            dx1 = -0.59f,
+            dy1 = -0.4f,
+          )
+          // c 0.37 -0.03 0.8 -0.05 1.05 -0.28
+          curveToRelative(
+            dx1 = 0.37f,
+            dy1 = -0.03f,
+            dx2 = 0.8f,
+            dy2 = -0.05f,
+            dx3 = 1.05f,
+            dy3 = -0.28f,
+          )
+          // c 0.26 0.23 0.68 0.25 1.05 0.29
+          curveToRelative(
+            dx1 = 0.26f,
+            dy1 = 0.23f,
+            dx2 = 0.68f,
+            dy2 = 0.25f,
+            dx3 = 1.05f,
+            dy3 = 0.29f,
+          )
+          // a 2 2 0 0 1 -0.59 0.39
+          arcToRelative(
+            a = 2.0f,
+            b = 2.0f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = true,
+            dx1 = -0.59f,
+            dy1 = 0.39f,
+          )
+          // m 3.47 -6.52
+          moveToRelative(dx = 3.47f, dy = -6.52f)
+          // c -1.28 -0.07 -1.32 2.74 -0.08 2.81
+          curveToRelative(
+            dx1 = -1.28f,
+            dy1 = -0.07f,
+            dx2 = -1.32f,
+            dy2 = 2.74f,
+            dx3 = -0.08f,
+            dy3 = 2.81f,
+          )
+          // c 1.32 0.08 1.5 -2.73 0.08 -2.8
+          curveToRelative(
+            dx1 = 1.32f,
+            dy1 = 0.08f,
+            dx2 = 1.5f,
+            dy2 = -2.73f,
+            dx3 = 0.08f,
+            dy3 = -2.8f,
+          )
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _logoRedHatAiInstructlabOnIbmCloud = it }
   }
 

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.tools.technology
 
 import androidx.compose.ui.graphics.Color
@@ -369,34 +369,34 @@ val Cookie: ImageVector
             theta = 0.0f,
             isMoreThanHalf = false,
             isPositiveArc = true,
-          dx1 = -8.6f,
-          dy1 = -6.8f,
-        )
-        // c 0 -0.2 0 -0.4 0.1 -0.6
-        curveToRelative(
-          dx1 = 0.0f,
-          dy1 = -0.2f,
-          dx2 = 0.0f,
-          dy2 = -0.4f,
-          dx3 = 0.1f,
-          dy3 = -0.6f,
-        )
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+            dx1 = -8.6f,
+            dy1 = -6.8f,
+          )
+          // c 0 -0.2 0 -0.4 0.1 -0.6
+          curveToRelative(
+            dx1 = 0.0f,
+            dy1 = -0.2f,
+            dx2 = 0.0f,
+            dy2 = -0.4f,
+            dx3 = 0.1f,
+            dy3 = -0.6f,
+          )
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _cookie = it }
   }
 

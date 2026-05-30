@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.brand.designanddevelopment
 
 import androidx.compose.ui.graphics.Color
@@ -64,9 +64,9 @@ val LogoNpm: ImageVector
           verticalLineToRelative(dy = 32.0f)
           // h -32z
           horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+          close()
+        }
+      }.build()
       .also { _logoNpm = it }
   }
 

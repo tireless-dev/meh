@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.brand.designanddevelopment
 
 import androidx.compose.ui.graphics.Color
@@ -924,81 +924,81 @@ val LogoReact: ImageVector
           // c -0.5 -0.1 -1 0 -1.5 0.1
           curveToRelative(
             dx1 = -0.5f,
-          dy1 = -0.1f,
-          dx2 = -1.0f,
-          dy2 = 0.0f,
-          dx3 = -1.5f,
-          dy3 = 0.1f,
-        )
-        // a 2 2 0 0 0 -1.1 0.9
-        arcToRelative(
-          a = 2.0f,
-          b = 2.0f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = false,
-          dx1 = -1.1f,
-          dy1 = 0.9f,
-        )
-        // a 2.3 2.3 0 0 0 -0.4 1.4
-        arcToRelative(
-          a = 2.3f,
-          b = 2.3f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = false,
-          dx1 = -0.4f,
-          dy1 = 1.4f,
-        )
-        // c 0 0.3 0.1 0.7 0.2 1
-        curveToRelative(
-          dx1 = 0.0f,
-          dy1 = 0.3f,
-          dx2 = 0.1f,
-          dy2 = 0.7f,
-          dx3 = 0.2f,
-          dy3 = 1.0f,
-        )
-        // s 0.3 0.6 0.5 0.8
-        reflectiveCurveToRelative(
-          dx1 = 0.3f,
-          dy1 = 0.6f,
-          dx2 = 0.5f,
-          dy2 = 0.8f,
-        )
-        // s 0.5 0.4 0.8 0.5
-        reflectiveCurveToRelative(
-          dx1 = 0.5f,
-          dy1 = 0.4f,
-          dx2 = 0.8f,
-          dy2 = 0.5f,
-        )
-        // a 3 3 0 0 0 1.1 0.3
-        arcToRelative(
-          a = 3.0f,
-          b = 3.0f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = false,
-          dx1 = 1.1f,
-          dy1 = 0.3f,
-        )
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+            dy1 = -0.1f,
+            dx2 = -1.0f,
+            dy2 = 0.0f,
+            dx3 = -1.5f,
+            dy3 = 0.1f,
+          )
+          // a 2 2 0 0 0 -1.1 0.9
+          arcToRelative(
+            a = 2.0f,
+            b = 2.0f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = false,
+            dx1 = -1.1f,
+            dy1 = 0.9f,
+          )
+          // a 2.3 2.3 0 0 0 -0.4 1.4
+          arcToRelative(
+            a = 2.3f,
+            b = 2.3f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = false,
+            dx1 = -0.4f,
+            dy1 = 1.4f,
+          )
+          // c 0 0.3 0.1 0.7 0.2 1
+          curveToRelative(
+            dx1 = 0.0f,
+            dy1 = 0.3f,
+            dx2 = 0.1f,
+            dy2 = 0.7f,
+            dx3 = 0.2f,
+            dy3 = 1.0f,
+          )
+          // s 0.3 0.6 0.5 0.8
+          reflectiveCurveToRelative(
+            dx1 = 0.3f,
+            dy1 = 0.6f,
+            dx2 = 0.5f,
+            dy2 = 0.8f,
+          )
+          // s 0.5 0.4 0.8 0.5
+          reflectiveCurveToRelative(
+            dx1 = 0.5f,
+            dy1 = 0.4f,
+            dx2 = 0.8f,
+            dy2 = 0.5f,
+          )
+          // a 3 3 0 0 0 1.1 0.3
+          arcToRelative(
+            a = 3.0f,
+            b = 3.0f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = false,
+            dx1 = 1.1f,
+            dy1 = 0.3f,
+          )
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _logoReact = it }
   }
 

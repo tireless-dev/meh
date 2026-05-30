@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.enterprise.commerce
 
 import androidx.compose.ui.graphics.Color
@@ -150,15 +150,15 @@ val Wallet: ImageVector
           close()
           // m 24 -11
           moveToRelative(dx = 24.0f, dy = -11.0f)
-        // v 6
-        verticalLineToRelative(dy = 6.0f)
-        // h -8
-        horizontalLineToRelative(dx = -8.0f)
-        // v -6z
-        verticalLineToRelative(dy = -6.0f)
-        close()
-      }
-    }.build()
+          // v 6
+          verticalLineToRelative(dy = 6.0f)
+          // h -8
+          horizontalLineToRelative(dx = -8.0f)
+          // v -6z
+          verticalLineToRelative(dy = -6.0f)
+          close()
+        }
+      }.build()
       .also { _wallet = it }
   }
 

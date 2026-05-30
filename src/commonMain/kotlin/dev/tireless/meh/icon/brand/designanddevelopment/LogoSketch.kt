@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.brand.designanddevelopment
 
 import androidx.compose.ui.graphics.Color
@@ -345,32 +345,32 @@ val LogoSketch: ImageVector
             dx2 = 0.0f,
             dy2 = 0.1f,
             dx3 = -0.1f,
-          dy3 = 0.2f,
-        )
-        // q -0.15 0.15 -0.3 0z
-        quadToRelative(
-          dx1 = -0.15f,
-          dy1 = 0.15f,
-          dx2 = -0.3f,
-          dy2 = 0.0f,
-        )
-        close()
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+            dy3 = 0.2f,
+          )
+          // q -0.15 0.15 -0.3 0z
+          quadToRelative(
+            dx1 = -0.15f,
+            dy1 = 0.15f,
+            dx2 = -0.3f,
+            dy2 = 0.0f,
+          )
+          close()
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _logoSketch = it }
   }
 

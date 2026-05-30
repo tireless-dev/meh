@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.component
 
 import androidx.compose.animation.Crossfade
@@ -47,20 +47,20 @@ fun IconButton(
     }
   Box(
     modifier =
-      if (size == ControlSize.Unspecified) {
-        modifier
-      } else {
-        modifier.height(size.dp)
-      }
-        then
-        Modifier.clickable(
-          onClick = onClick,
-          enabled = enabled,
-          role = Role.Button,
-        )
-        then
-        Modifier
-          .padding(horizontal = padding),
+    if (size == ControlSize.Unspecified) {
+      modifier
+    } else {
+      modifier.height(size.dp)
+    }
+      then
+      Modifier.clickable(
+        onClick = onClick,
+        enabled = enabled,
+        role = Role.Button,
+      )
+      then
+      Modifier
+        .padding(horizontal = padding),
     contentAlignment = Alignment.Center,
   ) {
     CompositionLocalProvider(content = content)
@@ -88,11 +88,11 @@ fun MonoIconButton(
     Icon(
       image = icon,
       tint =
-        if (enabled) {
-          if (color == Color.Unspecified) MehTheme.colors.iconPrimary else color
-        } else {
-          MehTheme.colors.iconDisabled
-        },
+      if (enabled) {
+        if (color == Color.Unspecified) MehTheme.colors.iconPrimary else color
+      } else {
+        MehTheme.colors.iconDisabled
+      },
       size = if (iconSize == IconSize.Unspecified) IconSize.Medium else iconSize,
     )
   }
@@ -117,11 +117,11 @@ fun FocusableIconButton(
     Icon(
       image = icon,
       tint =
-        if (enabled) {
-          if (active) MehTheme.colors.iconPrimary else MehTheme.colors.iconSecondary
-        } else {
-          MehTheme.colors.iconDisabled
-        },
+      if (enabled) {
+        if (active) MehTheme.colors.iconPrimary else MehTheme.colors.iconSecondary
+      } else {
+        MehTheme.colors.iconDisabled
+      },
       size = IconSize.Medium,
     )
   }

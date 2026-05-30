@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.actions.controls
 
 import androidx.compose.ui.graphics.Color
@@ -425,36 +425,36 @@ val SettingsServices: ImageVector
             isMoreThanHalf = false,
             isPositiveArc = true,
             dx1 = 1.73f,
-          dy1 = 1.0f,
-        )
-        // l 2.36 4.08
-        lineToRelative(dx = 2.36f, dy = 4.08f)
-        // a 2 2 0 0 1 -0.41 2.51
-        arcToRelative(
-          a = 2.0f,
-          b = 2.0f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = true,
-          dx1 = -0.41f,
-          dy1 = 2.51f,
-        )
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+            dy1 = 1.0f,
+          )
+          // l 2.36 4.08
+          lineToRelative(dx = 2.36f, dy = 4.08f)
+          // a 2 2 0 0 1 -0.41 2.51
+          arcToRelative(
+            a = 2.0f,
+            b = 2.0f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = true,
+            dx1 = -0.41f,
+            dy1 = 2.51f,
+          )
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _settingsServices = it }
   }
 

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.actions.navigation
 
 import androidx.compose.ui.graphics.Color
@@ -153,15 +153,15 @@ val Switcher: ImageVector
         ) {
           // M 24 24
           moveTo(x = 24.0f, y = 24.0f)
-        // h 4
-        horizontalLineToRelative(dx = 4.0f)
-        // v 4
-        verticalLineToRelative(dy = 4.0f)
-        // h -4z
-        horizontalLineToRelative(dx = -4.0f)
-        close()
-      }
-    }.build()
+          // h 4
+          horizontalLineToRelative(dx = 4.0f)
+          // v 4
+          verticalLineToRelative(dy = 4.0f)
+          // h -4z
+          horizontalLineToRelative(dx = -4.0f)
+          close()
+        }
+      }.build()
       .also { _switcher = it }
   }
 

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.planning.weather
 
 import androidx.compose.ui.graphics.Color
@@ -361,31 +361,31 @@ val WintryMix: ImageVector
           // v -5.82
           verticalLineToRelative(dy = -5.82f)
           // a 6.49 6.49 0 0 0 -3.2 -11.04
-        arcToRelative(
-          a = 6.49f,
-          b = 6.49f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = false,
-          dx1 = -3.2f,
-          dy1 = -11.04f,
-        )
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+          arcToRelative(
+            a = 6.49f,
+            b = 6.49f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = false,
+            dx1 = -3.2f,
+            dy1 = -11.04f,
+          )
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _wintryMix = it }
   }
 

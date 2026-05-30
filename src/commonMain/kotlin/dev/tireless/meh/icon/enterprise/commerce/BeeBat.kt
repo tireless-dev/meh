@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.enterprise.commerce
 
 import androidx.compose.ui.graphics.Color
@@ -405,35 +405,35 @@ val BeeBat: ImageVector
             dy2 = -6.12f,
             dx3 = 8.12f,
             dy3 = -6.12f,
-        )
-        // h 0.05
-        horizontalLineToRelative(dx = 0.05f)
-        // a 6.7 6.7 0 0 0 -1.14 5.33
-        arcToRelative(
-          a = 6.7f,
-          b = 6.7f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = false,
-          dx1 = -1.14f,
-          dy1 = 5.33f,
-        )
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+          )
+          // h 0.05
+          horizontalLineToRelative(dx = 0.05f)
+          // a 6.7 6.7 0 0 0 -1.14 5.33
+          arcToRelative(
+            a = 6.7f,
+            b = 6.7f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = false,
+            dx1 = -1.14f,
+            dy1 = 5.33f,
+          )
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _beeBat = it }
   }
 

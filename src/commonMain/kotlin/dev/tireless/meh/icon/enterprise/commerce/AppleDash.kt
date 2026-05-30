@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.enterprise.commerce
 
 import androidx.compose.ui.graphics.Color
@@ -389,35 +389,35 @@ val AppleDash: ImageVector
             y1 = 10.23f,
             x2 = 20.87f,
             y2 = 10.0f,
-          x3 = 22.0f,
-          y3 = 10.0f,
-        )
-        // a 3.2 3.2 0 0 1 1.81 0.53
-        arcToRelative(
-          a = 3.2f,
-          b = 3.2f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = true,
-          dx1 = 1.81f,
-          dy1 = 0.53f,
-        )
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+            x3 = 22.0f,
+            y3 = 10.0f,
+          )
+          // a 3.2 3.2 0 0 1 1.81 0.53
+          arcToRelative(
+            a = 3.2f,
+            b = 3.2f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = true,
+            dx1 = 1.81f,
+            dy1 = 0.53f,
+          )
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _appleDash = it }
   }
 

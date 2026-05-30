@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.actions.operations
 
 import androidx.compose.ui.graphics.Color
@@ -367,32 +367,32 @@ val DataSetEncryption: ImageVector
             dy2 = 1.4f,
             dx3 = 6.0f,
             dy3 = 1.86f,
-        )
-        // c -0.16 0.46 -2.16 1.49 -6 1.86
-        curveToRelative(
-          dx1 = -0.16f,
-          dy1 = 0.46f,
-          dx2 = -2.16f,
-          dy2 = 1.49f,
-          dx3 = -6.0f,
-          dy3 = 1.86f,
-        )
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+          )
+          // c -0.16 0.46 -2.16 1.49 -6 1.86
+          curveToRelative(
+            dx1 = -0.16f,
+            dy1 = 0.46f,
+            dx2 = -2.16f,
+            dy2 = 1.49f,
+            dx3 = -6.0f,
+            dy3 = 1.86f,
+          )
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _dataSetEncryption = it }
   }
 

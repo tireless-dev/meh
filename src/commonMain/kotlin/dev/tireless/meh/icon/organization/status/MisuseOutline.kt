@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.organization.status
 
 import androidx.compose.ui.graphics.Color
@@ -127,14 +127,14 @@ val MisuseOutline: ImageVector
           // L 21.4 9
           lineTo(x = 21.4f, y = 9.0f)
           // L 23 10.6
-        lineTo(x = 23.0f, y = 10.6f)
-        // L 17.6 16
-        lineTo(x = 17.6f, y = 16.0f)
-        // L 23 21.4z
-        lineTo(x = 23.0f, y = 21.4f)
-        close()
-      }
-    }.build()
+          lineTo(x = 23.0f, y = 10.6f)
+          // L 17.6 16
+          lineTo(x = 17.6f, y = 16.0f)
+          // L 23 21.4z
+          lineTo(x = 23.0f, y = 21.4f)
+          close()
+        }
+      }.build()
       .also { _misuseOutline = it }
   }
 

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.person.user
 
 import androidx.compose.ui.graphics.Color
@@ -343,29 +343,29 @@ val GroupPresentation: ImageVector
           )
           // M 6 4
           moveTo(x = 6.0f, y = 4.0f)
-        // v 8
-        verticalLineToRelative(dy = 8.0f)
-        // h 20
-        horizontalLineToRelative(dx = 20.0f)
-        // V 4z
-        verticalLineTo(y = 4.0f)
-        close()
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+          // v 8
+          verticalLineToRelative(dy = 8.0f)
+          // h 20
+          horizontalLineToRelative(dx = 20.0f)
+          // V 4z
+          verticalLineTo(y = 4.0f)
+          close()
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _groupPresentation = it }
   }
 

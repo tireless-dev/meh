@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.organization.systems
 
 import androidx.compose.ui.graphics.Color
@@ -366,31 +366,31 @@ val SatisfyUsage: ImageVector
           // a 7 7 0 0 0 -7 -7z
           arcToRelative(
             a = 7.0f,
-          b = 7.0f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = false,
-          dx1 = -7.0f,
-          dy1 = -7.0f,
-        )
-        close()
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none;stroke-width:0" stroke-width="0" />
-      path(
-        fill = SolidColor(Color.Transparent),
-        strokeLineWidth = 0.0f,
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+            b = 7.0f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = false,
+            dx1 = -7.0f,
+            dy1 = -7.0f,
+          )
+          close()
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none;stroke-width:0" stroke-width="0" />
+        path(
+          fill = SolidColor(Color.Transparent),
+          strokeLineWidth = 0.0f,
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _satisfyUsage = it }
   }
 

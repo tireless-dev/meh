@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.tools.technology
 
 import androidx.compose.ui.graphics.Color
@@ -595,49 +595,49 @@ val FingerprintRecognition: ImageVector
           // a 0.8 0.8 0 0 1 0.72 0.81
           arcToRelative(
             a = 0.8f,
-          b = 0.8f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = true,
-          dx1 = 0.72f,
-          dy1 = 0.81f,
-        )
-        // A 8 8 0 0 1 14.09 26
-        arcTo(
-          horizontalEllipseRadius = 8.0f,
-          verticalEllipseRadius = 8.0f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = true,
-          x1 = 14.09f,
-          y1 = 26.0f,
-        )
-        // a 8.2 8.2 0 0 1 -5.43 1.74
-        arcToRelative(
-          a = 8.2f,
-          b = 8.2f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = true,
-          dx1 = -5.43f,
-          dy1 = 1.74f,
-        )
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+            b = 0.8f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = true,
+            dx1 = 0.72f,
+            dy1 = 0.81f,
+          )
+          // A 8 8 0 0 1 14.09 26
+          arcTo(
+            horizontalEllipseRadius = 8.0f,
+            verticalEllipseRadius = 8.0f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = true,
+            x1 = 14.09f,
+            y1 = 26.0f,
+          )
+          // a 8.2 8.2 0 0 1 -5.43 1.74
+          arcToRelative(
+            a = 8.2f,
+            b = 8.2f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = true,
+            dx1 = -5.43f,
+            dy1 = 1.74f,
+          )
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _fingerprintRecognition = it }
   }
 

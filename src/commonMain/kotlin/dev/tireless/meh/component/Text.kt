@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.component
 
 import androidx.compose.foundation.layout.Box
@@ -29,25 +29,25 @@ fun Text(
   val mergedStyle =
     style.copy(
       color =
-        if (enabled) {
-          if (color == Color.Unspecified) {
-            MehTheme.colors.textPrimary
-          } else {
-            color
-          }
+      if (enabled) {
+        if (color == Color.Unspecified) {
+          MehTheme.colors.textPrimary
         } else {
-          MehTheme.colors.textDisabled
-        },
+          color
+        }
+      } else {
+        MehTheme.colors.textDisabled
+      },
       textAlign = textAlign,
     )
 
   Box(
     modifier =
-      if (size == ControlSize.Unspecified) {
-        modifier
-      } else {
-        modifier.height(size.dp)
-      },
+    if (size == ControlSize.Unspecified) {
+      modifier
+    } else {
+      modifier.height(size.dp)
+    },
     contentAlignment = alignment,
   ) {
     BasicText(

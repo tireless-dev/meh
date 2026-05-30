@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.brand.designanddevelopment
 
 import androidx.compose.ui.graphics.Color
@@ -1018,80 +1018,80 @@ val LogoKubernetes: ImageVector
           // q -0.06 0.06 -0.12 0.1
           quadToRelative(
             dx1 = -0.06f,
-          dy1 = 0.06f,
-          dx2 = -0.12f,
-          dy2 = 0.1f,
-        )
-        // a 7.8 7.8 0 0 1 1.25 5.4
-        arcToRelative(
-          a = 7.8f,
-          b = 7.8f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = true,
-          dx1 = 1.25f,
-          dy1 = 5.4f,
-        )
-        // l 0.24 0.07
-        lineToRelative(dx = 0.24f, dy = 0.07f)
-        // l 0.02 0.03
-        lineToRelative(dx = 0.02f, dy = 0.03f)
-        // a 1 1 0 0 0 0.24 0.23
-        arcToRelative(
-          a = 1.0f,
-          b = 1.0f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = false,
-          dx1 = 0.24f,
-          dy1 = 0.23f,
-        )
-        // a 6 6 0 0 0 1.06 0.18
-        arcToRelative(
-          a = 6.0f,
-          b = 6.0f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = false,
-          dx1 = 1.06f,
-          dy1 = 0.18f,
-        )
-        // h 0.02
-        horizontalLineToRelative(dx = 0.02f)
-        // l 0.2 0.01
-        lineToRelative(dx = 0.2f, dy = 0.01f)
-        // l 0.37 0.04
-        lineToRelative(dx = 0.37f, dy = 0.04f)
-        // l 0.11 0.02
-        lineToRelative(dx = 0.11f, dy = 0.02f)
-        // l 0.07 0.02
-        lineToRelative(dx = 0.07f, dy = 0.02f)
-        // a 0.64 0.64 0 0 1 0.5 0.74
-        arcToRelative(
-          a = 0.64f,
-          b = 0.64f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = true,
-          dx1 = 0.5f,
-          dy1 = 0.74f,
-        )
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+            dy1 = 0.06f,
+            dx2 = -0.12f,
+            dy2 = 0.1f,
+          )
+          // a 7.8 7.8 0 0 1 1.25 5.4
+          arcToRelative(
+            a = 7.8f,
+            b = 7.8f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = true,
+            dx1 = 1.25f,
+            dy1 = 5.4f,
+          )
+          // l 0.24 0.07
+          lineToRelative(dx = 0.24f, dy = 0.07f)
+          // l 0.02 0.03
+          lineToRelative(dx = 0.02f, dy = 0.03f)
+          // a 1 1 0 0 0 0.24 0.23
+          arcToRelative(
+            a = 1.0f,
+            b = 1.0f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = false,
+            dx1 = 0.24f,
+            dy1 = 0.23f,
+          )
+          // a 6 6 0 0 0 1.06 0.18
+          arcToRelative(
+            a = 6.0f,
+            b = 6.0f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = false,
+            dx1 = 1.06f,
+            dy1 = 0.18f,
+          )
+          // h 0.02
+          horizontalLineToRelative(dx = 0.02f)
+          // l 0.2 0.01
+          lineToRelative(dx = 0.2f, dy = 0.01f)
+          // l 0.37 0.04
+          lineToRelative(dx = 0.37f, dy = 0.04f)
+          // l 0.11 0.02
+          lineToRelative(dx = 0.11f, dy = 0.02f)
+          // l 0.07 0.02
+          lineToRelative(dx = 0.07f, dy = 0.02f)
+          // a 0.64 0.64 0 0 1 0.5 0.74
+          arcToRelative(
+            a = 0.64f,
+            b = 0.64f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = true,
+            dx1 = 0.5f,
+            dy1 = 0.74f,
+          )
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _logoKubernetes = it }
   }
 

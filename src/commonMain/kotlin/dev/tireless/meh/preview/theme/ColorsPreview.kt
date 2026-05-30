@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.preview.theme
 
 import androidx.compose.foundation.background
@@ -14,11 +14,11 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.luminance
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import dev.tireless.meh.component.Text
 import dev.tireless.meh.preview.PreviewTheme
 import dev.tireless.meh.theme.MehTheme
-import androidx.compose.ui.tooling.preview.Preview
 
 private data class ColorSwatch(
   val label: String,
@@ -35,11 +35,11 @@ private fun ColorRow(
 
   Row(
     modifier =
-      modifier
-        .fillMaxWidth()
-        .height(48.dp)
-        .background(swatch.color, RoundedCornerShape(6.dp))
-        .padding(horizontal = 12.dp, vertical = 8.dp),
+    modifier
+      .fillMaxWidth()
+      .height(48.dp)
+      .background(swatch.color, RoundedCornerShape(6.dp))
+      .padding(horizontal = 12.dp, vertical = 8.dp),
     horizontalArrangement = Arrangement.SpaceBetween,
   ) {
     Text(text = swatch.label, color = textColor)
@@ -86,9 +86,9 @@ internal fun ColorsPreview() {
 
     Column(
       modifier =
-        Modifier
-          .fillMaxWidth()
-          .padding(horizontal = spacing.spacing06, vertical = spacing.spacing05),
+      Modifier
+        .fillMaxWidth()
+        .padding(horizontal = spacing.spacing06, vertical = spacing.spacing05),
       verticalArrangement = Arrangement.spacedBy(spacing.spacing03),
     ) {
       swatches.forEach { ColorRow(it) }

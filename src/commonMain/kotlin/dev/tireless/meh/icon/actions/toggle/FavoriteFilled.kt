@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.actions.toggle
 
 import androidx.compose.ui.graphics.Color
@@ -94,11 +94,11 @@ val FavoriteFilled: ImageVector
           horizontalLineToRelative(dx = 32.0f)
           // v 32
           verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _favoriteFilled = it }
   }
 

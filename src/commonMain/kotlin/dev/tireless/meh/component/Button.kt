@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.component
 
 import androidx.compose.foundation.background
@@ -51,15 +51,15 @@ fun Button(
 
   Box(
     modifier =
-      modifier
-        .background(backgroundColor)
-        .clickable(enabled = enabled, onClick = onClick)
-        .height(size.dp)
-        .padding(
-          top = MehTheme.spacing.spacing05,
-          start = MehTheme.spacing.spacing05,
-          end = MehTheme.spacing.spacing10,
-        ),
+    modifier
+      .background(backgroundColor)
+      .clickable(enabled = enabled, onClick = onClick)
+      .height(size.dp)
+      .padding(
+        top = MehTheme.spacing.spacing05,
+        start = MehTheme.spacing.spacing05,
+        end = MehTheme.spacing.spacing10,
+      ),
     contentAlignment = Alignment.TopStart,
   ) {
     BasicText(

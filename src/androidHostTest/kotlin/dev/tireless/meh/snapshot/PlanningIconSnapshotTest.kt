@@ -1,12 +1,13 @@
 // SPDX-License-Identifier: Apache-2.0
 // Copyright 2026 tireless.dev
-
 package dev.tireless.meh.snapshot
 
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onRoot
 import com.github.takahirom.roborazzi.captureRoboImage
-import dev.tireless.meh.icon.preview.*
+import dev.tireless.meh.icon.preview.IconPackPlanningTimePreview
+import dev.tireless.meh.icon.preview.IconPackPlanningTravelPreview
+import dev.tireless.meh.icon.preview.IconPackPlanningWeatherPreview
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -30,6 +31,8 @@ class PlanningIconSnapshotTest {
   }
 
   @Test fun time() = captureIconPreview { IconPackPlanningTimePreview() }
+
   @Test fun travel() = captureIconPreview { IconPackPlanningTravelPreview() }
+
   @Test fun weather() = captureIconPreview { IconPackPlanningWeatherPreview() }
 }

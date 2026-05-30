@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.actions.toggle
 
 import androidx.compose.ui.graphics.Color
@@ -533,45 +533,45 @@ val Thumbnail2: ImageVector
             isMoreThanHalf = false,
             isPositiveArc = true,
             dx1 = 2.0f,
-          dy1 = 2.0f,
-        )
-        // v 4
-        verticalLineToRelative(dy = 4.0f)
-        // a 2 2 0 0 1 -2 2
-        arcToRelative(
-          a = 2.0f,
-          b = 2.0f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = true,
-          dx1 = -2.0f,
-          dy1 = 2.0f,
-        )
-        // m -4 -6
-        moveToRelative(dx = -4.0f, dy = -6.0f)
-        // v 4
-        verticalLineToRelative(dy = 4.0f)
-        // h 4
-        horizontalLineToRelative(dx = 4.0f)
-        // V 4z
-        verticalLineTo(y = 4.0f)
-        close()
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+            dy1 = 2.0f,
+          )
+          // v 4
+          verticalLineToRelative(dy = 4.0f)
+          // a 2 2 0 0 1 -2 2
+          arcToRelative(
+            a = 2.0f,
+            b = 2.0f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = true,
+            dx1 = -2.0f,
+            dy1 = 2.0f,
+          )
+          // m -4 -6
+          moveToRelative(dx = -4.0f, dy = -6.0f)
+          // v 4
+          verticalLineToRelative(dy = 4.0f)
+          // h 4
+          horizontalLineToRelative(dx = 4.0f)
+          // V 4z
+          verticalLineTo(y = 4.0f)
+          close()
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _thumbnail2 = it }
   }
 

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.brand.social
 
 import androidx.compose.ui.graphics.Color
@@ -520,44 +520,44 @@ val LogoSkype: ImageVector
             isMoreThanHalf = false,
             isPositiveArc = true,
             dx1 = 1.23f,
-          dy1 = 1.31f,
-        )
-        // A 4 4 0 0 1 22.5 19
-        arcTo(
-          horizontalEllipseRadius = 4.0f,
-          verticalEllipseRadius = 4.0f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = true,
-          x1 = 22.5f,
-          y1 = 19.0f,
-        )
-        // a 4.2 4.2 0 0 1 -0.77 2.48
-        arcToRelative(
-          a = 4.2f,
-          b = 4.2f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = true,
-          dx1 = -0.77f,
-          dy1 = 2.48f,
-        )
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+            dy1 = 1.31f,
+          )
+          // A 4 4 0 0 1 22.5 19
+          arcTo(
+            horizontalEllipseRadius = 4.0f,
+            verticalEllipseRadius = 4.0f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = true,
+            x1 = 22.5f,
+            y1 = 19.0f,
+          )
+          // a 4.2 4.2 0 0 1 -0.77 2.48
+          arcToRelative(
+            a = 4.2f,
+            b = 4.2f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = true,
+            dx1 = -0.77f,
+            dy1 = 2.48f,
+          )
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _logoSkype = it }
   }
 

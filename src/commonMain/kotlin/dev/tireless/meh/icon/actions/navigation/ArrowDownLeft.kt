@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.actions.navigation
 
 import androidx.compose.ui.graphics.Color
@@ -59,9 +59,9 @@ val ArrowDownLeft: ImageVector
           verticalLineToRelative(dy = 32.0f)
           // h -32z
           horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+          close()
+        }
+      }.build()
       .also { _arrowDownLeft = it }
   }
 

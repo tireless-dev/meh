@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.organization.data
 
 import androidx.compose.ui.graphics.Color
@@ -80,10 +80,10 @@ val TextMiningApplier: ImageVector
           // v 32
           verticalLineToRelative(dy = 32.0f)
           // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _textMiningApplier = it }
   }
 

@@ -1,12 +1,15 @@
 // SPDX-License-Identifier: Apache-2.0
 // Copyright 2026 tireless.dev
-
 package dev.tireless.meh.snapshot
 
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onRoot
 import com.github.takahirom.roborazzi.captureRoboImage
-import dev.tireless.meh.icon.preview.*
+import dev.tireless.meh.icon.preview.IconPackEnterpriseAiPreview
+import dev.tireless.meh.icon.preview.IconPackEnterpriseAppCataloguePreview
+import dev.tireless.meh.icon.preview.IconPackEnterpriseCommercePreview
+import dev.tireless.meh.icon.preview.IconPackEnterpriseHealthPreview
+import dev.tireless.meh.icon.preview.IconPackEnterpriseResearchPreview
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -30,8 +33,12 @@ class EnterpriseIconSnapshotTest {
   }
 
   @Test fun ai() = captureIconPreview { IconPackEnterpriseAiPreview() }
+
   @Test fun appCatalogue() = captureIconPreview { IconPackEnterpriseAppCataloguePreview() }
+
   @Test fun commerce() = captureIconPreview { IconPackEnterpriseCommercePreview() }
+
   @Test fun health() = captureIconPreview { IconPackEnterpriseHealthPreview() }
+
   @Test fun research() = captureIconPreview { IconPackEnterpriseResearchPreview() }
 }

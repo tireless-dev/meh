@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.enterprise.appcatalogue
 
 import androidx.compose.ui.graphics.Color
@@ -317,28 +317,28 @@ val DatabasePostgreSQL: ImageVector
             theta = 0.0f,
             isMoreThanHalf = false,
             isPositiveArc = false,
-          dx1 = -1.9f,
-          dy1 = -1.8f,
-        )
-        // h -3.9z
-        horizontalLineToRelative(dx = -3.9f)
-        close()
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+            dx1 = -1.9f,
+            dy1 = -1.8f,
+          )
+          // h -3.9z
+          horizontalLineToRelative(dx = -3.9f)
+          close()
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _databasePostgreSQL = it }
   }
 

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.brand.designanddevelopment
 
 import androidx.compose.ui.graphics.Color
@@ -363,32 +363,32 @@ val LogoVmwareAlt: ImageVector
           )
           // C 7 12 6.14 12.48 5.62 13.68
           curveTo(
-          x1 = 7.0f,
-          y1 = 12.0f,
-          x2 = 6.14f,
-          y2 = 12.48f,
-          x3 = 5.62f,
-          y3 = 13.68f,
-        )
-        // l -1.55 3.67z
-        lineToRelative(dx = -1.55f, dy = 3.67f)
-        close()
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+            x1 = 7.0f,
+            y1 = 12.0f,
+            x2 = 6.14f,
+            y2 = 12.48f,
+            x3 = 5.62f,
+            y3 = 13.68f,
+          )
+          // l -1.55 3.67z
+          lineToRelative(dx = -1.55f, dy = 3.67f)
+          close()
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _logoVmwareAlt = it }
   }
 

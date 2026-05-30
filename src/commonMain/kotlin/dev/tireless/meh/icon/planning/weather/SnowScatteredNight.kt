@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.planning.weather
 
 import androidx.compose.ui.graphics.Color
@@ -450,39 +450,39 @@ val SnowScatteredNight: ImageVector
           // a 7.4 7.4 0 0 0 3.9 2.22
           arcToRelative(
             a = 7.4f,
-          b = 7.4f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = false,
-          dx1 = 3.9f,
-          dy1 = 2.22f,
-        )
-        // a 5.5 5.5 0 0 1 -3.04 1.83
-        arcToRelative(
-          a = 5.5f,
-          b = 5.5f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = true,
-          dx1 = -3.04f,
-          dy1 = 1.83f,
-        )
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+            b = 7.4f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = false,
+            dx1 = 3.9f,
+            dy1 = 2.22f,
+          )
+          // a 5.5 5.5 0 0 1 -3.04 1.83
+          arcToRelative(
+            a = 5.5f,
+            b = 5.5f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = true,
+            dx1 = -3.04f,
+            dy1 = 1.83f,
+          )
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _snowScatteredNight = it }
   }
 

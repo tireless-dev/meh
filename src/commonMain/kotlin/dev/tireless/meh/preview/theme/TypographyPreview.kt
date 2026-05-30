@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.preview.theme
 
 import androidx.compose.foundation.layout.Arrangement
@@ -10,12 +10,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.tooling.preview.Preview
 import dev.tireless.meh.component.Text
 import dev.tireless.meh.preview.PreviewTheme
 import dev.tireless.meh.preview.previewFontFamilySc
 import dev.tireless.meh.preview.previewFontFamilyTc
 import dev.tireless.meh.theme.MehTheme
-import androidx.compose.ui.tooling.preview.Preview
 
 private data class TypographySample(
   val label: String,
@@ -97,9 +97,9 @@ private fun TypographyPreviewContent(
 
   Column(
     modifier =
-      Modifier
-        .fillMaxWidth()
-        .padding(horizontal = spacing.spacing06, vertical = spacing.spacing05),
+    Modifier
+      .fillMaxWidth()
+      .padding(horizontal = spacing.spacing06, vertical = spacing.spacing05),
     verticalArrangement = Arrangement.spacedBy(spacing.spacing05),
   ) {
     if (title != null) {

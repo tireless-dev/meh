@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.preview
 
 import androidx.compose.foundation.layout.Arrangement
@@ -71,10 +71,10 @@ internal fun IconSubcategoryPreview(
   PreviewTheme {
     Column(
       modifier =
-        Modifier
-          .fillMaxWidth()
-          .verticalScroll(rememberScrollState())
-          .padding(MehTheme.spacing.spacing05),
+      Modifier
+        .fillMaxWidth()
+        .verticalScroll(rememberScrollState())
+        .padding(MehTheme.spacing.spacing05),
       verticalArrangement = Arrangement.spacedBy(MehTheme.spacing.spacing05),
       horizontalAlignment = Alignment.CenterHorizontally,
     ) {

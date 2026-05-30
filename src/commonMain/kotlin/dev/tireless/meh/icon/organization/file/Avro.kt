@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.organization.file
 
 import androidx.compose.ui.graphics.Color
@@ -196,19 +196,19 @@ val Avro: ImageVector
           close()
         }
         // <polyline points="32.0 32.0 0.0 32.0 0.0 0.0 32.0 0.0" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 32 32
-        moveTo(x = 32.0f, y = 32.0f)
-        // L 0 32
-        lineTo(x = 0.0f, y = 32.0f)
-        // L 0 0
-        lineTo(x = 0.0f, y = 0.0f)
-        // L 32 0
-        lineTo(x = 32.0f, y = 0.0f)
-      }
-    }.build()
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 32 32
+          moveTo(x = 32.0f, y = 32.0f)
+          // L 0 32
+          lineTo(x = 0.0f, y = 32.0f)
+          // L 0 0
+          lineTo(x = 0.0f, y = 0.0f)
+          // L 32 0
+          lineTo(x = 32.0f, y = 0.0f)
+        }
+      }.build()
       .also { _avro = it }
   }
 

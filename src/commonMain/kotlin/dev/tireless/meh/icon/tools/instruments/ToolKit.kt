@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.tools.instruments
 
 import androidx.compose.ui.graphics.Color
@@ -396,34 +396,34 @@ val ToolKit: ImageVector
           lineToRelative(dx = -7.48f, dy = 7.48f)
           // l 1.41 1.41
           lineToRelative(dx = 1.41f, dy = 1.41f)
-        // l 7.48 -7.48
-        lineToRelative(dx = 7.48f, dy = -7.48f)
-        // a 3 3 0 0 0 0 -4.24
-        arcToRelative(
-          a = 3.0f,
-          b = 3.0f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = false,
-          dx1 = 0.0f,
-          dy1 = -4.24f,
-        )
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+          // l 7.48 -7.48
+          lineToRelative(dx = 7.48f, dy = -7.48f)
+          // a 3 3 0 0 0 0 -4.24
+          arcToRelative(
+            a = 3.0f,
+            b = 3.0f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = false,
+            dx1 = 0.0f,
+            dy1 = -4.24f,
+          )
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _toolKit = it }
   }
 

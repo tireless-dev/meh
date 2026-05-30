@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.brand.designanddevelopment
 
 import androidx.compose.ui.graphics.Color
@@ -419,38 +419,38 @@ val LogoSvelte: ImageVector
           )
           // c 2.1 -0.5 4.3 0.3 5.6 2.1
           curveToRelative(
-          dx1 = 2.1f,
-          dy1 = -0.5f,
-          dx2 = 4.3f,
-          dy2 = 0.3f,
-          dx3 = 5.6f,
-          dy3 = 2.1f,
-        )
-        // c 0.7 1.1 1 2.4 0.8 3.6
-        curveToRelative(
-          dx1 = 0.7f,
-          dy1 = 1.1f,
-          dx2 = 1.0f,
-          dy2 = 2.4f,
-          dx3 = 0.8f,
-          dy3 = 3.6f,
-        )
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+            dx1 = 2.1f,
+            dy1 = -0.5f,
+            dx2 = 4.3f,
+            dy2 = 0.3f,
+            dx3 = 5.6f,
+            dy3 = 2.1f,
+          )
+          // c 0.7 1.1 1 2.4 0.8 3.6
+          curveToRelative(
+            dx1 = 0.7f,
+            dy1 = 1.1f,
+            dx2 = 1.0f,
+            dy2 = 2.4f,
+            dx3 = 0.8f,
+            dy3 = 3.6f,
+          )
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _logoSvelte = it }
   }
 

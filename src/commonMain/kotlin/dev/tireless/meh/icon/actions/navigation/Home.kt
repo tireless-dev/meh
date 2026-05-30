@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.actions.navigation
 
 import androidx.compose.ui.graphics.Color
@@ -130,14 +130,14 @@ val Home: ImageVector
           // V 12.06
           verticalLineTo(y = 12.06f)
           // l 10 -7.79
-        lineToRelative(dx = 10.0f, dy = -7.79f)
-        // l 10 7.8
-        lineToRelative(dx = 10.0f, dy = 7.8f)
-        // V 26z
-        verticalLineTo(y = 26.0f)
-        close()
-      }
-    }.build()
+          lineToRelative(dx = 10.0f, dy = -7.79f)
+          // l 10 7.8
+          lineToRelative(dx = 10.0f, dy = 7.8f)
+          // V 26z
+          verticalLineTo(y = 26.0f)
+          close()
+        }
+      }.build()
       .also { _home = it }
   }
 

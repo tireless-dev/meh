@@ -1,16 +1,16 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.preview.component
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import dev.tireless.meh.component.GroupLayout
 import dev.tireless.meh.component.Radio
 import dev.tireless.meh.preview.PreviewTheme
 import dev.tireless.meh.theme.MehTheme
-import androidx.compose.ui.tooling.preview.Preview
 
 @Preview(name = "Radio – Horizontal", showBackground = true)
 @Composable
@@ -24,9 +24,9 @@ internal fun RadioPreviewHorizontal() {
       helper = "Choose the default channel",
       layout = GroupLayout.Horizontal,
       modifier =
-        Modifier
-          .fillMaxWidth()
-          .padding(MehTheme.spacing.spacing04),
+      Modifier
+        .fillMaxWidth()
+        .padding(MehTheme.spacing.spacing04),
     )
   }
 }
@@ -44,9 +44,9 @@ internal fun RadioPreviewVertical() {
       layout = GroupLayout.Vertical,
       enabled = false,
       modifier =
-        Modifier
-          .fillMaxWidth()
-          .padding(MehTheme.spacing.spacing04),
+      Modifier
+        .fillMaxWidth()
+        .padding(MehTheme.spacing.spacing04),
     )
   }
 }

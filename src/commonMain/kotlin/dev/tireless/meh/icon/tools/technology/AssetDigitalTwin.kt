@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.tools.technology
 
 import androidx.compose.ui.graphics.Color
@@ -1220,101 +1220,101 @@ val AssetDigitalTwin: ImageVector
           moveToRelative(dx = -1.0f, dy = 0.0f)
           // a 1 1 0 1 1 2 0
           arcToRelative(
-          a = 1.0f,
-          b = 1.0f,
-          theta = 0.0f,
-          isMoreThanHalf = true,
-          isPositiveArc = true,
-          dx1 = 2.0f,
-          dy1 = 0.0f,
-        )
-        // a 1 1 0 1 1 -2 0z
-        arcToRelative(
-          a = 1.0f,
-          b = 1.0f,
-          theta = 0.0f,
-          isMoreThanHalf = true,
-          isPositiveArc = true,
-          dx1 = -2.0f,
-          dy1 = 0.0f,
-        )
-        close()
-      }
-      // <circle cx="17.196" cy="17.0" radius="1.0" fill="#000" />
-      path(
-        fill = SolidColor(Color(0xFF000000)),
-      ) {
-        // M 17.196 17
-        moveTo(x = 17.196f, y = 17.0f)
-        // m -1 0
-        moveToRelative(dx = -1.0f, dy = 0.0f)
-        // a 1 1 0 1 1 2 0
-        arcToRelative(
-          a = 1.0f,
-          b = 1.0f,
-          theta = 0.0f,
-          isMoreThanHalf = true,
-          isPositiveArc = true,
-          dx1 = 2.0f,
-          dy1 = 0.0f,
-        )
-        // a 1 1 0 1 1 -2 0z
-        arcToRelative(
-          a = 1.0f,
-          b = 1.0f,
-          theta = 0.0f,
-          isMoreThanHalf = true,
-          isPositiveArc = true,
-          dx1 = -2.0f,
-          dy1 = 0.0f,
-        )
-        close()
-      }
-      // <circle cx="30.0" cy="6.026" radius="1.0" fill="#000" />
-      path(
-        fill = SolidColor(Color(0xFF000000)),
-      ) {
-        // M 30 6.026
-        moveTo(x = 30.0f, y = 6.026f)
-        // m -1 0
-        moveToRelative(dx = -1.0f, dy = 0.0f)
-        // a 1 1 0 1 1 2 0
-        arcToRelative(
-          a = 1.0f,
-          b = 1.0f,
-          theta = 0.0f,
-          isMoreThanHalf = true,
-          isPositiveArc = true,
-          dx1 = 2.0f,
-          dy1 = 0.0f,
-        )
-        // a 1 1 0 1 1 -2 0z
-        arcToRelative(
-          a = 1.0f,
-          b = 1.0f,
-          theta = 0.0f,
-          isMoreThanHalf = true,
-          isPositiveArc = true,
-          dx1 = -2.0f,
-          dy1 = 0.0f,
-        )
-        close()
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+            a = 1.0f,
+            b = 1.0f,
+            theta = 0.0f,
+            isMoreThanHalf = true,
+            isPositiveArc = true,
+            dx1 = 2.0f,
+            dy1 = 0.0f,
+          )
+          // a 1 1 0 1 1 -2 0z
+          arcToRelative(
+            a = 1.0f,
+            b = 1.0f,
+            theta = 0.0f,
+            isMoreThanHalf = true,
+            isPositiveArc = true,
+            dx1 = -2.0f,
+            dy1 = 0.0f,
+          )
+          close()
+        }
+        // <circle cx="17.196" cy="17.0" radius="1.0" fill="#000" />
+        path(
+          fill = SolidColor(Color(0xFF000000)),
+        ) {
+          // M 17.196 17
+          moveTo(x = 17.196f, y = 17.0f)
+          // m -1 0
+          moveToRelative(dx = -1.0f, dy = 0.0f)
+          // a 1 1 0 1 1 2 0
+          arcToRelative(
+            a = 1.0f,
+            b = 1.0f,
+            theta = 0.0f,
+            isMoreThanHalf = true,
+            isPositiveArc = true,
+            dx1 = 2.0f,
+            dy1 = 0.0f,
+          )
+          // a 1 1 0 1 1 -2 0z
+          arcToRelative(
+            a = 1.0f,
+            b = 1.0f,
+            theta = 0.0f,
+            isMoreThanHalf = true,
+            isPositiveArc = true,
+            dx1 = -2.0f,
+            dy1 = 0.0f,
+          )
+          close()
+        }
+        // <circle cx="30.0" cy="6.026" radius="1.0" fill="#000" />
+        path(
+          fill = SolidColor(Color(0xFF000000)),
+        ) {
+          // M 30 6.026
+          moveTo(x = 30.0f, y = 6.026f)
+          // m -1 0
+          moveToRelative(dx = -1.0f, dy = 0.0f)
+          // a 1 1 0 1 1 2 0
+          arcToRelative(
+            a = 1.0f,
+            b = 1.0f,
+            theta = 0.0f,
+            isMoreThanHalf = true,
+            isPositiveArc = true,
+            dx1 = 2.0f,
+            dy1 = 0.0f,
+          )
+          // a 1 1 0 1 1 -2 0z
+          arcToRelative(
+            a = 1.0f,
+            b = 1.0f,
+            theta = 0.0f,
+            isMoreThanHalf = true,
+            isPositiveArc = true,
+            dx1 = -2.0f,
+            dy1 = 0.0f,
+          )
+          close()
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _assetDigitalTwin = it }
   }
 

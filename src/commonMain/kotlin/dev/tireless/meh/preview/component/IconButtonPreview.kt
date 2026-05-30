@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.preview.component
 
 import androidx.compose.foundation.layout.Arrangement
@@ -9,6 +9,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import dev.tireless.meh.component.FocusableIconButton
 import dev.tireless.meh.component.HorizontalPaddingScale
 import dev.tireless.meh.component.MonoIconButton
@@ -22,7 +23,6 @@ import dev.tireless.meh.preview.PreviewTheme
 import dev.tireless.meh.theme.ControlSize
 import dev.tireless.meh.theme.IconSize
 import dev.tireless.meh.theme.MehTheme
-import androidx.compose.ui.tooling.preview.Preview
 
 @Preview(name = "IconButton – Mono", showBackground = true)
 @Composable
@@ -31,9 +31,9 @@ internal fun IconButtonPreviewMono() {
     val spacing = MehTheme.spacing
     Row(
       modifier =
-        Modifier
-          .fillMaxWidth()
-          .padding(horizontal = spacing.spacing05, vertical = spacing.spacing04),
+      Modifier
+        .fillMaxWidth()
+        .padding(horizontal = spacing.spacing05, vertical = spacing.spacing04),
       horizontalArrangement = Arrangement.spacedBy(spacing.spacing03),
     ) {
       MonoIconButton(onClick = {}, icon = Add, size = ControlSize.Small)
@@ -62,9 +62,9 @@ internal fun IconButtonPreviewStates() {
     val spacing = MehTheme.spacing
     Column(
       modifier =
-        Modifier
-          .fillMaxWidth()
-          .padding(horizontal = spacing.spacing05, vertical = spacing.spacing04),
+      Modifier
+        .fillMaxWidth()
+        .padding(horizontal = spacing.spacing05, vertical = spacing.spacing04),
       verticalArrangement = Arrangement.spacedBy(spacing.spacing03),
     ) {
       Row(horizontalArrangement = Arrangement.spacedBy(spacing.spacing03)) {

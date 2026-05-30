@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.planning.travel
 
 import androidx.compose.ui.graphics.Color
@@ -640,54 +640,54 @@ val NavaidNdbDme: ImageVector
             isPositiveArc = true,
             dx1 = -2.0f,
             dy1 = 0.0f,
-        )
-        close()
-      }
-      // <circle cx="7.0" cy="25.0" radius="1.0" fill="#000" />
-      path(
-        fill = SolidColor(Color(0xFF000000)),
-      ) {
-        // M 7 25
-        moveTo(x = 7.0f, y = 25.0f)
-        // m -1 0
-        moveToRelative(dx = -1.0f, dy = 0.0f)
-        // a 1 1 0 1 1 2 0
-        arcToRelative(
-          a = 1.0f,
-          b = 1.0f,
-          theta = 0.0f,
-          isMoreThanHalf = true,
-          isPositiveArc = true,
-          dx1 = 2.0f,
-          dy1 = 0.0f,
-        )
-        // a 1 1 0 1 1 -2 0z
-        arcToRelative(
-          a = 1.0f,
-          b = 1.0f,
-          theta = 0.0f,
-          isMoreThanHalf = true,
-          isPositiveArc = true,
-          dx1 = -2.0f,
-          dy1 = 0.0f,
-        )
-        close()
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 32 32
-        moveTo(x = 32.0f, y = 32.0f)
-        // l -32 0
-        lineToRelative(dx = -32.0f, dy = 0.0f)
-        // l 0 -32
-        lineToRelative(dx = 0.0f, dy = -32.0f)
-        // l 32 -0z
-        lineToRelative(dx = 32.0f, dy = -0.0f)
-        close()
-      }
-    }.build()
+          )
+          close()
+        }
+        // <circle cx="7.0" cy="25.0" radius="1.0" fill="#000" />
+        path(
+          fill = SolidColor(Color(0xFF000000)),
+        ) {
+          // M 7 25
+          moveTo(x = 7.0f, y = 25.0f)
+          // m -1 0
+          moveToRelative(dx = -1.0f, dy = 0.0f)
+          // a 1 1 0 1 1 2 0
+          arcToRelative(
+            a = 1.0f,
+            b = 1.0f,
+            theta = 0.0f,
+            isMoreThanHalf = true,
+            isPositiveArc = true,
+            dx1 = 2.0f,
+            dy1 = 0.0f,
+          )
+          // a 1 1 0 1 1 -2 0z
+          arcToRelative(
+            a = 1.0f,
+            b = 1.0f,
+            theta = 0.0f,
+            isMoreThanHalf = true,
+            isPositiveArc = true,
+            dx1 = -2.0f,
+            dy1 = 0.0f,
+          )
+          close()
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 32 32
+          moveTo(x = 32.0f, y = 32.0f)
+          // l -32 0
+          lineToRelative(dx = -32.0f, dy = 0.0f)
+          // l 0 -32
+          lineToRelative(dx = 0.0f, dy = -32.0f)
+          // l 32 -0z
+          lineToRelative(dx = 32.0f, dy = -0.0f)
+          close()
+        }
+      }.build()
       .also { _navaidNdbDme = it }
   }
 

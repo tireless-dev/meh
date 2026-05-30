@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.actions.controls
 
 import androidx.compose.ui.graphics.Color
@@ -377,32 +377,32 @@ val SettingsView: ImageVector
           lineTo(x = 26.1f, y = 16.0f)
           // l 2.8 -2.45
           lineToRelative(dx = 2.8f, dy = -2.45f)
-        // a 2 2 0 0 0 0.41 -2.5
-        arcToRelative(
-          a = 2.0f,
-          b = 2.0f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = false,
-          dx1 = 0.41f,
-          dy1 = -2.5f,
-        )
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+          // a 2 2 0 0 0 0.41 -2.5
+          arcToRelative(
+            a = 2.0f,
+            b = 2.0f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = false,
+            dx1 = 0.41f,
+            dy1 = -2.5f,
+          )
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _settingsView = it }
   }
 

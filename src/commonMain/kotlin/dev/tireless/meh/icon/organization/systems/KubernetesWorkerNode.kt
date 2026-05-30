@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.organization.systems
 
 import androidx.compose.ui.graphics.Color
@@ -281,25 +281,25 @@ val KubernetesWorkerNode: ImageVector
           lineTo(x = 6.6f, y = 8.25f)
           // L 16 4
           lineTo(x = 16.0f, y = 4.0f)
-        // l 9.4 4.25
-        lineToRelative(dx = 9.4f, dy = 4.25f)
-        // l 2.6 11.2z
-        lineToRelative(dx = 2.6f, dy = 11.2f)
-        close()
-      }
-      // M0 0 h32 v32 H0z
-      path {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // H 0z
-        horizontalLineTo(x = 0.0f)
-        close()
-      }
-    }.build()
+          // l 9.4 4.25
+          lineToRelative(dx = 9.4f, dy = 4.25f)
+          // l 2.6 11.2z
+          lineToRelative(dx = 2.6f, dy = 11.2f)
+          close()
+        }
+        // M0 0 h32 v32 H0z
+        path {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // H 0z
+          horizontalLineTo(x = 0.0f)
+          close()
+        }
+      }.build()
       .also { _kubernetesWorkerNode = it }
   }
 

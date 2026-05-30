@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.preview.theme
 
 import androidx.compose.foundation.background
@@ -15,13 +15,13 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import dev.tireless.meh.component.Text
 import dev.tireless.meh.preview.PreviewTheme
 import dev.tireless.meh.theme.MehTheme
 import dev.tireless.meh.theme.Spacing
-import androidx.compose.ui.tooling.preview.Preview
 
 private data class SpacingSample(
   val label: String,
@@ -40,10 +40,10 @@ private fun SpacingRow(
   ) {
     Box(
       modifier =
-        Modifier
-          .width(80.dp)
-          .height(sample.value)
-          .background(MehTheme.colors.highlight, RoundedCornerShape(4.dp)),
+      Modifier
+        .width(80.dp)
+        .height(sample.value)
+        .background(MehTheme.colors.highlight, RoundedCornerShape(4.dp)),
     )
     Text(
       text = "${sample.label} – ${sample.value.value.toInt()}dp",
@@ -77,9 +77,9 @@ internal fun SpacingPreview() {
 
     Column(
       modifier =
-        Modifier
-          .fillMaxWidth()
-          .padding(horizontal = spacing.spacing06, vertical = spacing.spacing05),
+      Modifier
+        .fillMaxWidth()
+        .padding(horizontal = spacing.spacing06, vertical = spacing.spacing05),
       verticalArrangement = Arrangement.spacedBy(spacing.spacing02),
     ) {
       samples.forEach { SpacingRow(it) }

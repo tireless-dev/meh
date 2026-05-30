@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.brand.designanddevelopment
 
 import androidx.compose.ui.graphics.Color
@@ -636,54 +636,54 @@ val LogoKeybase: ImageVector
             theta = 0.0f,
             isMoreThanHalf = false,
             isPositiveArc = false,
-          dx1 = 0.48f,
-          dy1 = -0.45f,
-        )
-        // a 13 13 0 0 1 1.39 0.51
-        arcToRelative(
-          a = 13.0f,
-          b = 13.0f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = true,
-          dx1 = 1.39f,
-          dy1 = 0.51f,
-        )
-        // a 11.4 11.4 0 0 1 4.5 3.69
-        arcToRelative(
-          a = 11.4f,
-          b = 11.4f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = true,
-          dx1 = 4.5f,
-          dy1 = 3.69f,
-        )
-        // c 0.98 1.34 1.15 2.71 0.47 3.68
-        curveToRelative(
-          dx1 = 0.98f,
-          dy1 = 1.34f,
-          dx2 = 1.15f,
-          dy2 = 2.71f,
-          dx3 = 0.47f,
-          dy3 = 3.68f,
-        )
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+            dx1 = 0.48f,
+            dy1 = -0.45f,
+          )
+          // a 13 13 0 0 1 1.39 0.51
+          arcToRelative(
+            a = 13.0f,
+            b = 13.0f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = true,
+            dx1 = 1.39f,
+            dy1 = 0.51f,
+          )
+          // a 11.4 11.4 0 0 1 4.5 3.69
+          arcToRelative(
+            a = 11.4f,
+            b = 11.4f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = true,
+            dx1 = 4.5f,
+            dy1 = 3.69f,
+          )
+          // c 0.98 1.34 1.15 2.71 0.47 3.68
+          curveToRelative(
+            dx1 = 0.98f,
+            dy1 = 1.34f,
+            dx2 = 1.15f,
+            dy2 = 2.71f,
+            dx3 = 0.47f,
+            dy3 = 3.68f,
+          )
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _logoKeybase = it }
   }
 

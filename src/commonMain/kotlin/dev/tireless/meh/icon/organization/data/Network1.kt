@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.organization.data
 
 import androidx.compose.ui.graphics.Color
@@ -327,28 +327,28 @@ val Network1: ImageVector
           arcToRelative(
             a = 2.0f,
             b = 2.0f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = false,
-          dx1 = -2.0f,
-          dy1 = -2.0f,
-        )
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 32 32
-        moveTo(x = 32.0f, y = 32.0f)
-        // l -32 0
-        lineToRelative(dx = -32.0f, dy = 0.0f)
-        // l 0 -32
-        lineToRelative(dx = 0.0f, dy = -32.0f)
-        // l 32 -0z
-        lineToRelative(dx = 32.0f, dy = -0.0f)
-        close()
-      }
-    }.build()
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = false,
+            dx1 = -2.0f,
+            dy1 = -2.0f,
+          )
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 32 32
+          moveTo(x = 32.0f, y = 32.0f)
+          // l -32 0
+          lineToRelative(dx = -32.0f, dy = 0.0f)
+          // l 0 -32
+          lineToRelative(dx = 0.0f, dy = -32.0f)
+          // l 32 -0z
+          lineToRelative(dx = 32.0f, dy = -0.0f)
+          close()
+        }
+      }.build()
       .also { _network1 = it }
   }
 

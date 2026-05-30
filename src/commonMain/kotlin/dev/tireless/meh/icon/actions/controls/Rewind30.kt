@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.actions.controls
 
 import androidx.compose.ui.graphics.Color
@@ -630,52 +630,52 @@ val Rewind30: ImageVector
             theta = 0.0f,
             isMoreThanHalf = false,
             isPositiveArc = false,
-          dx1 = 0.34f,
-          dy1 = -0.85f,
-        )
-        // v -0.08
-        verticalLineToRelative(dy = -0.08f)
-        // a 1 1 0 0 0 -0.37 -0.8
-        arcToRelative(
-          a = 1.0f,
-          b = 1.0f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = false,
-          dx1 = -0.37f,
-          dy1 = -0.8f,
-        )
-        // a 2 2 0 0 0 -1.06 -0.28
-        arcToRelative(
-          a = 2.0f,
-          b = 2.0f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = false,
-          dx1 = -1.06f,
-          dy1 = -0.28f,
-        )
-        // h -0.76
-        horizontalLineToRelative(dx = -0.76f)
-        // v -1.21z
-        verticalLineToRelative(dy = -1.21f)
-        close()
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+            dx1 = 0.34f,
+            dy1 = -0.85f,
+          )
+          // v -0.08
+          verticalLineToRelative(dy = -0.08f)
+          // a 1 1 0 0 0 -0.37 -0.8
+          arcToRelative(
+            a = 1.0f,
+            b = 1.0f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = false,
+            dx1 = -0.37f,
+            dy1 = -0.8f,
+          )
+          // a 2 2 0 0 0 -1.06 -0.28
+          arcToRelative(
+            a = 2.0f,
+            b = 2.0f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = false,
+            dx1 = -1.06f,
+            dy1 = -0.28f,
+          )
+          // h -0.76
+          horizontalLineToRelative(dx = -0.76f)
+          // v -1.21z
+          verticalLineToRelative(dy = -1.21f)
+          close()
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _rewind30 = it }
   }
 

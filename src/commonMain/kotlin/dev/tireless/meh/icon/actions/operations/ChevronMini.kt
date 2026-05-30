@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.actions.operations
 
 import androidx.compose.ui.graphics.Color
@@ -48,8 +48,8 @@ val ChevronMini: ImageVector
           // h -32z
           horizontalLineToRelative(dx = -32.0f)
           close()
-      }
-    }.build()
+        }
+      }.build()
       .also { _chevronMini = it }
   }
 

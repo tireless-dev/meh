@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.planning.weather
 
 import androidx.compose.ui.graphics.Color
@@ -314,27 +314,27 @@ val Buoy: ImageVector
           moveTo(x = 13.33f, y = 12.0f)
           // l 0.59 -4
           lineToRelative(dx = 0.59f, dy = -4.0f)
-        // l 4.16 0.06
-        lineToRelative(dx = 4.16f, dy = 0.06f)
-        // l 0.58 3.94z
-        lineToRelative(dx = 0.58f, dy = 3.94f)
-        close()
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+          // l 4.16 0.06
+          lineToRelative(dx = 4.16f, dy = 0.06f)
+          // l 0.58 3.94z
+          lineToRelative(dx = 0.58f, dy = 3.94f)
+          close()
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _buoy = it }
   }
 

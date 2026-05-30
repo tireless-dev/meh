@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.organization.systems
 
 import androidx.compose.ui.graphics.Color
@@ -306,28 +306,28 @@ val Db2DataSharingGroup: ImageVector
           )
           // s -3 -0.75 -3 -1z
           reflectiveCurveToRelative(
-          dx1 = -3.0f,
-          dy1 = -0.75f,
-          dx2 = -3.0f,
-          dy2 = -1.0f,
-        )
-        close()
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+            dx1 = -3.0f,
+            dy1 = -0.75f,
+            dx2 = -3.0f,
+            dy2 = -1.0f,
+          )
+          close()
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _db2DataSharingGroup = it }
   }
 

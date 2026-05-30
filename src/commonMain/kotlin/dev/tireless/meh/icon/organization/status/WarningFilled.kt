@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.organization.status
 
 import androidx.compose.ui.graphics.Color
@@ -106,14 +106,14 @@ val WarningFilled: ImageVector
             dy2 = 1.5f,
           )
           // S 16.8 25 16 25
-        reflectiveCurveTo(
-          x1 = 16.8f,
-          y1 = 25.0f,
-          x2 = 16.0f,
-          y2 = 25.0f,
-        )
-      }
-    }.build()
+          reflectiveCurveTo(
+            x1 = 16.8f,
+            y1 = 25.0f,
+            x2 = 16.0f,
+            y2 = 25.0f,
+          )
+        }
+      }.build()
       .also { _warningFilled = it }
   }
 

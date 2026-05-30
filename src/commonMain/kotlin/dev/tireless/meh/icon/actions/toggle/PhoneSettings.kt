@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.actions.toggle
 
 import androidx.compose.ui.graphics.Color
@@ -330,27 +330,27 @@ val PhoneSettings: ImageVector
           )
           // l -0.06 -0.48
           lineToRelative(dx = -0.06f, dy = -0.48f)
-        // l 2.84 -2.87
-        lineToRelative(dx = 2.84f, dy = -2.87f)
-        // L 10.28 6z
-        lineTo(x = 10.28f, y = 6.0f)
-        close()
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+          // l 2.84 -2.87
+          lineToRelative(dx = 2.84f, dy = -2.87f)
+          // L 10.28 6z
+          lineTo(x = 10.28f, y = 6.0f)
+          close()
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _phoneSettings = it }
   }
 

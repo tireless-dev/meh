@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.tools.technology
 
 import androidx.compose.ui.graphics.Color
@@ -178,15 +178,15 @@ val Share: ImageVector
         ) {
           // M 0 32
           moveTo(x = 0.0f, y = 32.0f)
-        // l -1.3987644E-6 -32
-        lineToRelative(dx = -1.3987644E-6f, dy = -32.0f)
-        // l 32 -1.3987644E-6
-        lineToRelative(dx = 32.0f, dy = -1.3987644E-6f)
-        // l 1.3987644E-6 32z
-        lineToRelative(dx = 1.3987644E-6f, dy = 32.0f)
-        close()
-      }
-    }.build()
+          // l -1.3987644E-6 -32
+          lineToRelative(dx = -1.3987644E-6f, dy = -32.0f)
+          // l 32 -1.3987644E-6
+          lineToRelative(dx = 32.0f, dy = -1.3987644E-6f)
+          // l 1.3987644E-6 32z
+          lineToRelative(dx = 1.3987644E-6f, dy = 32.0f)
+          close()
+        }
+      }.build()
       .also { _share = it }
   }
 

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.actions.formatting
 
 import androidx.compose.ui.graphics.Color
@@ -400,34 +400,34 @@ val DropPhotoFilled: ImageVector
           close()
         }
         // <rect width="2" height="2" x="3.0" y="27.0" fill="#000" />
-      path(
-        fill = SolidColor(Color(0xFF000000)),
-      ) {
-        // M 3 27
-        moveTo(x = 3.0f, y = 27.0f)
-        // h 2
-        horizontalLineToRelative(dx = 2.0f)
-        // v 2
-        verticalLineToRelative(dy = 2.0f)
-        // h -2z
-        horizontalLineToRelative(dx = -2.0f)
-        close()
-      }
-      // <rect width="32" height="32" fill="#000" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+        path(
+          fill = SolidColor(Color(0xFF000000)),
+        ) {
+          // M 3 27
+          moveTo(x = 3.0f, y = 27.0f)
+          // h 2
+          horizontalLineToRelative(dx = 2.0f)
+          // v 2
+          verticalLineToRelative(dy = 2.0f)
+          // h -2z
+          horizontalLineToRelative(dx = -2.0f)
+          close()
+        }
+        // <rect width="32" height="32" fill="#000" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _dropPhotoFilled = it }
   }
 

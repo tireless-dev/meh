@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 @file:Suppress("ktlint:standard:filename")
 
 package dev.tireless.meh.icon.organization.file

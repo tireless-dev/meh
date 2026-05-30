@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.brand.social
 
 import androidx.compose.ui.graphics.Color
@@ -974,82 +974,82 @@ val LogoSnapchat: ImageVector
             dy1 = 0.06f,
           )
           // a 0.6 0.6 0 0 1 0.45 0.48
-        arcToRelative(
-          a = 0.6f,
-          b = 0.6f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = true,
-          dx1 = 0.45f,
-          dy1 = 0.48f,
-        )
-        // c 0 0.18 -0.14 0.45 -0.8 0.72
-        curveToRelative(
-          dx1 = 0.0f,
-          dy1 = 0.18f,
-          dx2 = -0.14f,
-          dy2 = 0.45f,
-          dx3 = -0.8f,
-          dy3 = 0.72f,
-        )
-        // l -0.26 0.08
-        lineToRelative(dx = -0.26f, dy = 0.08f)
-        // c -0.37 0.12 -0.93 0.3 -1.1 0.7
-        curveToRelative(
-          dx1 = -0.37f,
-          dy1 = 0.12f,
-          dx2 = -0.93f,
-          dy2 = 0.3f,
-          dx3 = -1.1f,
-          dy3 = 0.7f,
-        )
-        // a 1 1 0 0 0 0.1 0.79
-        arcToRelative(
-          a = 1.0f,
-          b = 1.0f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = false,
-          dx1 = 0.1f,
-          dy1 = 0.79f,
-        )
-        // a 5.4 5.4 0 0 0 3.7 3.1
-        arcToRelative(
-          a = 5.4f,
-          b = 5.4f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = false,
-          dx1 = 3.7f,
-          dy1 = 3.1f,
-        )
-        // a 0.2 0.2 0 0 1 0.17 0.23z
-        arcToRelative(
-          a = 0.2f,
-          b = 0.2f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = true,
-          dx1 = 0.17f,
-          dy1 = 0.23f,
-        )
-        close()
-      }
-      // <rect width="32" height="32" fill="#000" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+          arcToRelative(
+            a = 0.6f,
+            b = 0.6f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = true,
+            dx1 = 0.45f,
+            dy1 = 0.48f,
+          )
+          // c 0 0.18 -0.14 0.45 -0.8 0.72
+          curveToRelative(
+            dx1 = 0.0f,
+            dy1 = 0.18f,
+            dx2 = -0.14f,
+            dy2 = 0.45f,
+            dx3 = -0.8f,
+            dy3 = 0.72f,
+          )
+          // l -0.26 0.08
+          lineToRelative(dx = -0.26f, dy = 0.08f)
+          // c -0.37 0.12 -0.93 0.3 -1.1 0.7
+          curveToRelative(
+            dx1 = -0.37f,
+            dy1 = 0.12f,
+            dx2 = -0.93f,
+            dy2 = 0.3f,
+            dx3 = -1.1f,
+            dy3 = 0.7f,
+          )
+          // a 1 1 0 0 0 0.1 0.79
+          arcToRelative(
+            a = 1.0f,
+            b = 1.0f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = false,
+            dx1 = 0.1f,
+            dy1 = 0.79f,
+          )
+          // a 5.4 5.4 0 0 0 3.7 3.1
+          arcToRelative(
+            a = 5.4f,
+            b = 5.4f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = false,
+            dx1 = 3.7f,
+            dy1 = 3.1f,
+          )
+          // a 0.2 0.2 0 0 1 0.17 0.23z
+          arcToRelative(
+            a = 0.2f,
+            b = 0.2f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = true,
+            dx1 = 0.17f,
+            dy1 = 0.23f,
+          )
+          close()
+        }
+        // <rect width="32" height="32" fill="#000" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _logoSnapchat = it }
   }
 

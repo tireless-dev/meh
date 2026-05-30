@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.planning.weather
 
 import androidx.compose.ui.graphics.Color
@@ -477,41 +477,41 @@ val FloodWarning: ImageVector
             b = 5.02f,
             theta = 0.0f,
             isMoreThanHalf = false,
-          isPositiveArc = false,
-          dx1 = 8.0f,
-          dy1 = 0.0f,
-        )
-        // A 5 5 0 0 0 25 23
-        arcTo(
-          horizontalEllipseRadius = 5.0f,
-          verticalEllipseRadius = 5.0f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = false,
-          x1 = 25.0f,
-          y1 = 23.0f,
-        )
-        // h 5
-        horizontalLineToRelative(dx = 5.0f)
-        // v -2z
-        verticalLineToRelative(dy = -2.0f)
-        close()
-      }
-      // <rect width="32" height="32" fill="#000" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+            isPositiveArc = false,
+            dx1 = 8.0f,
+            dy1 = 0.0f,
+          )
+          // A 5 5 0 0 0 25 23
+          arcTo(
+            horizontalEllipseRadius = 5.0f,
+            verticalEllipseRadius = 5.0f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = false,
+            x1 = 25.0f,
+            y1 = 23.0f,
+          )
+          // h 5
+          horizontalLineToRelative(dx = 5.0f)
+          // v -2z
+          verticalLineToRelative(dy = -2.0f)
+          close()
+        }
+        // <rect width="32" height="32" fill="#000" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _floodWarning = it }
   }
 

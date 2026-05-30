@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.actions.formatting
 
 import androidx.compose.ui.graphics.Color
@@ -83,11 +83,11 @@ val SquareSolid: ImageVector
           verticalLineTo(y = 0.0f)
           // h 32
           horizontalLineToRelative(dx = 32.0f)
-        // v 32z
-        verticalLineToRelative(dy = 32.0f)
-        close()
-      }
-    }.build()
+          // v 32z
+          verticalLineToRelative(dy = 32.0f)
+          close()
+        }
+      }.build()
       .also { _squareSolid = it }
   }
 

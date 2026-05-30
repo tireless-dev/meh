@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.enterprise.ai
 
 import androidx.compose.ui.graphics.Color
@@ -124,13 +124,13 @@ val AiLaunch: ImageVector
           moveTo(x = 32.0f, y = 32.0f)
           // l -32 0
           lineToRelative(dx = -32.0f, dy = 0.0f)
-        // l 0 -32
-        lineToRelative(dx = 0.0f, dy = -32.0f)
-        // l 32 -0z
-        lineToRelative(dx = 32.0f, dy = -0.0f)
-        close()
-      }
-    }.build()
+          // l 0 -32
+          lineToRelative(dx = 0.0f, dy = -32.0f)
+          // l 32 -0z
+          lineToRelative(dx = 32.0f, dy = -0.0f)
+          close()
+        }
+      }.build()
       .also { _aiLaunch = it }
   }
 

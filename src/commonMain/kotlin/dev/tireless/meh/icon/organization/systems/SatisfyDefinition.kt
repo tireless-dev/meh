@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.organization.systems
 
 import androidx.compose.ui.graphics.Color
@@ -333,28 +333,28 @@ val SatisfyDefinition: ImageVector
           moveTo(x = 4.0f, y = 28.0f)
           // h 24
           horizontalLineToRelative(dx = 24.0f)
-        // V 4
-        verticalLineTo(y = 4.0f)
-        // H 4z
-        horizontalLineTo(x = 4.0f)
-        close()
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none;stroke-width:0" stroke-width="0" />
-      path(
-        fill = SolidColor(Color.Transparent),
-        strokeLineWidth = 0.0f,
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+          // V 4
+          verticalLineTo(y = 4.0f)
+          // H 4z
+          horizontalLineTo(x = 4.0f)
+          close()
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none;stroke-width:0" stroke-width="0" />
+        path(
+          fill = SolidColor(Color.Transparent),
+          strokeLineWidth = 0.0f,
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _satisfyDefinition = it }
   }
 

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.organization.data
 
 import androidx.compose.ui.graphics.Color
@@ -576,49 +576,49 @@ val ValueVariableAlt: ImageVector
           // a 11 11 0 0 1 -1.12 1.42
           arcToRelative(
             a = 11.0f,
-          b = 11.0f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = true,
-          dx1 = -1.12f,
-          dy1 = 1.42f,
-        )
-        // a 4 4 0 0 1 -1.05 0.8
-        arcToRelative(
-          a = 4.0f,
-          b = 4.0f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = true,
-          dx1 = -1.05f,
-          dy1 = 0.8f,
-        )
-        // a 2.4 2.4 0 0 1 -1.07 0.25
-        arcToRelative(
-          a = 2.4f,
-          b = 2.4f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = true,
-          dx1 = -1.07f,
-          dy1 = 0.25f,
-        )
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+            b = 11.0f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = true,
+            dx1 = -1.12f,
+            dy1 = 1.42f,
+          )
+          // a 4 4 0 0 1 -1.05 0.8
+          arcToRelative(
+            a = 4.0f,
+            b = 4.0f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = true,
+            dx1 = -1.05f,
+            dy1 = 0.8f,
+          )
+          // a 2.4 2.4 0 0 1 -1.07 0.25
+          arcToRelative(
+            a = 2.4f,
+            b = 2.4f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = true,
+            dx1 = -1.07f,
+            dy1 = 0.25f,
+          )
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _valueVariableAlt = it }
   }
 

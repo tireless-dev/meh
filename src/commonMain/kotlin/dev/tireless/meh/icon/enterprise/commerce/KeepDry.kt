@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.enterprise.commerce
 
 import androidx.compose.ui.graphics.Color
@@ -401,34 +401,34 @@ val KeepDry: ImageVector
             dx2 = 4.0f,
             dy2 = 6.95f,
             dx3 = 4.05f,
-          dy3 = 9.18f,
-        )
-        // A 6.6 6.6 0 0 0 16 14
-        arcTo(
-          horizontalEllipseRadius = 6.6f,
-          verticalEllipseRadius = 6.6f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = false,
-          x1 = 16.0f,
-          y1 = 14.0f,
-        )
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+            dy3 = 9.18f,
+          )
+          // A 6.6 6.6 0 0 0 16 14
+          arcTo(
+            horizontalEllipseRadius = 6.6f,
+            verticalEllipseRadius = 6.6f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = false,
+            x1 = 16.0f,
+            y1 = 14.0f,
+          )
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _keepDry = it }
   }
 

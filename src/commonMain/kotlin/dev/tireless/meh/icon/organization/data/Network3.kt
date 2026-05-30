@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.organization.data
 
 import androidx.compose.ui.graphics.Color
@@ -163,15 +163,15 @@ val Network3: ImageVector
         ) {
           // M 32 32
           moveTo(x = 32.0f, y = 32.0f)
-        // l -32 0
-        lineToRelative(dx = -32.0f, dy = 0.0f)
-        // l 0 -32
-        lineToRelative(dx = 0.0f, dy = -32.0f)
-        // l 32 -0z
-        lineToRelative(dx = 32.0f, dy = -0.0f)
-        close()
-      }
-    }.build()
+          // l -32 0
+          lineToRelative(dx = -32.0f, dy = 0.0f)
+          // l 0 -32
+          lineToRelative(dx = 0.0f, dy = -32.0f)
+          // l 32 -0z
+          lineToRelative(dx = 32.0f, dy = -0.0f)
+          close()
+        }
+      }.build()
       .also { _network3 = it }
   }
 

@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.brand.designanddevelopment
 
 import androidx.compose.ui.graphics.Color
@@ -550,49 +550,49 @@ val LogoFigma: ImageVector
           )
           // c 0 0.5 -0.1 1 -0.3 1.4
           curveToRelative(
-          dx1 = 0.0f,
-          dy1 = 0.5f,
-          dx2 = -0.1f,
-          dy2 = 1.0f,
-          dx3 = -0.3f,
-          dy3 = 1.4f,
-        )
-        // a 8 8 0 0 1 -0.8 1.2
-        arcToRelative(
-          a = 8.0f,
-          b = 8.0f,
-          theta = 0.0f,
-          isMoreThanHalf = false,
-          isPositiveArc = true,
-          dx1 = -0.8f,
-          dy1 = 1.2f,
-        )
-        // c -0.4 0.3 -0.8 0.6 -1.2 0.8z
-        curveToRelative(
-          dx1 = -0.4f,
-          dy1 = 0.3f,
-          dx2 = -0.8f,
-          dy2 = 0.6f,
-          dx3 = -1.2f,
-          dy3 = 0.8f,
-        )
-        close()
-      }
-      // <rect width="32" height="32" fill="#000" style="fill:none" />
-      path(
-        fill = SolidColor(Color.Transparent),
-      ) {
-        // M 0 0
-        moveTo(x = 0.0f, y = 0.0f)
-        // h 32
-        horizontalLineToRelative(dx = 32.0f)
-        // v 32
-        verticalLineToRelative(dy = 32.0f)
-        // h -32z
-        horizontalLineToRelative(dx = -32.0f)
-        close()
-      }
-    }.build()
+            dx1 = 0.0f,
+            dy1 = 0.5f,
+            dx2 = -0.1f,
+            dy2 = 1.0f,
+            dx3 = -0.3f,
+            dy3 = 1.4f,
+          )
+          // a 8 8 0 0 1 -0.8 1.2
+          arcToRelative(
+            a = 8.0f,
+            b = 8.0f,
+            theta = 0.0f,
+            isMoreThanHalf = false,
+            isPositiveArc = true,
+            dx1 = -0.8f,
+            dy1 = 1.2f,
+          )
+          // c -0.4 0.3 -0.8 0.6 -1.2 0.8z
+          curveToRelative(
+            dx1 = -0.4f,
+            dy1 = 0.3f,
+            dx2 = -0.8f,
+            dy2 = 0.6f,
+            dx3 = -1.2f,
+            dy3 = 0.8f,
+          )
+          close()
+        }
+        // <rect width="32" height="32" fill="#000" style="fill:none" />
+        path(
+          fill = SolidColor(Color.Transparent),
+        ) {
+          // M 0 0
+          moveTo(x = 0.0f, y = 0.0f)
+          // h 32
+          horizontalLineToRelative(dx = 32.0f)
+          // v 32
+          verticalLineToRelative(dy = 32.0f)
+          // h -32z
+          horizontalLineToRelative(dx = -32.0f)
+          close()
+        }
+      }.build()
       .also { _logoFigma = it }
   }
 

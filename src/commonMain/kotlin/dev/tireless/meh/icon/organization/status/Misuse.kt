@@ -1,5 +1,5 @@
 // SPDX-License-Identifier: Apache-2.0
-// Copyright 2025 tireless.dev
+// Copyright 2026 tireless.dev
 package dev.tireless.meh.icon.organization.status
 
 import androidx.compose.ui.graphics.Color
@@ -93,11 +93,11 @@ val Misuse: ImageVector
           lineToRelative(dx = 1.6f, dy = 1.6f)
           // l -5.4 5.4
           lineToRelative(dx = -5.4f, dy = 5.4f)
-        // l 5.4 5.4z
-        lineToRelative(dx = 5.4f, dy = 5.4f)
-        close()
-      }
-    }.build()
+          // l 5.4 5.4z
+          lineToRelative(dx = 5.4f, dy = 5.4f)
+          close()
+        }
+      }.build()
       .also { _misuse = it }
   }
 
