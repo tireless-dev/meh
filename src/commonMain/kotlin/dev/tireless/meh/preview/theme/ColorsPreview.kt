@@ -18,7 +18,7 @@ import androidx.compose.ui.unit.dp
 import dev.tireless.meh.component.Text
 import dev.tireless.meh.preview.PreviewTheme
 import dev.tireless.meh.theme.MehTheme
-import org.jetbrains.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.Preview
 
 private data class ColorSwatch(
   val label: String,

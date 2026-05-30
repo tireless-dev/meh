@@ -9,14 +9,14 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.test.junit4.createComposeRule
+import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onRoot
 import androidx.compose.ui.unit.dp
 import com.github.takahirom.roborazzi.captureRoboImage
 import dev.tireless.meh.component.FormHelper
 import dev.tireless.meh.component.FormLabel
 import dev.tireless.meh.component.Text
-import dev.tireless.meh.theme.MehTheme
+import dev.tireless.meh.preview.PreviewTheme
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -35,7 +35,7 @@ class TextSnapshotTest {
   @Test
   fun textDefault() {
     composeTestRule.setContent {
-      MehTheme {
+      PreviewTheme {
         Text("Body 01")
       }
     }
@@ -45,7 +45,7 @@ class TextSnapshotTest {
   @Test
   fun textDisabled() {
     composeTestRule.setContent {
-      MehTheme {
+      PreviewTheme {
         Text(text = "Disabled body", enabled = false)
       }
     }
@@ -55,7 +55,7 @@ class TextSnapshotTest {
   @Test
   fun formLabel() {
     composeTestRule.setContent {
-      MehTheme {
+      PreviewTheme {
         FormLabel(text = "Label")
       }
     }
@@ -65,7 +65,7 @@ class TextSnapshotTest {
   @Test
   fun formHelper() {
     composeTestRule.setContent {
-      MehTheme {
+      PreviewTheme {
         FormHelper(text = "Helper text that wraps to multiple lines for inspection.")
       }
     }
@@ -75,7 +75,7 @@ class TextSnapshotTest {
   @Test
   fun textAllVariants() {
     composeTestRule.setContent {
-      MehTheme {
+      PreviewTheme {
         Column(
           modifier = Modifier.fillMaxWidth(),
           horizontalAlignment = Alignment.Start,

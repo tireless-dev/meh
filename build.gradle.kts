@@ -17,7 +17,7 @@ plugins {
 kotlin {
   android {
     namespace = "dev.tireless.meh"
-    compileSdk = 36
+    compileSdk = 37
     minSdk = 24
 
     withHostTest {
@@ -32,7 +32,6 @@ kotlin {
   jvm("desktop")
 
   listOf(
-    iosX64(),
     iosArm64(),
     iosSimulatorArm64(),
   ).forEach { iosTarget ->
@@ -44,16 +43,16 @@ kotlin {
 
   sourceSets {
     commonMain.dependencies {
-      implementation(compose.runtime)
-      implementation(compose.foundation)
-      implementation(compose.ui)
-      implementation(compose.components.uiToolingPreview)
-      implementation(compose.components.resources)
+      implementation(libs.compose.runtime)
+      implementation(libs.compose.foundation)
+      implementation(libs.compose.ui)
+      implementation(libs.compose.ui.tooling.preview)
+      implementation(libs.compose.components.resources)
     }
 
     androidMain.dependencies {
-      implementation(compose.preview)
-      implementation(compose.uiTooling)
+      implementation(libs.compose.ui.tooling.preview)
+      implementation(libs.compose.ui.tooling)
     }
 
     getByName("androidHostTest") {

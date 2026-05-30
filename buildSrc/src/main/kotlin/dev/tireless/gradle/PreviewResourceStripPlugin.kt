@@ -49,7 +49,7 @@ class PreviewResourceStripPlugin : Plugin<Project> {
         },
       )
 
-      listOf("iosArm64Klib", "iosX64Klib", "iosSimulatorArm64Klib").forEach { taskName ->
+      listOf("iosArm64Klib", "iosSimulatorArm64Klib").forEach { taskName ->
         project.tasks.matching { task -> task.name == taskName }.configureEach(
           object : Action<Task> {
             override fun execute(task: Task) {

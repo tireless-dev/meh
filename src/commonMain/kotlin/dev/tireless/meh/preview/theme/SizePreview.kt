@@ -24,7 +24,7 @@ import dev.tireless.meh.theme.MehTheme
 import dev.tireless.meh.theme.ModalSize
 import dev.tireless.meh.theme.ToggleSize
 import dev.tireless.meh.theme.dp
-import org.jetbrains.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.Preview
 
 private data class SizeSample(
   val label: String,

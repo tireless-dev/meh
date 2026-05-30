@@ -21,7 +21,7 @@ import dev.tireless.meh.component.Text
 import dev.tireless.meh.preview.PreviewTheme
 import dev.tireless.meh.theme.MehTheme
 import dev.tireless.meh.theme.Spacing
-import org.jetbrains.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.Preview
 
 private data class SpacingSample(
   val label: String,

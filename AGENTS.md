@@ -8,7 +8,7 @@ This file provides guidance for AI agents working on this codebase.
 
 - **Package:** `dev.tireless.meh`
 - **Maven coordinates:** `dev.tireless:meh:<version>`
-- **Targets:** Android, iOS (arm64, x64, simulator), Desktop (JVM)
+- **Targets:** Android, iOS (arm64, simulator), Desktop (JVM)
 
 ## Tech Stack
 
@@ -41,9 +41,17 @@ meh/
 ./gradlew publishToMavenLocal    # Publish all variants to ~/.m2/repository
 ./gradlew spotlessCheck          # Check code formatting
 ./gradlew spotlessApply          # Auto-fix code formatting
+./gradlew testAndroidHostTest    # Run snapshot tests (verify)
+./gradlew recordRoborazziAndroidHostTest # Record new snapshots
 ```
 
 ## Key Conventions
+
+### Testing & Snapshots
+- **Roborazzi** is used for snapshot testing in `src/androidHostTest`.
+- Snapshots are stored in `src/androidHostTest/snapshots`.
+- Use `NATIVE` graphics mode (configured in `src/androidHostTest/resources/robolectric.properties`).
+- When adding new components, add a corresponding snapshot test in `dev.tireless.meh.snapshot`.
 
 ### Dependencies
 - Use `compose.*` accessors from the Compose Multiplatform plugin (e.g., `compose.runtime`, `compose.foundation`)
@@ -57,8 +65,8 @@ meh/
 - `iosMain` - iOS-specific code (only if needed)
 
 ### Previews
-- Use `org.jetbrains.compose.ui.tooling.preview.Preview` (multiplatform)
-- NOT `androidx.compose.ui.tooling.preview.Preview` (Android-only)
+- Use `androidx.compose.ui.tooling.preview.Preview` (multiplatform in 1.11.0+)
+- Avoid the deprecated `org.jetbrains.compose.ui.tooling.preview.Preview`
 
 ### Versioning
 - Version is set in `build.gradle.kts` via `version = "x.x.x"`
@@ -72,7 +80,6 @@ Artifacts are published to Maven Local by default. Published variants:
 - `dev.tireless:meh-desktop` - Desktop JVM JAR
 - `dev.tireless:meh-iosarm64` - iOS ARM64
 - `dev.tireless:meh-iossimulatorarm64` - iOS Simulator
-- `dev.tireless:meh-iosx64` - iOS x64
 
 ## Notes
 

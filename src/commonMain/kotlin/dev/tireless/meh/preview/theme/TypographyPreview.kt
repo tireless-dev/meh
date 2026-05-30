@@ -15,7 +15,7 @@ import dev.tireless.meh.preview.PreviewTheme
 import dev.tireless.meh.preview.previewFontFamilySc
 import dev.tireless.meh.preview.previewFontFamilyTc
 import dev.tireless.meh.theme.MehTheme
-import org.jetbrains.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.tooling.preview.Preview
 
 private data class TypographySample(
   val label: String,
