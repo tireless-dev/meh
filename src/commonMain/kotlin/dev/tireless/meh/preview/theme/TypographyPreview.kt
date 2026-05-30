@@ -117,7 +117,7 @@ private fun TypographyPreviewContent(
 
 @Preview(name = "Typography – Latin", showBackground = true)
 @Composable
-private fun TypographyPreviewLatin() {
+internal fun TypographyPreviewLatin() {
   PreviewTheme {
     TypographyPreviewContent(
       title = "IBM Plex Sans (Latin)",
@@ -128,7 +128,7 @@ private fun TypographyPreviewLatin() {
 
 @Preview(name = "Typography – Chinese SC", showBackground = true)
 @Composable
-private fun TypographyPreviewSc() {
+internal fun TypographyPreviewSc() {
   PreviewTheme(fontFamily = previewFontFamilySc()) {
     TypographyPreviewContent(
       title = "IBM Plex Sans SC",
@@ -139,7 +139,7 @@ private fun TypographyPreviewSc() {
 
 @Preview(name = "Typography – Chinese TC", showBackground = true)
 @Composable
-private fun TypographyPreviewTc() {
+internal fun TypographyPreviewTc() {
   PreviewTheme(fontFamily = previewFontFamilyTc()) {
     TypographyPreviewContent(
       title = "IBM Plex Sans TC",

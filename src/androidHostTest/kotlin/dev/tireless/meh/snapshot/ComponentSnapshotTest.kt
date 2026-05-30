@@ -6,10 +6,7 @@ package dev.tireless.meh.snapshot
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onRoot
 import com.github.takahirom.roborazzi.captureRoboImage
-import dev.tireless.meh.component.Button
-import dev.tireless.meh.component.ButtonType
-import dev.tireless.meh.preview.PreviewTheme
-import dev.tireless.meh.theme.ControlSize
+import dev.tireless.meh.preview.component.*
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -20,37 +17,63 @@ import org.robolectric.annotation.GraphicsMode
 @RunWith(RobolectricTestRunner::class)
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
 @Config(sdk = [35], qualifiers = "w400dp-h800dp-xxhdpi")
-class ButtonSnapshotTest {
+class ComponentSnapshotTest {
 
   @get:Rule
   val composeTestRule = createComposeRule()
 
   @Test
-  fun buttonPrimary() {
+  fun text() {
     composeTestRule.setContent {
-      PreviewTheme {
-        Button(text = "Primary", onClick = {})
-      }
+      TextPreview()
     }
     composeTestRule.onRoot().captureRoboImage()
   }
 
   @Test
-  fun buttonSecondary() {
+  fun buttonTypes() {
     composeTestRule.setContent {
-      PreviewTheme {
-        Button(text = "Secondary", type = ButtonType.Secondary, onClick = {})
-      }
+      ButtonPreviewTypes()
     }
     composeTestRule.onRoot().captureRoboImage()
   }
 
   @Test
-  fun buttonSmall() {
+  fun buttonSizes() {
     composeTestRule.setContent {
-      PreviewTheme {
-        Button(text = "Small", onClick = {}, size = ControlSize.Small)
-      }
+      ButtonPreviewSizes()
+    }
+    composeTestRule.onRoot().captureRoboImage()
+  }
+
+  @Test
+  fun iconButtonMono() {
+    composeTestRule.setContent {
+      IconButtonPreviewMono()
+    }
+    composeTestRule.onRoot().captureRoboImage()
+  }
+
+  @Test
+  fun iconButtonStates() {
+    composeTestRule.setContent {
+      IconButtonPreviewStates()
+    }
+    composeTestRule.onRoot().captureRoboImage()
+  }
+
+  @Test
+  fun radioHorizontal() {
+    composeTestRule.setContent {
+      RadioPreviewHorizontal()
+    }
+    composeTestRule.onRoot().captureRoboImage()
+  }
+
+  @Test
+  fun radioVertical() {
+    composeTestRule.setContent {
+      RadioPreviewVertical()
     }
     composeTestRule.onRoot().captureRoboImage()
   }

@@ -12,7 +12,7 @@ import androidx.compose.ui.tooling.preview.Preview
   heightDp = PREVIEW_HEIGHT_DP,
 )
 @Composable
-private fun IconPackEnterpriseCommercePreview() {
+internal fun IconPackEnterpriseCommercePreview() {
   IconSubcategoryPreview(
     categoryName = "Enterprise",
     subcategoryName = "Commerce",

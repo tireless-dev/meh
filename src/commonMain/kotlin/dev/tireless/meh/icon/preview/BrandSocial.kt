@@ -12,7 +12,7 @@ import androidx.compose.ui.tooling.preview.Preview
   heightDp = PREVIEW_HEIGHT_DP,
 )
 @Composable
-private fun IconPackBrandSocialPreview() {
+internal fun IconPackBrandSocialPreview() {
   IconSubcategoryPreview(
     categoryName = "Brand",
     subcategoryName = "Social",
