@@ -1,0 +1,44 @@
+// SPDX-License-Identifier: Apache-2.0
+// Copyright 2026 tireless.dev
+package dev.tireless.meh.icon
+
+import androidx.compose.ui.test.junit4.v2.createComposeRule
+import androidx.compose.ui.test.onRoot
+import com.github.takahirom.roborazzi.captureRoboImage
+import dev.tireless.meh.icon.preview.IconPackActionsControlsPreview
+import dev.tireless.meh.icon.preview.IconPackActionsFormattingPreview
+import dev.tireless.meh.icon.preview.IconPackActionsNavigationPreview
+import dev.tireless.meh.icon.preview.IconPackActionsOperationsPreview
+import dev.tireless.meh.icon.preview.IconPackActionsTogglePreview
+import org.junit.Rule
+import org.junit.Test
+import org.junit.runner.RunWith
+import org.robolectric.RobolectricTestRunner
+import org.robolectric.annotation.Config
+import org.robolectric.annotation.GraphicsMode
+
+@RunWith(RobolectricTestRunner::class)
+@GraphicsMode(GraphicsMode.Mode.NATIVE)
+@Config(sdk = [35], qualifiers = "w800dp-h4000dp-xxhdpi")
+class ActionsIconSnapshotTest {
+
+  @get:Rule
+  val composeTestRule = createComposeRule()
+
+  private fun captureIconPreview(content: @androidx.compose.runtime.Composable () -> Unit) {
+    composeTestRule.setContent {
+      content()
+    }
+    composeTestRule.onRoot().captureRoboImage()
+  }
+
+  @Test fun controls() = captureIconPreview { IconPackActionsControlsPreview() }
+
+  @Test fun formatting() = captureIconPreview { IconPackActionsFormattingPreview() }
+
+  @Test fun navigation() = captureIconPreview { IconPackActionsNavigationPreview() }
+
+  @Test fun operations() = captureIconPreview { IconPackActionsOperationsPreview() }
+
+  @Test fun toggle() = captureIconPreview { IconPackActionsTogglePreview() }
+}

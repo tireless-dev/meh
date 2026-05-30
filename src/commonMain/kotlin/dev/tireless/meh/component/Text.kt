@@ -11,6 +11,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextDecoration
 import dev.tireless.meh.theme.ControlSize
 import dev.tireless.meh.theme.MehTheme
 import dev.tireless.meh.theme.dp
@@ -25,6 +26,7 @@ fun Text(
   color: Color = Color.Unspecified,
   alignment: Alignment = Alignment.Center,
   textAlign: TextAlign = TextAlign.Start,
+  textDecoration: TextDecoration = TextDecoration.None,
 ) {
   val mergedStyle =
     style.copy(
@@ -39,6 +41,7 @@ fun Text(
         MehTheme.colors.textDisabled
       },
       textAlign = textAlign,
+      textDecoration = textDecoration,
     )
 
   Box(

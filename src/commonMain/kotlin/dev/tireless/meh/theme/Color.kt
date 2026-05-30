@@ -19,8 +19,12 @@ val white = Color(0xffffffff)
 val red60 = Color(0xffda1e28)
 val red30 = Color(0xffffb3b8)
 val red40 = Color(0xffff8389)
+val red20 = Color(0xffffd7d9)
+val red80 = Color(0xff750e13)
 val green50 = Color(0xff24a148)
 val green40 = Color(0xff42be65)
+val green20 = Color(0xffdefbe6)
+val green80 = Color(0xff0e6027)
 val yellow30 = Color(0xfff1c21b)
 val blue80 = Color(0xff002d9c)
 val blue70 = Color(0xff0043ce)
@@ -28,6 +32,14 @@ val blue60 = Color(0xff0f62fe)
 val blue50 = Color(0xff4589ff)
 val blue40 = Color(0xff78a9ff)
 val blue20 = Color(0xffd0e2ff)
+val magenta20 = Color(0xffffd6e8)
+val magenta80 = Color(0xff740937)
+val purple20 = Color(0xffe8daff)
+val purple80 = Color(0xff491d8b)
+val cyan20 = Color(0xffd1f0ff)
+val cyan80 = Color(0xff00539a)
+val teal20 = Color(0xffd9fbfb)
+val teal80 = Color(0xff005d5d)
 
 @Immutable
 data class Colors(
@@ -84,6 +96,21 @@ data class Colors(
   val buttonPrimary: Color,
   val buttonSecondary: Color,
   val buttonDangerPrimary: Color,
+  // tags
+  val tagGray: ColorPair,
+  val tagBlue: ColorPair,
+  val tagGreen: ColorPair,
+  val tagRed: ColorPair,
+  val tagMagenta: ColorPair,
+  val tagPurple: ColorPair,
+  val tagCyan: ColorPair,
+  val tagTeal: ColorPair,
+)
+
+@Immutable
+data class ColorPair(
+  val background: Color,
+  val text: Color,
 )
 
 val whiteColors get() =
@@ -141,6 +168,15 @@ val whiteColors get() =
     buttonPrimary = blue60,
     buttonSecondary = gray80,
     buttonDangerPrimary = red60,
+    // tags
+    tagGray = ColorPair(gray20, gray100),
+    tagBlue = ColorPair(blue20, blue80),
+    tagGreen = ColorPair(green20, green80),
+    tagRed = ColorPair(red20, red80),
+    tagMagenta = ColorPair(magenta20, magenta80),
+    tagPurple = ColorPair(purple20, purple80),
+    tagCyan = ColorPair(cyan20, cyan80),
+    tagTeal = ColorPair(teal20, teal80),
   )
 
 val gray90Colors get() =
@@ -198,4 +234,13 @@ val gray90Colors get() =
     buttonPrimary = blue60,
     buttonSecondary = gray60,
     buttonDangerPrimary = red40,
+    // tags
+    tagGray = ColorPair(gray70, gray10),
+    tagBlue = ColorPair(blue80, blue20),
+    tagGreen = ColorPair(green80, green20),
+    tagRed = ColorPair(red80, red20),
+    tagMagenta = ColorPair(magenta80, magenta20),
+    tagPurple = ColorPair(purple80, purple20),
+    tagCyan = ColorPair(cyan80, cyan20),
+    tagTeal = ColorPair(teal80, teal20),
   )
