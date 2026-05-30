@@ -13,22 +13,22 @@
 - [x] Number input
 - [x] Search
 - [x] Form
-- [ ] Select / Dropdown
+- [x] Select / Dropdown
 
 ## Batch 3: Navigation & Structure
-- [ ] Tabs
-- [ ] Breadcrumb
-- [ ] Accordion
-- [ ] Tile
-- [ ] List / Contained list
-- [ ] Pagination
+- [x] Tabs
+- [x] Breadcrumb
+- [x] Accordion
+- [x] Tile
+- [x] List / Contained list
+- [x] Pagination
 
 ## Batch 4: Overlays & Contextual UI
-- [ ] Tooltip / Toggletip
-- [ ] Popover
-- [ ] Menu / Menu buttons
-- [ ] Modal
-- [ ] Notification
+- [x] Tooltip / Toggletip
+- [x] Popover
+- [x] Menu / Menu buttons
+- [x] Modal
+- [x] Notification
 
 ## Batch 5: Advanced & Specialized
 - [ ] Data table
