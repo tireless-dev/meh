@@ -31,10 +31,10 @@
 - [x] Notification
 
 ## Batch 5: Advanced & Specialized
-- [ ] Data table
-- [ ] Tree view
-- [ ] Date picker
-- [ ] File uploader
-- [ ] Content switcher
-- [ ] AI label
-- [ ] UI shell
+- [x] Data table
+- [x] Tree view
+- [x] Date picker
+- [x] File uploader
+- [x] Content switcher
+- [x] AI label
+- [x] UI shell
