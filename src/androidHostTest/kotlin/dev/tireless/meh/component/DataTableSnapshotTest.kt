@@ -5,7 +5,7 @@ package dev.tireless.meh.component
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onRoot
 import com.github.takahirom.roborazzi.captureRoboImage
-import dev.tireless.meh.preview.component.Batch5Preview
+import dev.tireless.meh.preview.component.DataTablePreview
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -15,16 +15,16 @@ import org.robolectric.annotation.GraphicsMode
 
 @RunWith(RobolectricTestRunner::class)
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
-@Config(sdk = [35], qualifiers = "w400dp-h1000dp-xxhdpi")
-class Batch5SnapshotTest {
+@Config(sdk = [35], qualifiers = "w400dp-h800dp-xxhdpi")
+class DataTableSnapshotTest {
 
   @get:Rule
   val composeTestRule = createComposeRule()
 
   @Test
-  fun batch5() {
+  fun dataTable() {
     composeTestRule.setContent {
-      Batch5Preview()
+      DataTablePreview()
     }
     composeTestRule.onRoot().captureRoboImage()
   }

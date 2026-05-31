@@ -5,7 +5,7 @@ package dev.tireless.meh.component
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onRoot
 import com.github.takahirom.roborazzi.captureRoboImage
-import dev.tireless.meh.preview.component.AdvancedPreview
+import dev.tireless.meh.preview.component.AiLabelPreview
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -15,16 +15,16 @@ import org.robolectric.annotation.GraphicsMode
 
 @RunWith(RobolectricTestRunner::class)
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
-@Config(sdk = [35], qualifiers = "w400dp-h1000dp-xxhdpi")
-class AdvancedSnapshotTest {
+@Config(sdk = [35], qualifiers = "w400dp-h800dp-xxhdpi")
+class AiLabelSnapshotTest {
 
   @get:Rule
   val composeTestRule = createComposeRule()
 
   @Test
-  fun advanced() {
+  fun aiLabel() {
     composeTestRule.setContent {
-      AdvancedPreview()
+      AiLabelPreview()
     }
     composeTestRule.onRoot().captureRoboImage()
   }
