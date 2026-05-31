@@ -2,16 +2,15 @@
 // Copyright 2026 tireless.dev
 package dev.tireless.meh.preview.component
 
-import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.tooling.preview.Preview
 import dev.tireless.meh.component.TreeNode
 import dev.tireless.meh.component.TreeView
-import dev.tireless.meh.theme.MehTheme
+import dev.tireless.meh.preview.PreviewTheme
 
+@Preview(name = "TreeView", showBackground = true)
 @Composable
-fun TreeViewPreview() {
+internal fun TreeViewPreview() {
   val treeNodes = listOf(
     TreeNode("1", "Node 1", listOf(
       TreeNode("1.1", "Child 1.1"),
@@ -20,10 +19,9 @@ fun TreeViewPreview() {
     TreeNode("2", "Node 2")
   )
 
-  MehTheme {
+  PreviewTheme {
     TreeView(
-      nodes = treeNodes,
-      modifier = Modifier.padding(16.dp)
+      nodes = treeNodes
     )
   }
 }

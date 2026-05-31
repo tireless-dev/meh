@@ -3,13 +3,16 @@
 package dev.tireless.meh.preview.component
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.tooling.preview.Preview
 import dev.tireless.meh.component.Header
 import dev.tireless.meh.component.MonoIconButton
+import dev.tireless.meh.preview.PreviewTheme
 import dev.tireless.meh.theme.MehTheme
 
+@Preview(name = "Header", showBackground = true)
 @Composable
-fun HeaderPreview() {
-  MehTheme {
+internal fun HeaderPreview() {
+  PreviewTheme {
     Header(
       title = "Application Name",
       onMenuClick = {},

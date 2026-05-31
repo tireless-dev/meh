@@ -4,19 +4,18 @@ package dev.tireless.meh.preview.component
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.tooling.preview.Preview
 import dev.tireless.meh.component.Checkbox
 import dev.tireless.meh.component.CheckboxGroup
-import dev.tireless.meh.theme.MehTheme
+import dev.tireless.meh.preview.PreviewTheme
 
+@Preview(name = "Checkbox", showBackground = true)
 @Composable
-fun CheckboxPreview() {
-  MehTheme {
+internal fun CheckboxPreview() {
+  PreviewTheme {
     Column(
-      modifier = Modifier.padding(16.dp),
       verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
       CheckboxGroup(label = "Checkbox states") {

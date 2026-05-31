@@ -2,22 +2,20 @@
 // Copyright 2026 tireless.dev
 package dev.tireless.meh.preview.component
 
-import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.tooling.preview.Preview
 import dev.tireless.meh.component.DatePicker
-import dev.tireless.meh.theme.MehTheme
+import dev.tireless.meh.preview.PreviewTheme
 
+@Preview(name = "DatePicker", showBackground = true)
 @Composable
-fun DatePickerPreview() {
-  MehTheme {
+internal fun DatePickerPreview() {
+  PreviewTheme {
     DatePicker(
       value = "",
       onValueChange = {},
       label = "Date picker label",
-      helper = "mm/dd/yyyy",
-      modifier = Modifier.padding(16.dp)
+      helper = "mm/dd/yyyy"
     )
   }
 }

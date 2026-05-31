@@ -6,21 +6,20 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.ExperimentalLayoutApi
 import androidx.compose.foundation.layout.FlowRow
-import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.tooling.preview.Preview
 import dev.tireless.meh.component.Tag
 import dev.tireless.meh.component.TagType
-import dev.tireless.meh.theme.MehTheme
+import dev.tireless.meh.preview.PreviewTheme
 import dev.tireless.meh.theme.TagSize
 
 @OptIn(ExperimentalLayoutApi::class)
+@Preview(name = "Tag", showBackground = true)
 @Composable
-fun TagPreview() {
-  MehTheme {
+internal fun TagPreview() {
+  PreviewTheme {
     Column(
-      modifier = Modifier.padding(16.dp),
       verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
       FlowRow(

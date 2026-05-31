@@ -4,18 +4,17 @@ package dev.tireless.meh.preview.component
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.tooling.preview.Preview
 import dev.tireless.meh.component.ProgressBar
-import dev.tireless.meh.theme.MehTheme
+import dev.tireless.meh.preview.PreviewTheme
 
+@Preview(name = "ProgressBar", showBackground = true)
 @Composable
-fun ProgressBarPreview() {
-  MehTheme {
+internal fun ProgressBarPreview() {
+  PreviewTheme {
     Column(
-      modifier = Modifier.padding(16.dp),
       verticalArrangement = Arrangement.spacedBy(24.dp),
     ) {
       ProgressBar(progress = 0.5f, label = "Progress bar label", helper = "Optional helper text")

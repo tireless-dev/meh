@@ -3,13 +3,15 @@
 package dev.tireless.meh.preview.component
 
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.tooling.preview.Preview
 import dev.tireless.meh.component.Modal
 import dev.tireless.meh.component.Text
-import dev.tireless.meh.theme.MehTheme
+import dev.tireless.meh.preview.PreviewTheme
 
+@Preview(name = "Modal", showBackground = true)
 @Composable
-fun ModalPreview() {
-  MehTheme {
+internal fun ModalPreview() {
+  PreviewTheme {
     Modal(
       title = "Modal title",
       onDismissRequest = {},

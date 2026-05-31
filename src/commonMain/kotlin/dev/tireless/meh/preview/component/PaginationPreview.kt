@@ -2,23 +2,21 @@
 // Copyright 2026 tireless.dev
 package dev.tireless.meh.preview.component
 
-import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.tooling.preview.Preview
 import dev.tireless.meh.component.Pagination
-import dev.tireless.meh.theme.MehTheme
+import dev.tireless.meh.preview.PreviewTheme
 
+@Preview(name = "Pagination", showBackground = true)
 @Composable
-fun PaginationPreview() {
-  MehTheme {
+internal fun PaginationPreview() {
+  PreviewTheme {
     Pagination(
       page = 1,
       totalItems = 103,
       pageSize = 10,
       onPageChange = {},
-      onPageSizeChange = {},
-      modifier = Modifier.padding(16.dp)
+      onPageSizeChange = {}
     )
   }
 }

@@ -4,18 +4,17 @@ package dev.tireless.meh.preview.component
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.tooling.preview.Preview
 import dev.tireless.meh.component.Select
-import dev.tireless.meh.theme.MehTheme
+import dev.tireless.meh.preview.PreviewTheme
 
+@Preview(name = "Select", showBackground = true)
 @Composable
-fun SelectPreview() {
-  MehTheme {
+internal fun SelectPreview() {
+  PreviewTheme {
     Column(
-      modifier = Modifier.padding(16.dp),
       verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
       Select(

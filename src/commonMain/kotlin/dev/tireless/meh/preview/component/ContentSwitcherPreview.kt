@@ -2,21 +2,19 @@
 // Copyright 2026 tireless.dev
 package dev.tireless.meh.preview.component
 
-import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
+import androidx.compose.ui.tooling.preview.Preview
 import dev.tireless.meh.component.ContentSwitcher
-import dev.tireless.meh.theme.MehTheme
+import dev.tireless.meh.preview.PreviewTheme
 
+@Preview(name = "ContentSwitcher", showBackground = true)
 @Composable
-fun ContentSwitcherPreview() {
-  MehTheme {
+internal fun ContentSwitcherPreview() {
+  PreviewTheme {
     ContentSwitcher(
       selectedIndex = 0,
       options = listOf("Option 1", "Option 2", "Option 3"),
-      onOptionSelected = {},
-      modifier = Modifier.padding(16.dp)
+      onOptionSelected = {}
     )
   }
 }

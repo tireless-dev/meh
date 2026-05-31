@@ -4,19 +4,18 @@ package dev.tireless.meh.preview.component
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.tooling.preview.Preview
 import dev.tireless.meh.component.Link
+import dev.tireless.meh.preview.PreviewTheme
 import dev.tireless.meh.theme.Icons
-import dev.tireless.meh.theme.MehTheme
 
+@Preview(name = "Link", showBackground = true)
 @Composable
-fun LinkPreview() {
-  MehTheme {
+internal fun LinkPreview() {
+  PreviewTheme {
     Column(
-      modifier = Modifier.padding(16.dp),
       verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
       Link(text = "Primary link", onClick = {})
