@@ -23,7 +23,7 @@ import dev.tireless.meh.theme.gray80
 fun ContentSwitcher(
   selectedIndex: Int,
   options: List<String>,
-  onOptionSelected: (Int) -> Unit,
+  onOptionSelect: (Int) -> Unit,
   modifier: Modifier = Modifier,
   enabled: Boolean = true,
   size: ControlSize = ControlSize.Large,
@@ -32,7 +32,7 @@ fun ContentSwitcher(
     modifier = modifier
       .fillMaxWidth()
       .height(size.dp)
-      .background(MehTheme.colors.layer01)
+      .background(MehTheme.colors.layer01),
   ) {
     options.forEachIndexed { index, option ->
       val selected = index == selectedIndex
@@ -41,15 +41,15 @@ fun ContentSwitcher(
           .weight(1f)
           .height(size.dp)
           .background(if (selected) gray80 else Color.Transparent)
-          .clickable(enabled = enabled) { onOptionSelected(index) }
+          .clickable(enabled = enabled) { onOptionSelect(index) }
           .padding(horizontal = MehTheme.spacing.spacing05),
-        contentAlignment = Alignment.Center
+        contentAlignment = Alignment.Center,
       ) {
         Text(
           text = option,
           style = MehTheme.typography.bodyCompact01,
           color = if (selected) MehTheme.colors.textOnColor else MehTheme.colors.textSecondary,
-          enabled = enabled
+          enabled = enabled,
         )
       }
     }

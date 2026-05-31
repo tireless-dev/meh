@@ -29,7 +29,7 @@ fun ProgressIndicator(
 ) {
   Row(
     modifier = modifier.fillMaxWidth(),
-    verticalAlignment = Alignment.Top
+    verticalAlignment = Alignment.Top,
   ) {
     steps.forEachIndexed { index, step ->
       val isComplete = index < currentIndex
@@ -37,35 +37,35 @@ fun ProgressIndicator(
 
       Column(
         modifier = Modifier.weight(1f),
-        horizontalAlignment = Alignment.CenterHorizontally
+        horizontalAlignment = Alignment.CenterHorizontally,
       ) {
         Box(
           modifier = Modifier
             .size(24.dp)
             .clip(CircleShape)
             .background(if (isComplete || isCurrent) MehTheme.colors.interactive else MehTheme.colors.borderStrong01),
-          contentAlignment = Alignment.Center
+          contentAlignment = Alignment.Center,
         ) {
           if (isComplete) {
             Icon(
               image = Icons.Checkmark,
               size = IconSize.XSmall,
-              tint = MehTheme.colors.background
+              tint = MehTheme.colors.background,
             )
           } else if (isCurrent) {
-             Box(
-               modifier = Modifier
-                 .size(8.dp)
-                 .clip(CircleShape)
-                 .background(MehTheme.colors.background)
-             )
+            Box(
+              modifier = Modifier
+                .size(8.dp)
+                .clip(CircleShape)
+                .background(MehTheme.colors.background),
+            )
           }
         }
 
         Text(
           text = step,
           style = MehTheme.typography.label01,
-          modifier = Modifier.padding(top = MehTheme.spacing.spacing03)
+          modifier = Modifier.padding(top = MehTheme.spacing.spacing03),
         )
       }
     }

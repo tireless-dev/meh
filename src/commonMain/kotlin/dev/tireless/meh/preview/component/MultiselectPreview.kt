@@ -15,7 +15,7 @@ internal fun MultiselectPreview() {
       selectedOptions = listOf("Option 1", "Option 2"),
       label = "Multiselect label",
       helper = "Optional helper text",
-      onClick = {}
+      onClick = {},
     )
   }
 }

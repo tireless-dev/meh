@@ -77,21 +77,23 @@ fun TextInput(
         .let {
           if (!isFocused && !isInvalid) {
             it.border(width = 1.dp, color = bottomBorderColor) // This is a simplification; Carbon uses a bottom border mostly.
-          } else it
-        }
+          } else {
+            it
+          }
+        },
     ) {
       Row(
         modifier = Modifier
           .fillMaxWidth()
           .padding(horizontal = MehTheme.spacing.spacing05),
-        verticalAlignment = Alignment.CenterVertically
+        verticalAlignment = Alignment.CenterVertically,
       ) {
         Box(modifier = Modifier.weight(1f)) {
           if (value.isEmpty() && placeholder != null) {
             Text(
               text = placeholder,
               style = MehTheme.typography.body01,
-              color = MehTheme.colors.textPlaceholder
+              color = MehTheme.colors.textPlaceholder,
             )
           }
           BasicTextField(
@@ -101,13 +103,13 @@ fun TextInput(
             enabled = enabled,
             readOnly = readOnly,
             textStyle = MehTheme.typography.body01.copy(
-              color = if (enabled) MehTheme.colors.textPrimary else MehTheme.colors.textDisabled
+              color = if (enabled) MehTheme.colors.textPrimary else MehTheme.colors.textDisabled,
             ),
             cursorBrush = SolidColor(MehTheme.colors.textPrimary),
             visualTransformation = visualTransformation,
             keyboardOptions = keyboardOptions,
             interactionSource = interactionSource,
-            singleLine = true
+            singleLine = true,
           )
         }
 
@@ -116,7 +118,7 @@ fun TextInput(
             image = Icons.WarningFilled,
             size = IconSize.Small,
             tint = MehTheme.colors.supportError,
-            modifier = Modifier.padding(start = MehTheme.spacing.spacing03)
+            modifier = Modifier.padding(start = MehTheme.spacing.spacing03),
           )
         }
 
@@ -133,7 +135,7 @@ fun TextInput(
         text = error,
         style = MehTheme.typography.label01,
         color = MehTheme.colors.textError,
-        modifier = Modifier.padding(top = MehTheme.spacing.spacing02)
+        modifier = Modifier.padding(top = MehTheme.spacing.spacing02),
       )
     } else if (helper != null) {
       FormHelper(text = helper, enabled = enabled, modifier = Modifier.padding(top = MehTheme.spacing.spacing02))

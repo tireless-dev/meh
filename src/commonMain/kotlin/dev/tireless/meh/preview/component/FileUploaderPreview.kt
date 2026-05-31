@@ -5,8 +5,8 @@ package dev.tireless.meh.preview.component
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import dev.tireless.meh.component.FileUploader
 import dev.tireless.meh.component.FileUploaderItem
 import dev.tireless.meh.component.LoadingStatus
@@ -17,13 +17,13 @@ import dev.tireless.meh.preview.PreviewTheme
 internal fun FileUploaderPreview() {
   PreviewTheme {
     Column(
-      verticalArrangement = Arrangement.spacedBy(8.dp)
+      verticalArrangement = Arrangement.spacedBy(8.dp),
     ) {
       FileUploader(
         label = "Account photo",
         description = "Only .jpg and .png files. Max file size is 500kb.",
         buttonText = "Add file",
-        onUploadClick = {}
+        onUploadClick = {},
       )
       FileUploaderItem(fileName = "photo.jpg")
       FileUploaderItem(fileName = "error.png", status = LoadingStatus.Error, onDeleteClick = {})

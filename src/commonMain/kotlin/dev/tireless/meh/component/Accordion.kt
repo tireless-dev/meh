@@ -48,14 +48,14 @@ fun AccordionItem(
   Column(
     modifier = modifier
       .fillMaxWidth()
-      .background(MehTheme.colors.background)
+      .background(MehTheme.colors.background),
   ) {
     // Divider
     Box(
       modifier = Modifier
         .fillMaxWidth()
         .height(1.dp)
-        .background(MehTheme.colors.borderSubtle01)
+        .background(MehTheme.colors.borderSubtle01),
     )
 
     Row(
@@ -64,18 +64,18 @@ fun AccordionItem(
         .height(48.dp)
         .clickable { expanded = !expanded }
         .padding(horizontal = MehTheme.spacing.spacing05),
-      verticalAlignment = Alignment.CenterVertically
+      verticalAlignment = Alignment.CenterVertically,
     ) {
       Icon(
         image = Icons.ChevronDown,
         size = IconSize.Small,
         tint = MehTheme.colors.iconPrimary,
-        modifier = Modifier.rotate(rotation)
+        modifier = Modifier.rotate(rotation),
       )
       Text(
         text = title,
         style = MehTheme.typography.headingCompact01,
-        modifier = Modifier.padding(start = MehTheme.spacing.spacing05)
+        modifier = Modifier.padding(start = MehTheme.spacing.spacing05),
       )
     }
 
@@ -87,8 +87,8 @@ fun AccordionItem(
             start = 40.dp, // 16 (icon) + 16 (spacing) + some extra
             end = MehTheme.spacing.spacing05,
             bottom = MehTheme.spacing.spacing07,
-            top = MehTheme.spacing.spacing03
-          )
+            top = MehTheme.spacing.spacing03,
+          ),
       ) {
         content()
       }

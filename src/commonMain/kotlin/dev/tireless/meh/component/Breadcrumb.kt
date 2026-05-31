@@ -17,7 +17,7 @@ fun Breadcrumb(
 ) {
   Row(
     modifier = modifier,
-    verticalAlignment = Alignment.CenterVertically
+    verticalAlignment = Alignment.CenterVertically,
   ) {
     items.forEachIndexed { index, title ->
       val isLast = index == items.size - 1
@@ -27,18 +27,18 @@ fun Breadcrumb(
           text = title,
           style = MehTheme.typography.label01,
           color = MehTheme.colors.textPrimary,
-          modifier = Modifier.padding(horizontal = MehTheme.spacing.spacing03)
+          modifier = Modifier.padding(horizontal = MehTheme.spacing.spacing03),
         )
       } else {
         Link(
           text = title,
           onClick = { onItemClick(index) },
-          modifier = Modifier.padding(horizontal = MehTheme.spacing.spacing03)
+          modifier = Modifier.padding(horizontal = MehTheme.spacing.spacing03),
         )
         Text(
           text = "/",
           style = MehTheme.typography.label01,
-          color = MehTheme.colors.textSecondary
+          color = MehTheme.colors.textSecondary,
         )
       }
     }

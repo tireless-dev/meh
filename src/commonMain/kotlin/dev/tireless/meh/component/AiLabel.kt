@@ -28,7 +28,7 @@ fun AiLabel(
 ) {
   // Carbon AI Label uses a specific gradient
   val aiGradient = Brush.linearGradient(
-    colors = listOf(Color(0xFFEE5396), Color(0xFF1192E8), Color(0xFFA6C8FF))
+    colors = listOf(Color(0xFFEE5396), Color(0xFF1192E8), Color(0xFFA6C8FF)),
   )
 
   Row(
@@ -37,18 +37,18 @@ fun AiLabel(
       .clip(RoundedCornerShape(size.dp / 2))
       .background(aiGradient)
       .padding(horizontal = 8.dp),
-    verticalAlignment = Alignment.CenterVertically
+    verticalAlignment = Alignment.CenterVertically,
   ) {
     Icon(
       image = MehTheme.icons.AiLabel,
       size = IconSize.XSmall,
-      tint = Color.White
+      tint = Color.White,
     )
     Spacer(Modifier.size(4.dp))
     Text(
       text = "AI",
       style = MehTheme.typography.label01,
-      color = Color.White
+      color = Color.White,
     )
   }
 }

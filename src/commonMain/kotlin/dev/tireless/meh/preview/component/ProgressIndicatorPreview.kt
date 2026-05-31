@@ -14,7 +14,7 @@ internal fun ProgressIndicatorPreview() {
   PreviewTheme {
     ProgressIndicator(
       currentIndex = 1,
-      steps = steps
+      steps = steps,
     )
   }
 }

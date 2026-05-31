@@ -21,18 +21,18 @@ internal fun FormPreview() {
         value = "",
         onValueChange = {},
         label = "First Name",
-        placeholder = "e.g. John"
+        placeholder = "e.g. John",
       )
       TextInput(
         value = "",
         onValueChange = {},
         label = "Last Name",
-        placeholder = "e.g. Doe"
+        placeholder = "e.g. Doe",
       )
       Checkbox(
         checked = false,
         onCheckedChange = {},
-        label = "I agree to the terms and conditions"
+        label = "I agree to the terms and conditions",
       )
       FormButtonGroup {
         Button(text = "Submit", onClick = {})

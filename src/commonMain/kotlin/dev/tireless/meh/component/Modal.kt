@@ -34,34 +34,34 @@ fun Modal(
 ) {
   Dialog(
     onDismissRequest = onDismissRequest,
-    properties = DialogProperties(usePlatformDefaultWidth = false)
+    properties = DialogProperties(usePlatformDefaultWidth = false),
   ) {
     Box(
-      modifier = Modifier
+      modifier = modifier
         .fillMaxSize()
         .background(MehTheme.colors.overlay),
-      contentAlignment = Alignment.Center
+      contentAlignment = Alignment.Center,
     ) {
       Column(
-        modifier = modifier
+        modifier = Modifier
           .widthIn(max = size.dp)
-          .background(MehTheme.colors.background)
+          .background(MehTheme.colors.background),
       ) {
         // Header
         Row(
           modifier = Modifier
             .fillMaxWidth()
             .padding(MehTheme.spacing.spacing05),
-          verticalAlignment = Alignment.Top
+          verticalAlignment = Alignment.Top,
         ) {
           Text(
             text = title,
             style = MehTheme.typography.heading02,
-            modifier = Modifier.weight(1f)
+            modifier = Modifier.weight(1f),
           )
           MonoIconButton(
             icon = MehTheme.icons.Close,
-            onClick = onDismissRequest
+            onClick = onDismissRequest,
           )
         }
 
@@ -70,7 +70,7 @@ fun Modal(
           modifier = Modifier
             .fillMaxWidth()
             .padding(horizontal = MehTheme.spacing.spacing05)
-            .padding(bottom = MehTheme.spacing.spacing07)
+            .padding(bottom = MehTheme.spacing.spacing07),
         ) {
           content()
         }
@@ -78,14 +78,14 @@ fun Modal(
         // Footer
         if (primaryButtonText != null || secondaryButtonText != null) {
           Row(
-            modifier = Modifier.fillMaxWidth()
+            modifier = Modifier.fillMaxWidth(),
           ) {
             if (secondaryButtonText != null) {
               Button(
                 text = secondaryButtonText,
                 onClick = onSecondaryButtonClick ?: {},
                 type = ButtonType.Secondary,
-                modifier = Modifier.weight(1f)
+                modifier = Modifier.weight(1f),
               )
             }
             if (primaryButtonText != null) {
@@ -93,7 +93,7 @@ fun Modal(
                 text = primaryButtonText,
                 onClick = onPrimaryButtonClick ?: {},
                 type = ButtonType.Primary,
-                modifier = Modifier.weight(1f)
+                modifier = Modifier.weight(1f),
               )
             }
           }

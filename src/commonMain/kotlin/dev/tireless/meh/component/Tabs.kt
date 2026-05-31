@@ -27,7 +27,7 @@ enum class TabVariant {
 @Composable
 fun Tabs(
   selectedIndex: Int,
-  onTabSelected: (Int) -> Unit,
+  onTabSelect: (Int) -> Unit,
   tabs: List<String>,
   modifier: Modifier = Modifier,
   variant: TabVariant = TabVariant.Line,
@@ -39,9 +39,9 @@ fun Tabs(
       TabItem(
         title = title,
         selected = index == selectedIndex,
-        onClick = { onTabSelected(index) },
+        onClick = { onTabSelect(index) },
         variant = variant,
-        modifier = Modifier.weight(1f)
+        modifier = Modifier.weight(1f),
       )
     }
   }
@@ -71,24 +71,24 @@ private fun TabItem(
       .clickable(
         interactionSource = interactionSource,
         indication = null,
-        onClick = onClick
+        onClick = onClick,
       ),
-    contentAlignment = Alignment.Center
+    contentAlignment = Alignment.Center,
   ) {
     Column(
       modifier = Modifier.fillMaxWidth(),
-      horizontalAlignment = Alignment.CenterHorizontally
+      horizontalAlignment = Alignment.CenterHorizontally,
     ) {
       Box(
         modifier = Modifier
           .weight(1f)
           .padding(horizontal = MehTheme.spacing.spacing05),
-        contentAlignment = Alignment.Center
+        contentAlignment = Alignment.Center,
       ) {
         Text(
           text = title,
           style = MehTheme.typography.bodyCompact01,
-          color = textColor
+          color = textColor,
         )
       }
 
@@ -97,14 +97,14 @@ private fun TabItem(
           modifier = Modifier
             .fillMaxWidth()
             .height(2.dp)
-            .background(if (selected) MehTheme.colors.interactive else MehTheme.colors.borderSubtle01)
+            .background(if (selected) MehTheme.colors.interactive else MehTheme.colors.borderSubtle01),
         )
       } else if (variant == TabVariant.Contained && !selected) {
         Box(
           modifier = Modifier
             .fillMaxWidth()
             .height(1.dp)
-            .background(MehTheme.colors.borderSubtle01)
+            .background(MehTheme.colors.borderSubtle01),
         )
       }
     }

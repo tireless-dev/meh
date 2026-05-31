@@ -15,7 +15,7 @@ internal fun MenuButtonPreview() {
     MenuButton(
       text = "Actions",
       expanded = false,
-      onExpandedChange = {}
+      onExpandedChange = {},
     ) {
       MenuItem(text = "Option 1", onClick = {})
       MenuItem(text = "Option 2", onClick = {})

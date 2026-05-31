@@ -27,12 +27,12 @@ fun Tooltip(
         modifier = modifier
           .clip(RoundedCornerShape(2.dp))
           .background(gray80)
-          .padding(MehTheme.spacing.spacing03)
+          .padding(MehTheme.spacing.spacing03),
       ) {
         Text(
           text = text,
           style = MehTheme.typography.label01,
-          color = MehTheme.colors.textOnColor
+          color = MehTheme.colors.textOnColor,
         )
       }
     }
@@ -50,6 +50,6 @@ fun Toggletip(
     expanded = expanded,
     onDismissRequest = onDismissRequest,
     modifier = modifier,
-    content = content
+    content = content,
   )
 }

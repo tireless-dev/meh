@@ -46,10 +46,10 @@ fun Toggle(
   val padding = (trackHeight - thumbSize) / 2
 
   val thumbOffset by
-  animateDpAsState(
-    targetValue = if (toggled) trackWidth - thumbSize - padding else padding,
-    label = "ToggleThumbOffset",
-  )
+    animateDpAsState(
+      targetValue = if (toggled) trackWidth - thumbSize - padding else padding,
+      label = "ToggleThumbOffset",
+    )
 
   Column(modifier = modifier) {
     label?.let {

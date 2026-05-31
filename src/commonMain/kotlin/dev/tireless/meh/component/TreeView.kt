@@ -48,26 +48,27 @@ fun TreeView(
 private fun TreeViewNode(
   node: TreeNode,
   level: Int,
+  modifier: Modifier = Modifier,
 ) {
   var expanded by remember { mutableStateOf(false) }
   val hasChildren = node.children.isNotEmpty()
   val rotation by animateFloatAsState(if (expanded) 0f else -90f, label = "ChevronRotation")
 
-  Column(modifier = Modifier.fillMaxWidth()) {
+  Column(modifier = modifier.fillMaxWidth()) {
     Row(
       modifier = Modifier
         .fillMaxWidth()
         .height(32.dp)
         .clickable { if (hasChildren) expanded = !expanded }
         .padding(start = (level * 16).dp + MehTheme.spacing.spacing05, end = MehTheme.spacing.spacing05),
-      verticalAlignment = Alignment.CenterVertically
+      verticalAlignment = Alignment.CenterVertically,
     ) {
       if (hasChildren) {
         Icon(
           image = Icons.CaretDown,
           size = IconSize.XSmall,
           tint = MehTheme.colors.iconPrimary,
-          modifier = Modifier.rotate(rotation)
+          modifier = Modifier.rotate(rotation),
         )
       } else {
         Spacer(Modifier.size(16.dp))
@@ -76,7 +77,7 @@ private fun TreeViewNode(
       Text(
         text = node.label,
         style = MehTheme.typography.bodyCompact01,
-        modifier = Modifier.padding(start = MehTheme.spacing.spacing03)
+        modifier = Modifier.padding(start = MehTheme.spacing.spacing03),
       )
     }
 

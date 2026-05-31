@@ -5,8 +5,8 @@ package dev.tireless.meh.preview.component
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import dev.tireless.meh.component.Link
 import dev.tireless.meh.preview.PreviewTheme
 import dev.tireless.meh.theme.Icons

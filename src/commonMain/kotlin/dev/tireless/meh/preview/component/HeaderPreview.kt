@@ -19,7 +19,7 @@ internal fun HeaderPreview() {
       actions = {
         MonoIconButton(icon = MehTheme.icons.Search, onClick = {})
         MonoIconButton(icon = MehTheme.icons.User, onClick = {})
-      }
+      },
     )
   }
 }

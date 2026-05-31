@@ -31,13 +31,13 @@ fun Header(
       .height(48.dp)
       .background(gray100)
       .padding(horizontal = MehTheme.spacing.spacing05),
-    verticalAlignment = Alignment.CenterVertically
+    verticalAlignment = Alignment.CenterVertically,
   ) {
     if (onMenuClick != null) {
       MonoIconButton(
         icon = MehTheme.icons.Menu,
         onClick = onMenuClick,
-        color = Color.White
+        color = Color.White,
       )
       Spacer(Modifier.size(MehTheme.spacing.spacing05))
     }
@@ -45,7 +45,7 @@ fun Header(
     Text(
       text = title,
       style = MehTheme.typography.headingCompact01,
-      color = Color.White
+      color = Color.White,
     )
 
     Spacer(Modifier.weight(1f))

@@ -34,14 +34,14 @@ fun FileUploader(
 ) {
   Column(
     modifier = modifier.fillMaxWidth(),
-    verticalArrangement = Arrangement.spacedBy(MehTheme.spacing.spacing03)
+    verticalArrangement = Arrangement.spacedBy(MehTheme.spacing.spacing03),
   ) {
     FormLabel(text = label, enabled = enabled)
     Text(
       text = description,
       style = MehTheme.typography.label01,
       color = MehTheme.colors.textSecondary,
-      enabled = enabled
+      enabled = enabled,
     )
 
     Button(
@@ -49,7 +49,7 @@ fun FileUploader(
       onClick = onUploadClick,
       type = ButtonType.Primary,
       enabled = enabled,
-      size = ControlSize.Large
+      size = ControlSize.Large,
     )
   }
 }
@@ -67,30 +67,32 @@ fun FileUploaderItem(
       .height(48.dp)
       .background(MehTheme.colors.layer01)
       .padding(horizontal = MehTheme.spacing.spacing05),
-    verticalAlignment = Alignment.CenterVertically
+    verticalAlignment = Alignment.CenterVertically,
   ) {
     Text(
       text = fileName,
       style = MehTheme.typography.bodyCompact01,
-      modifier = Modifier.weight(1f)
+      modifier = Modifier.weight(1f),
     )
 
     when (status) {
       LoadingStatus.Active -> {
         Loading(size = 16.dp)
       }
+
       LoadingStatus.Finished -> {
         Icon(
           image = MehTheme.icons.CheckmarkFilled,
           size = IconSize.Small,
-          tint = MehTheme.colors.supportSuccess
+          tint = MehTheme.colors.supportSuccess,
         )
       }
+
       LoadingStatus.Error -> {
         Icon(
           image = MehTheme.icons.WarningFilled,
           size = IconSize.Small,
-          tint = MehTheme.colors.supportError
+          tint = MehTheme.colors.supportError,
         )
       }
     }
@@ -100,7 +102,7 @@ fun FileUploaderItem(
       MonoIconButton(
         icon = MehTheme.icons.Close,
         onClick = onDeleteClick,
-        size = ControlSize.Small
+        size = ControlSize.Small,
       )
     }
   }

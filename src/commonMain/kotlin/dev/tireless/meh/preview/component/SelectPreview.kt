@@ -5,8 +5,8 @@ package dev.tireless.meh.preview.component
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import dev.tireless.meh.component.Select
 import dev.tireless.meh.preview.PreviewTheme
 
@@ -21,19 +21,19 @@ internal fun SelectPreview() {
         selectedOption = "Option 1",
         onClick = {},
         label = "Select label",
-        helper = "Optional helper text"
+        helper = "Optional helper text",
       )
       Select(
         selectedOption = "Option 2",
         onClick = {},
         label = "Invalid state",
-        error = "Please select a valid option"
+        error = "Please select a valid option",
       )
       Select(
         selectedOption = "Option 3",
         onClick = {},
         label = "Disabled state",
-        enabled = false
+        enabled = false,
       )
     }
   }

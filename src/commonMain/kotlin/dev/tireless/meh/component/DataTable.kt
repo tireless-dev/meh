@@ -28,14 +28,14 @@ fun DataTable(
         .fillMaxWidth()
         .height(48.dp)
         .background(MehTheme.colors.layer01),
-      verticalAlignment = Alignment.CenterVertically
+      verticalAlignment = Alignment.CenterVertically,
     ) {
       headers.forEach { header ->
         Box(
           modifier = Modifier
             .weight(1f)
             .padding(horizontal = MehTheme.spacing.spacing05),
-          contentAlignment = Alignment.CenterStart
+          contentAlignment = Alignment.CenterStart,
         ) {
           Text(text = header, style = MehTheme.typography.headingCompact01)
         }
@@ -48,21 +48,21 @@ fun DataTable(
         modifier = Modifier
           .fillMaxWidth()
           .height(1.dp)
-          .background(MehTheme.colors.borderSubtle01)
+          .background(MehTheme.colors.borderSubtle01),
       )
       Row(
         modifier = Modifier
           .fillMaxWidth()
           .height(48.dp)
           .background(MehTheme.colors.background),
-        verticalAlignment = Alignment.CenterVertically
+        verticalAlignment = Alignment.CenterVertically,
       ) {
         row.forEach { cell ->
           Box(
             modifier = Modifier
               .weight(1f)
               .padding(horizontal = MehTheme.spacing.spacing05),
-            contentAlignment = Alignment.CenterStart
+            contentAlignment = Alignment.CenterStart,
           ) {
             Text(text = cell, style = MehTheme.typography.body01)
           }

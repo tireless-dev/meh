@@ -15,7 +15,7 @@ internal fun DatePickerPreview() {
       value = "",
       onValueChange = {},
       label = "Date picker label",
-      helper = "mm/dd/yyyy"
+      helper = "mm/dd/yyyy",
     )
   }
 }

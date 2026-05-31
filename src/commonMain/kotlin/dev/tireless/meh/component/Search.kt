@@ -35,20 +35,20 @@ fun Search(
     trailingIcon = {
       Row(
         modifier = Modifier.fillMaxHeight(),
-        verticalAlignment = Alignment.CenterVertically
+        verticalAlignment = Alignment.CenterVertically,
       ) {
         if (value.isNotEmpty()) {
           Box(
             modifier = Modifier
               .fillMaxHeight()
               .clickable(enabled = enabled, onClick = onClear),
-            contentAlignment = Alignment.Center
+            contentAlignment = Alignment.Center,
           ) {
             Icon(
               image = Icons.Close,
               size = IconSize.Small,
               tint = if (enabled) MehTheme.colors.iconPrimary else MehTheme.colors.iconDisabled,
-              modifier = Modifier.padding(horizontal = MehTheme.spacing.spacing03)
+              modifier = Modifier.padding(horizontal = MehTheme.spacing.spacing03),
             )
           }
         }
@@ -56,9 +56,9 @@ fun Search(
           image = Icons.Search,
           size = IconSize.Small,
           tint = if (enabled) MehTheme.colors.iconPrimary else MehTheme.colors.iconDisabled,
-          modifier = Modifier.padding(end = MehTheme.spacing.spacing03)
+          modifier = Modifier.padding(end = MehTheme.spacing.spacing03),
         )
       }
-    }
+    },
   )
 }

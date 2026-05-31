@@ -19,12 +19,12 @@ internal fun CodeSnippetPreview() {
       CodeSnippet(
         code = "npm install @carbon/react",
         variant = CodeSnippetVariant.Single,
-        onCopyClick = {}
+        onCopyClick = {},
       )
 
       CodeSnippet(
         code = "inline code",
-        variant = CodeSnippetVariant.Inline
+        variant = CodeSnippetVariant.Inline,
       )
     }
   }

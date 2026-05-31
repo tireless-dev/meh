@@ -16,7 +16,7 @@ internal fun ModalPreview() {
       title = "Modal title",
       onDismissRequest = {},
       primaryButtonText = "Primary button",
-      secondaryButtonText = "Secondary button"
+      secondaryButtonText = "Secondary button",
     ) {
       Text("Modal content goes here. This is the body of the modal.")
     }

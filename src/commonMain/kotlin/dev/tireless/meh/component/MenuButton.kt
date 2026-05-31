@@ -31,13 +31,13 @@ fun MenuButton(
       enabled = enabled,
       type = type,
       size = size,
-      modifier = Modifier.padding(end = 0.dp) // Avoid padding issue if we added an icon
+      modifier = Modifier.padding(end = 0.dp), // Avoid padding issue if we added an icon
     )
     // Carbon menu button often has a chevron
     Menu(
       expanded = expanded,
       onDismissRequest = { onExpandedChange(false) },
-      content = content
+      content = content,
     )
   }
 }

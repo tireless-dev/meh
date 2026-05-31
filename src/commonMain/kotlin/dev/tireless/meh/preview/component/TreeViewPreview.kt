@@ -12,16 +12,20 @@ import dev.tireless.meh.preview.PreviewTheme
 @Composable
 internal fun TreeViewPreview() {
   val treeNodes = listOf(
-    TreeNode("1", "Node 1", listOf(
-      TreeNode("1.1", "Child 1.1"),
-      TreeNode("1.2", "Child 1.2")
-    )),
-    TreeNode("2", "Node 2")
+    TreeNode(
+      "1",
+      "Node 1",
+      listOf(
+        TreeNode("1.1", "Child 1.1"),
+        TreeNode("1.2", "Child 1.2"),
+      ),
+    ),
+    TreeNode("2", "Node 2"),
   )
 
   PreviewTheme {
     TreeView(
-      nodes = treeNodes
+      nodes = treeNodes,
     )
   }
 }

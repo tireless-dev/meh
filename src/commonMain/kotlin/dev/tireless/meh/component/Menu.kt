@@ -31,7 +31,7 @@ fun Menu(
       Column(modifier = Modifier.fillMaxWidth()) {
         content()
       }
-    }
+    },
   )
 }
 
@@ -48,12 +48,12 @@ fun MenuItem(
       .height(40.dp)
       .clickable(enabled = enabled, onClick = onClick)
       .padding(horizontal = MehTheme.spacing.spacing05),
-    contentAlignment = Alignment.CenterStart
+    contentAlignment = Alignment.CenterStart,
   ) {
     Text(
       text = text,
       style = MehTheme.typography.bodyCompact01,
-      enabled = enabled
+      enabled = enabled,
     )
   }
 }
@@ -68,12 +68,12 @@ fun OverflowMenu(
   Box(modifier = modifier) {
     MonoIconButton(
       icon = MehTheme.icons.OverflowMenuVertical,
-      onClick = { onExpandedChange(!expanded) }
+      onClick = { onExpandedChange(!expanded) },
     )
     Menu(
       expanded = expanded,
       onDismissRequest = { onExpandedChange(false) },
-      content = content
+      content = content,
     )
   }
 }

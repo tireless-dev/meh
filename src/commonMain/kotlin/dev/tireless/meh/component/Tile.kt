@@ -20,7 +20,7 @@ fun Tile(
     modifier = modifier
       .fillMaxWidth()
       .background(MehTheme.colors.layer01)
-      .padding(MehTheme.spacing.spacing05)
+      .padding(MehTheme.spacing.spacing05),
   ) {
     content()
   }
@@ -38,7 +38,7 @@ fun ClickableTile(
       .fillMaxWidth()
       .background(MehTheme.colors.layer01)
       .clickable(enabled = enabled, onClick = onClick)
-      .padding(MehTheme.spacing.spacing05)
+      .padding(MehTheme.spacing.spacing05),
   ) {
     content()
   }

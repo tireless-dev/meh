@@ -16,8 +16,8 @@ internal fun DataTablePreview() {
       rows = listOf(
         listOf("Item 1", "Active", "$100.00"),
         listOf("Item 2", "Disabled", "$50.00"),
-        listOf("Item 3", "Active", "$200.00")
-      )
+        listOf("Item 3", "Active", "$200.00"),
+      ),
     )
   }
 }

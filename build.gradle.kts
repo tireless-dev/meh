@@ -137,7 +137,7 @@ spotless {
         mapOf(
           "compose_allowed_composition_locals" to "LocalColors,LocalSpacing,LocalSizes,LocalFontFamily,LocalIcons",
         ),
-      ).customRuleSets(listOf("io.nlopez.compose.rules:ktlint:0.4.28"))
+      ).customRuleSets(listOf("io.nlopez.compose.rules:ktlint:0.5.9"))
     licenseHeader(
       """
       // SPDX-License-Identifier: Apache-2.0

@@ -26,7 +26,7 @@ fun UnorderedList(
 ) {
   Column(
     modifier = modifier,
-    verticalArrangement = Arrangement.spacedBy(MehTheme.spacing.spacing03)
+    verticalArrangement = Arrangement.spacedBy(MehTheme.spacing.spacing03),
   ) {
     items.forEach { item ->
       Row(verticalAlignment = Alignment.Top) {
@@ -35,7 +35,7 @@ fun UnorderedList(
             .padding(top = 8.dp, end = MehTheme.spacing.spacing04)
             .size(4.dp)
             .clip(CircleShape)
-            .background(MehTheme.colors.textPrimary)
+            .background(MehTheme.colors.textPrimary),
         )
         Text(text = item, style = MehTheme.typography.body01)
       }
@@ -50,14 +50,14 @@ fun OrderedList(
 ) {
   Column(
     modifier = modifier,
-    verticalArrangement = Arrangement.spacedBy(MehTheme.spacing.spacing03)
+    verticalArrangement = Arrangement.spacedBy(MehTheme.spacing.spacing03),
   ) {
     items.forEachIndexed { index, item ->
       Row(verticalAlignment = Alignment.Top) {
         Text(
           text = "${index + 1}.",
           style = MehTheme.typography.body01,
-          modifier = Modifier.padding(end = MehTheme.spacing.spacing04)
+          modifier = Modifier.padding(end = MehTheme.spacing.spacing04),
         )
         Text(text = item, style = MehTheme.typography.body01)
       }
@@ -74,12 +74,12 @@ fun ContainedList(
   Column(
     modifier = modifier
       .fillMaxWidth()
-      .background(MehTheme.colors.layer01)
+      .background(MehTheme.colors.layer01),
   ) {
     Box(
       modifier = Modifier
         .fillMaxWidth()
-        .padding(MehTheme.spacing.spacing05)
+        .padding(MehTheme.spacing.spacing05),
     ) {
       Text(text = title, style = MehTheme.typography.headingCompact01)
     }
@@ -89,12 +89,12 @@ fun ContainedList(
         modifier = Modifier
           .fillMaxWidth()
           .height(1.dp)
-          .background(MehTheme.colors.borderSubtle01)
+          .background(MehTheme.colors.borderSubtle01),
       )
       Box(
         modifier = Modifier
           .fillMaxWidth()
-          .padding(MehTheme.spacing.spacing05)
+          .padding(MehTheme.spacing.spacing05),
       ) {
         Text(text = item, style = MehTheme.typography.bodyCompact01)
       }

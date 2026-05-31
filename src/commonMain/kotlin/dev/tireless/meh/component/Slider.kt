@@ -37,7 +37,7 @@ fun Slider(
         Text(
           text = value.toInt().toString(),
           style = MehTheme.typography.label01,
-          enabled = enabled
+          enabled = enabled,
         )
       }
       Spacer(Modifier.size(MehTheme.spacing.spacing03))
@@ -48,29 +48,29 @@ fun Slider(
       modifier = Modifier
         .fillMaxWidth()
         .height(40.dp),
-      contentAlignment = Alignment.CenterStart
+      contentAlignment = Alignment.CenterStart,
     ) {
       // Track
       Box(
         modifier = Modifier
           .fillMaxWidth()
           .height(4.dp)
-          .background(MehTheme.colors.borderSubtle01)
+          .background(MehTheme.colors.borderSubtle01),
       )
       // Active Track
       Box(
         modifier = Modifier
           .fillMaxWidth((value - min) / (max - min))
           .height(4.dp)
-          .background(if (enabled) MehTheme.colors.interactive else MehTheme.colors.iconDisabled)
+          .background(if (enabled) MehTheme.colors.interactive else MehTheme.colors.iconDisabled),
       )
       // Thumb
       Box(
         modifier = Modifier
-          .padding(start = ( (value - min) / (max - min) * 300).dp) // very loose approx
+          .padding(start = ((value - min) / (max - min) * 300).dp) // very loose approx
           .size(16.dp)
           .clip(CircleShape)
-          .background(if (enabled) MehTheme.colors.interactive else MehTheme.colors.iconDisabled)
+          .background(if (enabled) MehTheme.colors.interactive else MehTheme.colors.iconDisabled),
       )
     }
   }

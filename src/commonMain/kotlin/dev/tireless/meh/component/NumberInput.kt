@@ -50,12 +50,12 @@ fun NumberInput(
     trailingIcon = {
       Row(
         modifier = Modifier.fillMaxHeight(),
-        verticalAlignment = Alignment.CenterVertically
+        verticalAlignment = Alignment.CenterVertically,
       ) {
         Column(
           modifier = Modifier
             .width(40.dp)
-            .fillMaxHeight()
+            .fillMaxHeight(),
         ) {
           Box(
             modifier = Modifier
@@ -64,12 +64,12 @@ fun NumberInput(
               .clickable(enabled = enabled && !readOnly && value + step <= max) {
                 onValueChange((value + step).coerceAtMost(max))
               },
-            contentAlignment = Alignment.Center
+            contentAlignment = Alignment.Center,
           ) {
             Icon(
               image = Icons.CaretUp,
               size = IconSize.XSmall,
-              tint = if (enabled && value + step <= max) MehTheme.colors.iconPrimary else MehTheme.colors.iconDisabled
+              tint = if (enabled && value + step <= max) MehTheme.colors.iconPrimary else MehTheme.colors.iconDisabled,
             )
           }
           Box(
@@ -79,16 +79,16 @@ fun NumberInput(
               .clickable(enabled = enabled && !readOnly && value - step >= min) {
                 onValueChange((value - step).coerceAtLeast(min))
               },
-            contentAlignment = Alignment.Center
+            contentAlignment = Alignment.Center,
           ) {
             Icon(
               image = Icons.CaretDown,
               size = IconSize.XSmall,
-              tint = if (enabled && value - step >= min) MehTheme.colors.iconPrimary else MehTheme.colors.iconDisabled
+              tint = if (enabled && value - step >= min) MehTheme.colors.iconPrimary else MehTheme.colors.iconDisabled,
             )
           }
         }
       }
-    }
+    },
   )
 }

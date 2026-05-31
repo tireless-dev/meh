@@ -16,7 +16,7 @@ internal fun SliderPreview() {
       onValueChange = {},
       label = "Slider label",
       min = 0f,
-      max = 100f
+      max = 100f,
     )
   }
 }

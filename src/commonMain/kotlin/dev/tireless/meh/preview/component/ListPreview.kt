@@ -5,8 +5,8 @@ package dev.tireless.meh.preview.component
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import dev.tireless.meh.component.ContainedList
 import dev.tireless.meh.component.OrderedList
 import dev.tireless.meh.component.UnorderedList
@@ -18,7 +18,7 @@ internal fun ListPreview() {
   val items = listOf("List item 1", "List item 2", "List item 3")
   PreviewTheme {
     Column(
-      verticalArrangement = Arrangement.spacedBy(24.dp)
+      verticalArrangement = Arrangement.spacedBy(24.dp),
     ) {
       UnorderedList(items = items)
       OrderedList(items = items)

@@ -11,13 +11,13 @@ import dev.tireless.meh.theme.ControlSize
 @Composable
 fun Multiselect(
   selectedOptions: List<String>,
+  onClick: () -> Unit,
   modifier: Modifier = Modifier,
   label: String? = null,
   helper: String? = null,
   error: String? = null,
   enabled: Boolean = true,
   size: ControlSize = ControlSize.Large,
-  onClick: () -> Unit,
 ) {
   Select(
     selectedOption = if (selectedOptions.isEmpty()) "" else "${selectedOptions.size} selected",
@@ -27,6 +27,6 @@ fun Multiselect(
     error = error,
     enabled = enabled,
     size = size,
-    onClick = onClick
+    onClick = onClick,
   )
 }

@@ -40,16 +40,16 @@ fun Loading(
 
   val infiniteTransition = rememberInfiniteTransition(label = "LoadingTransition")
   val rotation by
-  infiniteTransition.animateFloat(
-    initialValue = 0f,
-    targetValue = 360f,
-    animationSpec =
-    infiniteRepeatable(
-      animation = tween(1000, easing = LinearEasing),
-      repeatMode = RepeatMode.Restart,
-    ),
-    label = "LoadingRotation",
-  )
+    infiniteTransition.animateFloat(
+      initialValue = 0f,
+      targetValue = 360f,
+      animationSpec =
+      infiniteRepeatable(
+        animation = tween(1000, easing = LinearEasing),
+        repeatMode = RepeatMode.Restart,
+      ),
+      label = "LoadingRotation",
+    )
 
   val trackColor = MehTheme.colors.borderSubtle01
   val activeColor = MehTheme.colors.interactive
@@ -86,6 +86,7 @@ fun InlineLoading(
       LoadingStatus.Active -> {
         Loading(size = 16.dp, modifier = Modifier.size(16.dp))
       }
+
       LoadingStatus.Finished -> {
         Icon(
           image = Icons.CheckmarkFilled,
@@ -93,6 +94,7 @@ fun InlineLoading(
           tint = MehTheme.colors.supportSuccess,
         )
       }
+
       LoadingStatus.Error -> {
         Icon(
           image = Icons.ErrorFilled,

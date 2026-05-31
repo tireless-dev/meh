@@ -5,8 +5,8 @@ package dev.tireless.meh.preview.component
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import dev.tireless.meh.component.ClickableTile
 import dev.tireless.meh.component.Text
 import dev.tireless.meh.component.Tile
@@ -17,7 +17,7 @@ import dev.tireless.meh.preview.PreviewTheme
 internal fun TilePreview() {
   PreviewTheme {
     Column(
-      verticalArrangement = Arrangement.spacedBy(16.dp)
+      verticalArrangement = Arrangement.spacedBy(16.dp),
     ) {
       Tile {
         Text("This is a default tile.")

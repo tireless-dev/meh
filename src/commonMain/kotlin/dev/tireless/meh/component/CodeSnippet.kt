@@ -40,12 +40,12 @@ fun CodeSnippet(
       .let { if (variant != CodeSnippetVariant.Inline) it.fillMaxWidth() else it }
       .background(backgroundColor)
       .padding(horizontal = horizontalPadding, vertical = verticalPadding),
-    verticalAlignment = Alignment.CenterVertically
+    verticalAlignment = Alignment.CenterVertically,
   ) {
     Text(
       text = code,
       style = MehTheme.typography.body01, // Ideally a Monospace font if available
-      modifier = Modifier.weight(1f, fill = variant != CodeSnippetVariant.Inline)
+      modifier = Modifier.weight(1f, fill = variant != CodeSnippetVariant.Inline),
     )
 
     if (variant != CodeSnippetVariant.Inline && onCopyClick != null) {

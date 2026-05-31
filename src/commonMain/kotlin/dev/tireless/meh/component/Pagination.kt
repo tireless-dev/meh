@@ -39,18 +39,18 @@ fun Pagination(
       .height(48.dp)
       .background(MehTheme.colors.background)
       .padding(horizontal = MehTheme.spacing.spacing05),
-    verticalAlignment = Alignment.CenterVertically
+    verticalAlignment = Alignment.CenterVertically,
   ) {
     Text(
       text = "Items per page: ",
       style = MehTheme.typography.label01,
-      color = MehTheme.colors.textSecondary
+      color = MehTheme.colors.textSecondary,
     )
 
     // Simplified select for page size
     Row(
       modifier = Modifier.clickable { /* Show menu */ },
-      verticalAlignment = Alignment.CenterVertically
+      verticalAlignment = Alignment.CenterVertically,
     ) {
       Text(text = pageSize.toString(), style = MehTheme.typography.label01)
       Icon(image = Icons.ChevronDown, size = IconSize.XSmall)
@@ -61,7 +61,7 @@ fun Pagination(
     Text(
       text = "$startItem-$endItem of $totalItems items",
       style = MehTheme.typography.label01,
-      color = MehTheme.colors.textSecondary
+      color = MehTheme.colors.textSecondary,
     )
 
     Spacer(Modifier.padding(start = MehTheme.spacing.spacing07))
@@ -69,7 +69,7 @@ fun Pagination(
     Text(
       text = "$page of $totalPages pages",
       style = MehTheme.typography.label01,
-      color = MehTheme.colors.textSecondary
+      color = MehTheme.colors.textSecondary,
     )
 
     Spacer(Modifier.padding(start = MehTheme.spacing.spacing05))
@@ -78,7 +78,7 @@ fun Pagination(
       image = Icons.CaretLeft,
       size = IconSize.Small,
       tint = if (page > 1) MehTheme.colors.iconPrimary else MehTheme.colors.iconDisabled,
-      modifier = Modifier.clickable(enabled = page > 1) { onPageChange(page - 1) }
+      modifier = Modifier.clickable(enabled = page > 1) { onPageChange(page - 1) },
     )
 
     Spacer(Modifier.padding(start = MehTheme.spacing.spacing03))
@@ -87,7 +87,7 @@ fun Pagination(
       image = Icons.CaretRight,
       size = IconSize.Small,
       tint = if (page < totalPages) MehTheme.colors.iconPrimary else MehTheme.colors.iconDisabled,
-      modifier = Modifier.clickable(enabled = page < totalPages) { onPageChange(page + 1) }
+      modifier = Modifier.clickable(enabled = page < totalPages) { onPageChange(page + 1) },
     )
   }
 }

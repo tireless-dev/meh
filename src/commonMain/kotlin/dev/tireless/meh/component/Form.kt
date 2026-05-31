@@ -46,7 +46,7 @@ fun FormButtonGroup(
 ) {
   Row(
     modifier = modifier.fillMaxWidth().padding(top = MehTheme.spacing.spacing05),
-    horizontalArrangement = Arrangement.spacedBy(MehTheme.spacing.spacing04)
+    horizontalArrangement = Arrangement.spacedBy(MehTheme.spacing.spacing04),
   ) {
     content()
   }

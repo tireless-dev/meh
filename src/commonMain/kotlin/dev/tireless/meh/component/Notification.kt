@@ -44,27 +44,27 @@ fun InlineNotification(
       .fillMaxWidth()
       .background(MehTheme.colors.layer01)
       .background(color.copy(alpha = 0.1f)), // Carbon uses a subtle background
-    verticalAlignment = Alignment.Top
+    verticalAlignment = Alignment.Top,
   ) {
     // Left border indicator
     Box(
       modifier = Modifier
         .width(4.dp)
         .size(64.dp) // height should ideally match row but simplistic for now
-        .background(color)
+        .background(color),
     )
 
     Row(
       modifier = Modifier
         .weight(1f)
         .padding(MehTheme.spacing.spacing05),
-      verticalAlignment = Alignment.Top
+      verticalAlignment = Alignment.Top,
     ) {
       Icon(
         image = icon,
         size = IconSize.Small,
         tint = color,
-        modifier = Modifier.padding(top = 2.dp)
+        modifier = Modifier.padding(top = 2.dp),
       )
 
       Spacer(Modifier.size(MehTheme.spacing.spacing05))
@@ -77,7 +77,7 @@ fun InlineNotification(
         Text(
           text = subtitle,
           style = MehTheme.typography.bodyCompact01,
-          color = MehTheme.colors.textSecondary
+          color = MehTheme.colors.textSecondary,
         )
       }
 
@@ -85,7 +85,7 @@ fun InlineNotification(
         MonoIconButton(
           icon = MehTheme.icons.Close,
           onClick = onClose,
-          size = ControlSize.Small
+          size = ControlSize.Small,
         )
       }
     }
@@ -108,13 +108,13 @@ fun ToastNotification(
       .width(288.dp)
       .background(gray90) // Carbon toast is dark
       .padding(MehTheme.spacing.spacing05),
-    verticalAlignment = Alignment.Top
+    verticalAlignment = Alignment.Top,
   ) {
     Icon(
       image = icon,
       size = IconSize.Small,
       tint = color,
-      modifier = Modifier.padding(top = 2.dp)
+      modifier = Modifier.padding(top = 2.dp),
     )
 
     Spacer(Modifier.size(MehTheme.spacing.spacing05))
@@ -123,18 +123,18 @@ fun ToastNotification(
       Text(
         text = title,
         style = MehTheme.typography.headingCompact01,
-        color = Color.White
+        color = Color.White,
       )
       Text(
         text = subtitle,
         style = MehTheme.typography.bodyCompact01,
-        color = Color.White
+        color = Color.White,
       )
       Text(
         text = caption,
         style = MehTheme.typography.label01,
         color = Color.White.copy(alpha = 0.7f),
-        modifier = Modifier.padding(top = MehTheme.spacing.spacing03)
+        modifier = Modifier.padding(top = MehTheme.spacing.spacing03),
       )
     }
 
@@ -143,18 +143,16 @@ fun ToastNotification(
         icon = MehTheme.icons.Close,
         onClick = onClose,
         size = ControlSize.Small,
-        color = Color.White
+        color = Color.White,
       )
     }
   }
 }
 
 @Composable
-private fun getNotificationAssets(type: NotificationType): Pair<ImageVector, Color> {
-  return when (type) {
-    NotificationType.Error -> MehTheme.icons.ErrorFilled to MehTheme.colors.supportError
-    NotificationType.Success -> MehTheme.icons.CheckmarkFilled to MehTheme.colors.supportSuccess
-    NotificationType.Warning -> MehTheme.icons.WarningFilled to MehTheme.colors.supportWarning
-    NotificationType.Info -> MehTheme.icons.InformationFilled to MehTheme.colors.supportInfo
-  }
+private fun getNotificationAssets(type: NotificationType): Pair<ImageVector, Color> = when (type) {
+  NotificationType.Error -> MehTheme.icons.ErrorFilled to MehTheme.colors.supportError
+  NotificationType.Success -> MehTheme.icons.CheckmarkFilled to MehTheme.colors.supportSuccess
+  NotificationType.Warning -> MehTheme.icons.WarningFilled to MehTheme.colors.supportWarning
+  NotificationType.Info -> MehTheme.icons.InformationFilled to MehTheme.colors.supportInfo
 }

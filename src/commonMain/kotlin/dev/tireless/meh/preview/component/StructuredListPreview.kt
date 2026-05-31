@@ -15,8 +15,8 @@ internal fun StructuredListPreview() {
       headers = listOf("Column 1", "Column 2", "Column 3"),
       rows = listOf(
         listOf("Row 1, Col 1", "Row 1, Col 2", "Row 1, Col 3"),
-        listOf("Row 2, Col 1", "Row 2, Col 2", "Row 2, Col 3")
-      )
+        listOf("Row 2, Col 1", "Row 2, Col 2", "Row 2, Col 3"),
+      ),
     )
   }
 }

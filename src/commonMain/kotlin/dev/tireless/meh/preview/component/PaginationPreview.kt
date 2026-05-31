@@ -16,7 +16,7 @@ internal fun PaginationPreview() {
       totalItems = 103,
       pageSize = 10,
       onPageChange = {},
-      onPageSizeChange = {}
+      onPageSizeChange = {},
     )
   }
 }

@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.movableContentOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -79,9 +80,9 @@ fun Checkbox(
 
 @Composable
 fun CheckboxGroup(
+  modifier: Modifier = Modifier,
   label: String? = null,
   helper: String? = null,
-  modifier: Modifier = Modifier,
   enabled: Boolean = true,
   layout: GroupLayout = GroupLayout.Vertical,
   content: @Composable () -> Unit,
@@ -94,13 +95,15 @@ fun CheckboxGroup(
       FormLabel(text = it, enabled = enabled)
     }
 
+    val contentWithState = remember(content) { movableContentOf(content) }
+
     if (layout == GroupLayout.Horizontal) {
       Row(horizontalArrangement = Arrangement.spacedBy(MehTheme.spacing.spacing04)) {
-        content()
+        contentWithState()
       }
     } else {
       Column {
-        content()
+        contentWithState()
       }
     }
 

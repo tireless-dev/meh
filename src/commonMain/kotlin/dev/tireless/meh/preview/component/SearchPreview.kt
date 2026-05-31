@@ -5,8 +5,8 @@ package dev.tireless.meh.preview.component
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 import dev.tireless.meh.component.Search
 import dev.tireless.meh.preview.PreviewTheme
 
@@ -21,18 +21,18 @@ internal fun SearchPreview() {
         value = "",
         onValueChange = {},
         onClear = {},
-        placeholder = "Search"
+        placeholder = "Search",
       )
       Search(
         value = "Carbon design",
         onValueChange = {},
-        onClear = {}
+        onClear = {},
       )
       Search(
         value = "",
         onValueChange = {},
         onClear = {},
-        enabled = false
+        enabled = false,
       )
     }
   }

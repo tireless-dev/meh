@@ -25,13 +25,13 @@ import dev.tireless.meh.theme.dp
 @Composable
 fun Select(
   selectedOption: String,
+  onClick: () -> Unit,
   modifier: Modifier = Modifier,
   label: String? = null,
   helper: String? = null,
   error: String? = null,
   enabled: Boolean = true,
   size: ControlSize = ControlSize.Large,
-  onClick: () -> Unit,
 ) {
   val isInvalid = error != null
 
@@ -54,20 +54,22 @@ fun Select(
         .let {
           if (!isInvalid) {
             it.border(width = 1.dp, color = bottomBorderColor)
-          } else it
-        }
+          } else {
+            it
+          }
+        },
     ) {
       Row(
         modifier = Modifier
           .fillMaxWidth()
           .padding(horizontal = MehTheme.spacing.spacing05),
-        verticalAlignment = Alignment.CenterVertically
+        verticalAlignment = Alignment.CenterVertically,
       ) {
         Text(
           text = selectedOption,
           style = MehTheme.typography.body01,
           color = if (enabled) MehTheme.colors.textPrimary else MehTheme.colors.textDisabled,
-          modifier = Modifier.weight(1f)
+          modifier = Modifier.weight(1f),
         )
 
         if (isInvalid) {
@@ -75,7 +77,7 @@ fun Select(
             image = Icons.WarningFilled,
             size = IconSize.Small,
             tint = MehTheme.colors.supportError,
-            modifier = Modifier.padding(start = MehTheme.spacing.spacing03)
+            modifier = Modifier.padding(start = MehTheme.spacing.spacing03),
           )
         }
 
@@ -83,7 +85,7 @@ fun Select(
           image = Icons.ChevronDown,
           size = IconSize.Small,
           tint = if (enabled) MehTheme.colors.iconPrimary else MehTheme.colors.iconDisabled,
-          modifier = Modifier.padding(start = MehTheme.spacing.spacing03)
+          modifier = Modifier.padding(start = MehTheme.spacing.spacing03),
         )
       }
     }
@@ -93,7 +95,7 @@ fun Select(
         text = error,
         style = MehTheme.typography.label01,
         color = MehTheme.colors.textError,
-        modifier = Modifier.padding(top = MehTheme.spacing.spacing02)
+        modifier = Modifier.padding(top = MehTheme.spacing.spacing02),
       )
     } else if (helper != null) {
       FormHelper(text = helper, enabled = enabled, modifier = Modifier.padding(top = MehTheme.spacing.spacing02))

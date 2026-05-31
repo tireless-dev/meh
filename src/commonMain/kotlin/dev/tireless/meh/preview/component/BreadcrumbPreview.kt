@@ -14,7 +14,7 @@ internal fun BreadcrumbPreview() {
   PreviewTheme {
     Breadcrumb(
       items = items,
-      onItemClick = {}
+      onItemClick = {},
     )
   }
 }

@@ -36,9 +36,9 @@ fun DatePicker(
         Icon(
           image = MehTheme.icons.Calendar,
           size = dev.tireless.meh.theme.IconSize.Small,
-          tint = if (enabled) MehTheme.colors.iconPrimary else MehTheme.colors.iconDisabled
+          tint = if (enabled) MehTheme.colors.iconPrimary else MehTheme.colors.iconDisabled,
         )
-      }
+      },
     )
   }
 }

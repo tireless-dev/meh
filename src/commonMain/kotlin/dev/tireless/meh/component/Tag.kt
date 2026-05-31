@@ -72,16 +72,14 @@ fun Tag(
 }
 
 @Composable
-private fun getTagColors(type: TagType): ColorPair {
-  return when (type) {
-    TagType.Gray -> MehTheme.colors.tagGray
-    TagType.Red -> MehTheme.colors.tagRed
-    TagType.Magenta -> MehTheme.colors.tagMagenta
-    TagType.Purple -> MehTheme.colors.tagPurple
-    TagType.Blue -> MehTheme.colors.tagBlue
-    TagType.Cyan -> MehTheme.colors.tagCyan
-    TagType.Teal -> MehTheme.colors.tagTeal
-    TagType.Green -> MehTheme.colors.tagGreen
-    TagType.HighContrast -> ColorPair(MehTheme.colors.textPrimary, MehTheme.colors.background)
-  }
+private fun getTagColors(type: TagType): ColorPair = when (type) {
+  TagType.Gray -> MehTheme.colors.tagGray
+  TagType.Red -> MehTheme.colors.tagRed
+  TagType.Magenta -> MehTheme.colors.tagMagenta
+  TagType.Purple -> MehTheme.colors.tagPurple
+  TagType.Blue -> MehTheme.colors.tagBlue
+  TagType.Cyan -> MehTheme.colors.tagCyan
+  TagType.Teal -> MehTheme.colors.tagTeal
+  TagType.Green -> MehTheme.colors.tagGreen
+  TagType.HighContrast -> ColorPair(MehTheme.colors.textPrimary, MehTheme.colors.background)
 }

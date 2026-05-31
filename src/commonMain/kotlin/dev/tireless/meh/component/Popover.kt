@@ -25,14 +25,14 @@ fun Popover(
   if (expanded) {
     Popup(
       onDismissRequest = onDismissRequest,
-      properties = PopupProperties(focusable = true)
+      properties = PopupProperties(focusable = true),
     ) {
       Box(
         modifier = modifier
           .shadow(elevation = 6.dp, shape = RoundedCornerShape(2.dp))
           .clip(RoundedCornerShape(2.dp))
           .background(MehTheme.colors.background)
-          .padding(MehTheme.spacing.spacing05)
+          .padding(MehTheme.spacing.spacing05),
       ) {
         content()
       }

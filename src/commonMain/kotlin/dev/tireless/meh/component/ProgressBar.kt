@@ -59,16 +59,16 @@ fun ProgressBar(
       if (indeterminate) {
         val infiniteTransition = rememberInfiniteTransition(label = "ProgressTransition")
         val translation by
-        infiniteTransition.animateFloat(
-          initialValue = -1f,
-          targetValue = 1f,
-          animationSpec =
-          infiniteRepeatable(
-            animation = tween(1500, easing = LinearEasing),
-            repeatMode = RepeatMode.Restart,
-          ),
-          label = "ProgressTranslation",
-        )
+          infiniteTransition.animateFloat(
+            initialValue = -1f,
+            targetValue = 1f,
+            animationSpec =
+            infiniteRepeatable(
+              animation = tween(1500, easing = LinearEasing),
+              repeatMode = RepeatMode.Restart,
+            ),
+            label = "ProgressTranslation",
+          )
 
         Box(
           modifier =
