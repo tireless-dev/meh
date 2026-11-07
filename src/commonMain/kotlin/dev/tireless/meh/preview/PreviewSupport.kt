@@ -3,13 +3,13 @@
 package dev.tireless.meh.preview
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
-import androidx.compose.ui.unit.dp
 import dev.tireless.meh.generated.resources.IBMPlexSansSC_Light
 import dev.tireless.meh.generated.resources.IBMPlexSansSC_Regular
 import dev.tireless.meh.generated.resources.IBMPlexSansSC_SemiBold
@@ -43,14 +43,18 @@ internal fun previewFontFamily(): FontFamily = previewFontFamilySc()
 
 @Composable
 internal fun PreviewTheme(
+  darkTheme: Boolean = isSystemInDarkTheme(),
   fontFamily: FontFamily = previewFontFamily(),
   content: @Composable () -> Unit,
 ) {
-  MehTheme(fontFamily = fontFamily) {
+  MehTheme(
+    darkTheme = darkTheme,
+    fontFamily = fontFamily,
+  ) {
     Box(
       modifier = Modifier
         .background(MehTheme.colors.background)
-        .padding(16.dp),
+        .padding(MehTheme.spacing.spacing06),
     ) {
       content()
     }

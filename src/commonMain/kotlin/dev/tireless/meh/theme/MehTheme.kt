@@ -2,6 +2,7 @@
 // Copyright 2026 tireless.dev
 package dev.tireless.meh.theme
 
+import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.ReadOnlyComposable
@@ -44,7 +45,8 @@ internal val LocalIcons = staticCompositionLocalOf<IconPack> { Icons }
 
 @Composable
 fun MehTheme(
-  colors: Colors = whiteColors,
+  darkTheme: Boolean = isSystemInDarkTheme(),
+  colors: Colors = if (darkTheme) gray90Colors else whiteColors,
   spacing: Spacing = Spacing,
   size: Size = Size,
   fontFamily: FontFamily = FontFamily.Default,
