@@ -5,7 +5,7 @@ package dev.tireless.meh.component
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onRoot
 import com.github.takahirom.roborazzi.captureRoboImage
-import dev.tireless.meh.preview.component.SelectPreview
+import dev.tireless.meh.preview.PreviewTheme
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -22,9 +22,43 @@ class SelectSnapshotTest {
   val composeTestRule = createComposeRule()
 
   @Test
-  fun select() {
+  fun selectDefault() {
     composeTestRule.setContent {
-      SelectPreview()
+      PreviewTheme {
+        Select(
+          selectedOption = "Option 1",
+          label = "Country",
+          helper = "Select your country",
+        )
+      }
+    }
+    composeTestRule.onRoot().captureRoboImage()
+  }
+
+  @Test
+  fun selectExpanded() {
+    composeTestRule.setContent {
+      PreviewTheme {
+        Select(
+          selectedOption = "Option 1",
+          expanded = true,
+          label = "Country",
+        )
+      }
+    }
+    composeTestRule.onRoot().captureRoboImage()
+  }
+
+  @Test
+  fun selectError() {
+    composeTestRule.setContent {
+      PreviewTheme {
+        Select(
+          selectedOption = "Invalid Option",
+          label = "Country",
+          error = "Please select a valid option",
+        )
+      }
     }
     composeTestRule.onRoot().captureRoboImage()
   }

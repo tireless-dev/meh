@@ -12,8 +12,13 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import dev.tireless.meh.theme.ControlSize
@@ -25,8 +30,9 @@ import dev.tireless.meh.theme.dp
 @Composable
 fun Select(
   selectedOption: String,
-  onClick: () -> Unit,
   modifier: Modifier = Modifier,
+  expanded: Boolean = false,
+  onExpandedChange: (Boolean) -> Unit = {},
   label: String? = null,
   helper: String? = null,
   error: String? = null,
@@ -37,19 +43,25 @@ fun Select(
 
   Column(modifier = modifier.fillMaxWidth()) {
     label?.let {
-      FormLabel(text = it, enabled = enabled, modifier = Modifier.padding(bottom = MehTheme.spacing.spacing03))
+      FormLabel(
+        text = it,
+        enabled = enabled,
+        modifier = Modifier.padding(bottom = MehTheme.spacing.spacing03)
+      )
     }
 
-    val backgroundColor = if (enabled) MehTheme.colors.field02 else MehTheme.colors.field02.copy(alpha = 0.5f)
+    val backgroundColor =
+      if (enabled) MehTheme.colors.field02 else MehTheme.colors.field02.copy(alpha = 0.5f)
     val borderColor = if (isInvalid) MehTheme.colors.supportError else Color.Transparent
-    val bottomBorderColor = if (isInvalid) MehTheme.colors.supportError else MehTheme.colors.borderStrong01
+    val bottomBorderColor =
+      if (isInvalid) MehTheme.colors.supportError else MehTheme.colors.borderStrong01
 
     Box(
       modifier = Modifier
         .fillMaxWidth()
         .height(size.dp)
         .background(backgroundColor)
-        .clickable(enabled = enabled, onClick = onClick)
+        .clickable(enabled = enabled, onClick = { onExpandedChange(!expanded) })
         .border(width = if (isInvalid) 2.dp else 0.dp, color = borderColor)
         .let {
           if (!isInvalid) {
@@ -85,7 +97,8 @@ fun Select(
           image = Icons.ChevronDown,
           size = IconSize.Small,
           tint = if (enabled) MehTheme.colors.iconPrimary else MehTheme.colors.iconDisabled,
-          modifier = Modifier.padding(start = MehTheme.spacing.spacing03),
+          modifier = Modifier
+            .rotate(if (expanded) 180f else 0f),
         )
       }
     }
@@ -98,7 +111,36 @@ fun Select(
         modifier = Modifier.padding(top = MehTheme.spacing.spacing02),
       )
     } else if (helper != null) {
-      FormHelper(text = helper, enabled = enabled, modifier = Modifier.padding(top = MehTheme.spacing.spacing02))
+      FormHelper(
+        text = helper,
+        enabled = enabled,
+        modifier = Modifier.padding(top = MehTheme.spacing.spacing02)
+      )
     }
   }
+}
+
+@Composable
+fun Select(
+  selectedOption: String,
+  modifier: Modifier = Modifier,
+  label: String? = null,
+  helper: String? = null,
+  error: String? = null,
+  enabled: Boolean = true,
+  size: ControlSize = ControlSize.Large,
+) {
+  var expanded by remember { mutableStateOf(false) }
+
+  Select(
+    selectedOption = selectedOption,
+    expanded = expanded,
+    onExpandedChange = { expanded = it },
+    modifier = modifier,
+    label = label,
+    helper = helper,
+    error = error,
+    enabled = enabled,
+    size = size,
+  )
 }

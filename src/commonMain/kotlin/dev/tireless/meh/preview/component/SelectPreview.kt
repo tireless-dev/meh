@@ -19,26 +19,22 @@ internal fun SelectPreview() {
     ) {
       Select(
         selectedOption = "Option 1",
-        onClick = {},
         label = "Select label",
         helper = "Optional helper text",
       )
       Select(
         selectedOption = "Option 2",
-        onClick = {},
         label = "Invalid state",
         error = "Please select a valid option",
       )
       Select(
         selectedOption = "Option 3",
-        onClick = {},
         label = "Disabled state",
         enabled = false,
       )
       Select(
         selectedOption = "No label",
-        onClick = {},
-        enabled = false,
+        expanded = true,
       )
     }
   }

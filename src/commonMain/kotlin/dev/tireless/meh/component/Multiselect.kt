@@ -2,8 +2,6 @@
 // Copyright 2026 tireless.dev
 package dev.tireless.meh.component
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.Column
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import dev.tireless.meh.theme.ControlSize
@@ -27,6 +25,6 @@ fun Multiselect(
     error = error,
     enabled = enabled,
     size = size,
-    onClick = onClick,
+    onExpandedChange = {},
   )
 }
