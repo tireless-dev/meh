@@ -10,6 +10,7 @@ plugins {
   alias(libs.plugins.android.kotlin.multiplatform.library)
   alias(libs.plugins.spotless)
   alias(libs.plugins.roborazzi)
+  alias(libs.plugins.kover)
   id("maven-publish")
   id("dev.tireless.preview-strip-plugin")
 }
@@ -152,6 +153,20 @@ spotless {
   }
 }
 
+kover {
+  reports {
+    filters {
+      excludes {
+        classes("*.preview.*", "*Preview*", "*.icon.*")
+      }
+    }
+    verify {
+      rule {
+        minBound(80)
+      }
+    }
+  }
+}
 publishing {
   repositories {
     mavenLocal()

@@ -35,6 +35,11 @@ internal fun SelectPreview() {
         label = "Disabled state",
         enabled = false,
       )
+      Select(
+        selectedOption = "No label",
+        onClick = {},
+        enabled = false,
+      )
     }
   }
 }
