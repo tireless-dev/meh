@@ -34,6 +34,16 @@ object Typography {
         fontWeight = FontWeight.Normal,
       )
 
+  val bodyCompact02: TextStyle
+    @Composable @ReadOnlyComposable
+    get() =
+      TextStyle(
+        fontSize = 16.sp,
+        lineHeight = 22.sp,
+        fontFamily = fontFamily,
+        fontWeight = FontWeight.Normal,
+      )
+
   val label01: TextStyle
     @Composable @ReadOnlyComposable
     get() =

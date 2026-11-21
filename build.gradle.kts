@@ -135,7 +135,7 @@ spotless {
     ktlint()
       .editorConfigOverride(
         mapOf(
-          "compose_allowed_composition_locals" to "LocalColors,LocalSpacing,LocalSizes,LocalFontFamily,LocalIcons",
+          "compose_allowed_composition_locals" to "LocalColors,LocalSpacing,LocalSizes,LocalFontFamily,LocalIcons,LocalTone",
         ),
       ).customRuleSets(listOf("io.nlopez.compose.rules:ktlint:0.5.9"))
     licenseHeader(

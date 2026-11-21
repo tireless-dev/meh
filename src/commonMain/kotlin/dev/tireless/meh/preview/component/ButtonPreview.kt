@@ -6,12 +6,13 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.width
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.AndroidUiModes.UI_MODE_NIGHT_YES
 import androidx.compose.ui.tooling.preview.AndroidUiModes.UI_MODE_TYPE_NORMAL
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.tooling.preview.PreviewLightDark
+import androidx.compose.ui.unit.dp
 import dev.tireless.meh.component.Button
 import dev.tireless.meh.component.ButtonKind
 import dev.tireless.meh.preview.PreviewInteractionState
@@ -20,12 +21,11 @@ import dev.tireless.meh.preview.rememberPreviewInteractionSource
 import dev.tireless.meh.theme.ControlSize
 import dev.tireless.meh.theme.Icons
 import dev.tireless.meh.theme.MehTheme
-import org.jetbrains.compose.resources.imageResource
 
 @Preview(name = "Light", widthDp = 1600)
 @Preview(name = "Dark", widthDp = 1600, uiMode = UI_MODE_NIGHT_YES or UI_MODE_TYPE_NORMAL)
 @Composable
-internal fun ButtonPreviewTypes() {
+internal fun ButtonKindsPreview() {
   PreviewTheme {
     Column(
       modifier = Modifier.fillMaxWidth(),
@@ -70,21 +70,123 @@ internal fun ButtonPreviewTypes() {
   }
 }
 
-@PreviewLightDark
+@Preview(widthDp = 1000)
 @Composable
-internal fun ButtonPreviewSizes() {
+internal fun ButtonSizesPreview() {
   PreviewTheme {
     val spacing = MehTheme.spacing
     Column(
       modifier = Modifier.fillMaxWidth(),
       verticalArrangement = Arrangement.spacedBy(spacing.spacing03),
     ) {
-      ControlSize.entries.forEach {
-        Button(text = it.name, onClick = {}, size = it)
+      buttonSizeSpecs.forEach { (label, size, expressive) ->
+        Row(
+          horizontalArrangement = Arrangement.spacedBy(spacing.spacing03),
+        ) {
+          Button(
+            text = label,
+            onClick = {},
+            size = size,
+            expressive = expressive,
+            interactionSource = rememberPreviewInteractionSource(),
+          )
+          Button(
+            text = label,
+            onClick = {},
+            size = size,
+            expressive = expressive,
+            icon = Icons.Add,
+            interactionSource = rememberPreviewInteractionSource(),
+          )
+          Button(
+            text = label,
+            onClick = {},
+            kind = ButtonKind.Ghost,
+            size = size,
+            expressive = expressive,
+            interactionSource = rememberPreviewInteractionSource(),
+          )
+          Button(
+            text = label,
+            onClick = {},
+            kind = ButtonKind.Ghost,
+            size = size,
+            expressive = expressive,
+            icon = Icons.Add,
+            interactionSource = rememberPreviewInteractionSource(),
+          )
+        }
       }
     }
   }
 }
+
+@Preview(widthDp = 900)
+@Composable
+internal fun ButtonOverflowPreview() {
+  PreviewTheme {
+    val spacing = MehTheme.spacing
+    val narrowWidth = Modifier.width(180.dp)
+    Column(
+      modifier = Modifier.fillMaxWidth(),
+      verticalArrangement = Arrangement.spacedBy(spacing.spacing03),
+    ) {
+      buttonSizeSpecs.forEach { (label, size, expressive) ->
+        val overflowText = "$label button with a long wrapping label"
+        Row(
+          horizontalArrangement = Arrangement.spacedBy(spacing.spacing03),
+        ) {
+          Button(
+            text = overflowText,
+            onClick = {},
+            size = size,
+            expressive = expressive,
+            interactionSource = rememberPreviewInteractionSource(),
+            modifier = narrowWidth,
+          )
+          Button(
+            text = overflowText,
+            onClick = {},
+            size = size,
+            expressive = expressive,
+            icon = Icons.Add,
+            interactionSource = rememberPreviewInteractionSource(),
+            modifier = narrowWidth,
+          )
+          Button(
+            text = overflowText,
+            onClick = {},
+            kind = ButtonKind.Ghost,
+            size = size,
+            expressive = expressive,
+            interactionSource = rememberPreviewInteractionSource(),
+            modifier = narrowWidth,
+          )
+          Button(
+            text = overflowText,
+            onClick = {},
+            kind = ButtonKind.Ghost,
+            size = size,
+            expressive = expressive,
+            icon = Icons.Add,
+            interactionSource = rememberPreviewInteractionSource(),
+            modifier = narrowWidth,
+          )
+        }
+      }
+    }
+  }
+}
+
+private val buttonSizeSpecs = listOf(
+  Triple("XSmall", ControlSize.XSmall, false),
+  Triple("Small", ControlSize.Small, false),
+  Triple("Medium", ControlSize.Medium, false),
+  Triple("Large", ControlSize.Large, false),
+  Triple("Large (Expressive)", ControlSize.Large, true),
+  Triple("XLarge", ControlSize.XLarge, false),
+  Triple("XXLarge", ControlSize.XXLarge, false),
+)
 
 private val buttonKinds = setOf(
   "Primary" to ButtonKind.Primary,

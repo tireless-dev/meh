@@ -9,7 +9,7 @@ Done criteria for each component:
 | [Accordion](https://carbondesignsystem.com/building-blocks/core/components/accordion) | [ ] | [ ] | [ ] | |
 | [AI label](https://carbondesignsystem.com/building-blocks/core/components/ai-label) | [ ] | [ ] | [ ] | |
 | [Breadcrumb](https://carbondesignsystem.com/building-blocks/core/components/breadcrumb) | [ ] | [ ] | [ ] | |
-| [Button](https://carbondesignsystem.com/building-blocks/core/components/button) | [ ] | [ ] | [ ] | Includes icon button, copy button, chat button |
+| [Button](https://carbondesignsystem.com/building-blocks/core/components/button) | [x] | [x] | [x] | |
 | [Checkbox](https://carbondesignsystem.com/building-blocks/core/components/checkbox) | [ ] | [ ] | [ ] | |
 | [Code snippet](https://carbondesignsystem.com/building-blocks/core/components/code-snippet) | [ ] | [ ] | [ ] | |
 | [Contained list](https://carbondesignsystem.com/building-blocks/core/components/contained-list) | [ ] | [ ] | [ ] | Currently in `List.kt` / `ListSnapshotTest.kt` |
@@ -19,6 +19,7 @@ Done criteria for each component:
 | [Dropdown](https://carbondesignsystem.com/building-blocks/core/components/dropdown) | [ ] | [ ] | [ ] | Currently implemented as `Select`; includes combo box |
 | [File uploader](https://carbondesignsystem.com/building-blocks/core/components/file-uploader) | [ ] | [ ] | [ ] | |
 | [Form](https://carbondesignsystem.com/building-blocks/core/components/form) | [ ] | [ ] | [ ] | |
+| [Icon button](https://carbondesignsystem.com/building-blocks/core/components/button/guidelines#icon-only-buttons) | [ ] | [ ] | [ ] | Variant under Button spec |
 | [Inline loading](https://carbondesignsystem.com/building-blocks/core/components/inline-loading) | [ ] | [ ] | [ ] | Currently in `Loading.kt` / `LoadingSnapshotTest.kt` |
 | [Link](https://carbondesignsystem.com/building-blocks/core/components/link) | [ ] | [ ] | [ ] | |
 | [List](https://carbondesignsystem.com/building-blocks/core/components/list) | [ ] | [ ] | [ ] | Includes ordered & unordered lists |

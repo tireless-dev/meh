@@ -11,6 +11,11 @@ import androidx.compose.ui.text.font.FontFamily
 import dev.tireless.meh.icon.IconPack
 import dev.tireless.meh.theme.Typography as MehTypography
 
+enum class Tone {
+  Productive,
+  Expressive,
+}
+
 object MehTheme {
   val colors: Colors
     @Composable @ReadOnlyComposable
@@ -35,6 +40,10 @@ object MehTheme {
   val icons: IconPack
     @Composable @ReadOnlyComposable
     get() = LocalIcons.current
+
+  val tone: Tone
+    @Composable @ReadOnlyComposable
+    get() = LocalTone.current
 }
 
 internal val LocalColors = staticCompositionLocalOf { whiteColors }
@@ -42,6 +51,7 @@ internal val LocalSpacing = staticCompositionLocalOf { Spacing }
 internal val LocalSizes = staticCompositionLocalOf { Size }
 internal val LocalFontFamily = staticCompositionLocalOf<FontFamily> { FontFamily.Default }
 internal val LocalIcons = staticCompositionLocalOf<IconPack> { Icons }
+internal val LocalTone = staticCompositionLocalOf { Tone.Productive }
 
 @Composable
 fun MehTheme(
@@ -51,6 +61,7 @@ fun MehTheme(
   size: Size = Size,
   fontFamily: FontFamily = FontFamily.Default,
   icons: IconPack = Icons,
+  tone: Tone = Tone.Productive,
   content: @Composable () -> Unit,
 ) {
   CompositionLocalProvider(
@@ -59,6 +70,7 @@ fun MehTheme(
     LocalSizes provides size,
     LocalFontFamily provides fontFamily,
     LocalIcons provides icons,
+    LocalTone provides tone,
     content = content,
   )
 }

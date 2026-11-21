@@ -11,16 +11,13 @@ import androidx.compose.foundation.interaction.collectIsHoveredAsState
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.defaultMinSize
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.text.BasicText
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.geometry.Offset
@@ -33,7 +30,7 @@ import androidx.compose.ui.unit.dp
 import dev.tireless.meh.theme.ControlSize
 import dev.tireless.meh.theme.IconSize
 import dev.tireless.meh.theme.MehTheme
-import dev.tireless.meh.theme.Typography.bodyCompact01
+import dev.tireless.meh.theme.Tone
 import dev.tireless.meh.theme.dp
 
 sealed interface ButtonKind {
@@ -57,6 +54,7 @@ fun Button(
   enabled: Boolean = true,
   kind: ButtonKind = ButtonKind.Primary,
   size: ControlSize = ControlSize.Large,
+  expressive: Boolean = MehTheme.tone == Tone.Expressive,
   icon: ImageVector? = null,
   interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
 ) {
@@ -66,8 +64,13 @@ fun Button(
   val isDisabled = !enabled
 
   val colors = MehTheme.colors
+  val spacing = MehTheme.spacing
   val isFilled =
     kind == ButtonKind.Primary || kind == ButtonKind.Secondary || kind == ButtonKind.Danger.Primary
+  val isGhost = kind == ButtonKind.Ghost || kind == ButtonKind.Danger.Ghost
+  val effectiveSize = if (size == ControlSize.Unspecified) ControlSize.Large else size
+  val isExpressive = expressive && effectiveSize == ControlSize.Large
+  val isTall = effectiveSize == ControlSize.XLarge || effectiveSize == ControlSize.XXLarge
 
   val labelColor = if (isDisabled) {
     if (isFilled) colors.textOnColorDisabled else colors.textDisabled
@@ -141,11 +144,22 @@ fun Button(
     else -> Color.Transparent
   }
 
+  val labelStyle = if (isExpressive) MehTheme.typography.bodyCompact02 else MehTheme.typography.bodyCompact01
+  val iconSize = if (isExpressive) IconSize.Expressive else IconSize.Small
+  val endPadding = if (isGhost || icon != null) spacing.spacing05 else spacing.spacing10
+  val iconGap = if (isGhost) spacing.spacing03 else spacing.spacing07
+  val verticalPadding = when (effectiveSize) {
+    ControlSize.XSmall -> 3.dp
+    ControlSize.Small -> 7.dp
+    ControlSize.Medium -> 11.dp
+    ControlSize.Large -> if (isExpressive) 13.dp else 15.dp
+    else -> 15.dp
+  }
+
   Row(
     modifier =
     modifier
-      .defaultMinSize(ControlSize.Large.dp)
-      .height(size.dp)
+      .defaultMinSize(minHeight = effectiveSize.dp)
       .background(containerColor)
       .then(
         when {
@@ -170,22 +184,30 @@ fun Button(
         indication = null,
       )
       .padding(
-        top = MehTheme.spacing.spacing05,
-        start = MehTheme.spacing.spacing05,
-        end = MehTheme.spacing.spacing10,
+        start = spacing.spacing05,
+        end = endPadding,
+        top = verticalPadding,
+        bottom = verticalPadding,
       ),
-    horizontalArrangement = Arrangement.spacedBy(MehTheme.spacing.spacing05),
+    horizontalArrangement = Arrangement.SpaceBetween,
+    verticalAlignment = Alignment.Top,
   ) {
     BasicText(
       text = text,
-      style = bodyCompact01.copy(color = labelColor),
-      modifier = Modifier.weight(1.0f),
+      style = labelStyle.copy(color = labelColor),
+      modifier = Modifier.weight(1f, fill = false),
     )
     if (icon != null) {
       Icon(
         image = icon,
-        size = IconSize.Small,
+        size = iconSize,
         tint = iconColor,
+        modifier =
+        if (isGhost && !isTall) {
+          Modifier.align(Alignment.CenterVertically).padding(start = iconGap)
+        } else {
+          Modifier.padding(start = iconGap, top = 1.dp)
+        },
       )
     }
   }

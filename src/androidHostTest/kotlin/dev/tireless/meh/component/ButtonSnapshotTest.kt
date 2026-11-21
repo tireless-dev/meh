@@ -5,8 +5,9 @@ package dev.tireless.meh.component
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onRoot
 import com.github.takahirom.roborazzi.captureRoboImage
-import dev.tireless.meh.preview.component.ButtonPreviewSizes
-import dev.tireless.meh.preview.component.ButtonPreviewTypes
+import dev.tireless.meh.preview.component.ButtonKindsPreview
+import dev.tireless.meh.preview.component.ButtonOverflowPreview
+import dev.tireless.meh.preview.component.ButtonSizesPreview
 import dev.tireless.meh.preview.component.IconButtonPreviewMono
 import dev.tireless.meh.preview.component.IconButtonPreviewStates
 import org.junit.Rule
@@ -25,17 +26,37 @@ class ButtonSnapshotTest {
   val composeTestRule = createComposeRule()
 
   @Test
-  fun buttonTypes() {
+  @Config(qualifiers = "w1600dp-h1000dp-xxhdpi")
+  fun buttonKindsLight() {
     composeTestRule.setContent {
-      ButtonPreviewTypes()
+      ButtonKindsPreview()
     }
     composeTestRule.onRoot().captureRoboImage()
   }
 
   @Test
+  @Config(qualifiers = "w1600dp-h1000dp-night-xxhdpi")
+  fun buttonKindsDark() {
+    composeTestRule.setContent {
+      ButtonKindsPreview()
+    }
+    composeTestRule.onRoot().captureRoboImage()
+  }
+
+  @Test
+  @Config(qualifiers = "w1000dp-h600dp-xxhdpi")
   fun buttonSizes() {
     composeTestRule.setContent {
-      ButtonPreviewSizes()
+      ButtonSizesPreview()
+    }
+    composeTestRule.onRoot().captureRoboImage()
+  }
+
+  @Test
+  @Config(qualifiers = "w900dp-h1000dp-xxhdpi")
+  fun buttonOverflow() {
+    composeTestRule.setContent {
+      ButtonOverflowPreview()
     }
     composeTestRule.onRoot().captureRoboImage()
   }
