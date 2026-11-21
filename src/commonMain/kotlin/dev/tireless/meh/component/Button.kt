@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.defaultMinSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.text.BasicText
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.Immutable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -23,10 +24,12 @@ import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.geometry.Size
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.drawscope.DrawScope
 import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
+import dev.tireless.meh.theme.Colors
 import dev.tireless.meh.theme.ControlSize
 import dev.tireless.meh.theme.IconSize
 import dev.tireless.meh.theme.MehTheme
@@ -58,101 +61,35 @@ fun Button(
   icon: ImageVector? = null,
   interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
 ) {
-  val isActive by interactionSource.collectIsPressedAsState()
-  val isFocused by interactionSource.collectIsFocusedAsState()
-  val isHovered by interactionSource.collectIsHoveredAsState()
-  val isDisabled = !enabled
+  val active by interactionSource.collectIsPressedAsState()
+  val focused by interactionSource.collectIsFocusedAsState()
+  val hovered by interactionSource.collectIsHoveredAsState()
 
   val colors = MehTheme.colors
   val spacing = MehTheme.spacing
-  val isFilled =
-    kind == ButtonKind.Primary || kind == ButtonKind.Secondary || kind == ButtonKind.Danger.Primary
-  val isGhost = kind == ButtonKind.Ghost || kind == ButtonKind.Danger.Ghost
+  val ghost = kind == ButtonKind.Ghost || kind == ButtonKind.Danger.Ghost
   val effectiveSize = if (size == ControlSize.Unspecified) ControlSize.Large else size
-  val isExpressive = expressive && effectiveSize == ControlSize.Large
-  val isTall = effectiveSize == ControlSize.XLarge || effectiveSize == ControlSize.XXLarge
+  val effectiveExpressive = expressive && effectiveSize == ControlSize.Large
+  val tall = effectiveSize == ControlSize.XLarge || effectiveSize == ControlSize.XXLarge
 
-  val labelColor = if (isDisabled) {
-    if (isFilled) colors.textOnColorDisabled else colors.textDisabled
-  } else {
-    when (kind) {
-      ButtonKind.Primary, ButtonKind.Secondary, ButtonKind.Danger.Primary -> colors.textOnColor
-      ButtonKind.Tertiary -> if (isHovered || isActive || isFocused) colors.textInverse else colors.buttonTertiary
-      ButtonKind.Ghost -> if (isHovered || isActive) colors.linkPrimaryHover else colors.linkPrimary
-      ButtonKind.Danger.Tertiary -> if (isHovered || isActive || isFocused) colors.textOnColor else colors.buttonDangerSecondary
-      ButtonKind.Danger.Ghost -> if (isHovered || isActive) colors.textOnColor else colors.buttonDangerSecondary
-    }
-  }
-  val iconColor = if (isDisabled) {
-    if (isFilled) colors.iconOnColorDisabled else colors.iconDisabled
-  } else {
-    when (kind) {
-      ButtonKind.Primary, ButtonKind.Secondary, ButtonKind.Danger.Primary -> colors.iconOnColor
-      ButtonKind.Tertiary -> if (isHovered || isActive || isFocused) colors.iconInverse else colors.buttonTertiary
-      ButtonKind.Ghost -> if (isHovered || isActive) colors.linkPrimaryHover else colors.linkPrimary
-      ButtonKind.Danger.Tertiary -> if (isHovered || isActive || isFocused) colors.iconOnColor else colors.buttonDangerSecondary
-      ButtonKind.Danger.Ghost -> if (isHovered || isActive) colors.iconOnColor else colors.buttonDangerSecondary
-    }
-  }
-  val containerColor = if (isDisabled) {
-    if (isFilled) colors.buttonDisabled else Color.Transparent
-  } else {
-    when (kind) {
-      ButtonKind.Primary -> when {
-        isActive -> colors.buttonPrimaryActive
-        isHovered -> colors.buttonPrimaryHover
-        else -> colors.buttonPrimary
-      }
+  val buttonColors = resolveButtonColors(
+    kind = kind,
+    colors = colors,
+    enabled = enabled,
+    hovered = hovered,
+    active = active,
+    focused = focused,
+  )
 
-      ButtonKind.Secondary -> when {
-        isActive -> colors.buttonSecondaryActive
-        isHovered -> colors.buttonSecondaryHover
-        else -> colors.buttonSecondary
-      }
-
-      ButtonKind.Tertiary -> when {
-        isActive -> colors.buttonTertiaryActive
-        isHovered -> colors.buttonTertiaryHover
-        isFocused -> colors.buttonTertiary
-        else -> Color.Transparent
-      }
-
-      ButtonKind.Ghost -> when {
-        isActive -> colors.backgroundActive
-        isHovered -> colors.backgroundHover
-        else -> Color.Transparent
-      }
-
-      is ButtonKind.Danger -> when {
-        isActive -> colors.buttonDangerActive
-        isHovered -> colors.buttonDangerHover
-        kind == ButtonKind.Danger.Primary || (kind == ButtonKind.Danger.Tertiary && isFocused) -> colors.buttonDangerPrimary
-        else -> Color.Transparent
-      }
-    }
-  }
-  val containerBorderColor = when {
-    isFocused && enabled -> Color.Transparent
-
-    kind == ButtonKind.Tertiary || kind == ButtonKind.Danger.Tertiary -> when {
-      isDisabled -> colors.buttonDisabled
-      isActive || isHovered -> Color.Transparent
-      kind == ButtonKind.Tertiary -> colors.buttonTertiary
-      else -> colors.buttonDangerSecondary
-    }
-
-    else -> Color.Transparent
-  }
-
-  val labelStyle = if (isExpressive) MehTheme.typography.bodyCompact02 else MehTheme.typography.bodyCompact01
-  val iconSize = if (isExpressive) IconSize.Expressive else IconSize.Small
-  val endPadding = if (isGhost || icon != null) spacing.spacing05 else spacing.spacing10
-  val iconGap = if (isGhost) spacing.spacing03 else spacing.spacing07
+  val labelStyle = if (effectiveExpressive) MehTheme.typography.bodyCompact02 else MehTheme.typography.bodyCompact01
+  val iconSize = if (effectiveExpressive) IconSize.Expressive else IconSize.Small
+  val endPadding = if (ghost || icon != null) spacing.spacing05 else spacing.spacing10
+  val iconGap = if (ghost) spacing.spacing03 else spacing.spacing07
   val verticalPadding = when (effectiveSize) {
     ControlSize.XSmall -> 3.dp
     ControlSize.Small -> 7.dp
     ControlSize.Medium -> 11.dp
-    ControlSize.Large -> if (isExpressive) 13.dp else 15.dp
+    ControlSize.Large -> if (effectiveExpressive) 13.dp else 15.dp
     else -> 15.dp
   }
 
@@ -160,17 +97,17 @@ fun Button(
     modifier =
     modifier
       .defaultMinSize(minHeight = effectiveSize.dp)
-      .background(containerColor)
+      .background(buttonColors.container)
       .then(
         when {
-          isFocused && enabled -> Modifier.focusBorder(
+          focused && enabled -> Modifier.focusBorder(
             focusColor = colors.focus,
-            focusInsetColor = colors.focusInset.takeIf { containerColor != Color.Transparent },
+            focusInsetColor = colors.focusInset.takeIf { buttonColors.container != Color.Transparent },
           )
 
-          containerBorderColor != Color.Transparent -> Modifier.border(
+          buttonColors.border != Color.Transparent -> Modifier.border(
             width = 1.dp,
-            color = containerBorderColor,
+            color = buttonColors.border,
           )
 
           else -> Modifier
@@ -194,19 +131,132 @@ fun Button(
   ) {
     BasicText(
       text = text,
-      style = labelStyle.copy(color = labelColor),
+      style = labelStyle.copy(color = buttonColors.label),
       modifier = Modifier.weight(1f, fill = false),
     )
     if (icon != null) {
       Icon(
         image = icon,
         size = iconSize,
-        tint = iconColor,
+        tint = buttonColors.icon,
         modifier =
-        if (isGhost && !isTall) {
+        if (ghost && !tall) {
           Modifier.align(Alignment.CenterVertically).padding(start = iconGap)
         } else {
           Modifier.padding(start = iconGap, top = 1.dp)
+        },
+      )
+    }
+  }
+}
+
+@Immutable
+private data class ButtonColors(
+  val label: Color,
+  val icon: Color,
+  val container: Color,
+  val border: Color = Color.Transparent,
+)
+
+private fun resolveButtonColors(
+  kind: ButtonKind,
+  colors: Colors,
+  enabled: Boolean,
+  hovered: Boolean,
+  active: Boolean,
+  focused: Boolean,
+): ButtonColors {
+  if (!enabled) {
+    return when (kind) {
+      ButtonKind.Primary, ButtonKind.Secondary, ButtonKind.Danger.Primary -> ButtonColors(
+        label = colors.textOnColorDisabled,
+        icon = colors.iconOnColorDisabled,
+        container = colors.buttonDisabled,
+      )
+
+      ButtonKind.Tertiary, ButtonKind.Danger.Tertiary -> ButtonColors(
+        label = colors.textDisabled,
+        icon = colors.iconDisabled,
+        container = Color.Transparent,
+        border = colors.buttonDisabled,
+      )
+
+      ButtonKind.Ghost, ButtonKind.Danger.Ghost -> ButtonColors(
+        label = colors.textDisabled,
+        icon = colors.iconDisabled,
+        container = Color.Transparent,
+      )
+    }
+  }
+
+  return when (kind) {
+    ButtonKind.Primary -> ButtonColors(
+      label = colors.textOnColor,
+      icon = colors.iconOnColor,
+      container = when {
+        active -> colors.buttonPrimaryActive
+        hovered -> colors.buttonPrimaryHover
+        else -> colors.buttonPrimary
+      },
+    )
+
+    ButtonKind.Secondary -> ButtonColors(
+      label = colors.textOnColor,
+      icon = colors.iconOnColor,
+      container = when {
+        active -> colors.buttonSecondaryActive
+        hovered -> colors.buttonSecondaryHover
+        else -> colors.buttonSecondary
+      },
+    )
+
+    ButtonKind.Tertiary -> {
+      val filled = hovered || active || focused
+      ButtonColors(
+        label = if (filled) colors.textInverse else colors.buttonTertiary,
+        icon = if (filled) colors.iconInverse else colors.buttonTertiary,
+        container = when {
+          active -> colors.buttonTertiaryActive
+          hovered -> colors.buttonTertiaryHover
+          focused -> colors.buttonTertiary
+          else -> Color.Transparent
+        },
+        border = if (filled) Color.Transparent else colors.buttonTertiary,
+      )
+    }
+
+    ButtonKind.Ghost -> {
+      val content = if (hovered || active) colors.linkPrimaryHover else colors.linkPrimary
+      ButtonColors(
+        label = content,
+        icon = content,
+        container = when {
+          active -> colors.backgroundActive
+          hovered -> colors.backgroundHover
+          else -> Color.Transparent
+        },
+      )
+    }
+
+    is ButtonKind.Danger -> {
+      val filled =
+        kind == ButtonKind.Danger.Primary ||
+          hovered ||
+          active ||
+          (kind == ButtonKind.Danger.Tertiary && focused)
+      ButtonColors(
+        label = if (filled) colors.textOnColor else colors.buttonDangerSecondary,
+        icon = if (filled) colors.iconOnColor else colors.buttonDangerSecondary,
+        container = when {
+          active -> colors.buttonDangerActive
+          hovered -> colors.buttonDangerHover
+          filled -> colors.buttonDangerPrimary
+          else -> Color.Transparent
+        },
+        border = if (!filled && kind == ButtonKind.Danger.Tertiary) {
+          colors.buttonDangerSecondary
+        } else {
+          Color.Transparent
         },
       )
     }
@@ -218,20 +268,26 @@ private fun Modifier.focusBorder(
   focusInsetColor: Color?,
 ): Modifier = drawBehind {
   val outerPx = 2.dp.toPx()
-  drawRect(
-    color = focusColor,
-    topLeft = Offset(outerPx / 2f, outerPx / 2f),
-    size = Size(size.width - outerPx, size.height - outerPx),
-    style = Stroke(width = outerPx),
-  )
+  drawInsetBorder(color = focusColor, strokeWidthPx = outerPx)
   if (focusInsetColor != null) {
-    val insetPx = 1.dp.toPx()
-    val insetOffset = outerPx + insetPx / 2f
-    drawRect(
+    drawInsetBorder(
       color = focusInsetColor,
-      topLeft = Offset(insetOffset, insetOffset),
-      size = Size(size.width - insetOffset * 2f, size.height - insetOffset * 2f),
-      style = Stroke(width = insetPx),
+      strokeWidthPx = 1.dp.toPx(),
+      insetPx = outerPx,
     )
   }
+}
+
+private fun DrawScope.drawInsetBorder(
+  color: Color,
+  strokeWidthPx: Float,
+  insetPx: Float = 0f,
+) {
+  val offset = insetPx + strokeWidthPx / 2f
+  drawRect(
+    color = color,
+    topLeft = Offset(offset, offset),
+    size = Size(size.width - offset * 2f, size.height - offset * 2f),
+    style = Stroke(width = strokeWidthPx),
+  )
 }

@@ -25,7 +25,7 @@ object MehTheme {
     @Composable @ReadOnlyComposable
     get() = LocalSpacing.current
 
-  val size: Size
+  val sizes: Size
     @Composable @ReadOnlyComposable
     get() = LocalSizes.current
 
@@ -58,7 +58,7 @@ fun MehTheme(
   darkTheme: Boolean = isSystemInDarkTheme(),
   colors: Colors = if (darkTheme) gray90Colors else whiteColors,
   spacing: Spacing = Spacing,
-  size: Size = Size,
+  sizes: Size = Size,
   fontFamily: FontFamily = FontFamily.Default,
   icons: IconPack = Icons,
   tone: Tone = Tone.Productive,
@@ -67,7 +67,7 @@ fun MehTheme(
   CompositionLocalProvider(
     LocalColors provides colors,
     LocalSpacing provides spacing,
-    LocalSizes provides size,
+    LocalSizes provides sizes,
     LocalFontFamily provides fontFamily,
     LocalIcons provides icons,
     LocalTone provides tone,
