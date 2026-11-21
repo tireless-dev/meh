@@ -51,11 +51,6 @@ kotlin {
       implementation(libs.compose.components.resources)
     }
 
-    androidMain.dependencies {
-      implementation(libs.compose.ui.tooling.preview)
-      implementation(libs.compose.ui.tooling)
-    }
-
     getByName("androidHostTest") {
       dependencies {
         implementation(libs.roborazzi)
@@ -66,6 +61,10 @@ kotlin {
       }
     }
   }
+}
+
+dependencies {
+  androidRuntimeClasspath(libs.compose.ui.tooling)
 }
 
 roborazzi {

@@ -13,7 +13,6 @@ import androidx.compose.foundation.layout.widthIn
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.unit.dp
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import dev.tireless.meh.theme.MehTheme
@@ -84,7 +83,7 @@ fun Modal(
               Button(
                 text = secondaryButtonText,
                 onClick = onSecondaryButtonClick ?: {},
-                type = ButtonType.Secondary,
+                kind = ButtonKind.Secondary,
                 modifier = Modifier.weight(1f),
               )
             }
@@ -92,7 +91,7 @@ fun Modal(
               Button(
                 text = primaryButtonText,
                 onClick = onPrimaryButtonClick ?: {},
-                type = ButtonType.Primary,
+                kind = ButtonKind.Primary,
                 modifier = Modifier.weight(1f),
               )
             }

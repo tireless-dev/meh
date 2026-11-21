@@ -19,4 +19,6 @@ object Spacing {
   val spacing11 = 80.dp
   val spacing12 = 96.dp
   val spacing13 = 160.dp
+
+  val inset = spacing01
 }

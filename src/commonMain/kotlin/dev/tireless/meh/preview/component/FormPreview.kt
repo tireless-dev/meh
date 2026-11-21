@@ -5,7 +5,7 @@ package dev.tireless.meh.preview.component
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import dev.tireless.meh.component.Button
-import dev.tireless.meh.component.ButtonType
+import dev.tireless.meh.component.ButtonKind
 import dev.tireless.meh.component.Checkbox
 import dev.tireless.meh.component.Form
 import dev.tireless.meh.component.FormButtonGroup
@@ -36,7 +36,7 @@ internal fun FormPreview() {
       )
       FormButtonGroup {
         Button(text = "Submit", onClick = {})
-        Button(text = "Cancel", onClick = {}, type = ButtonType.Secondary)
+        Button(text = "Cancel", onClick = {}, kind = ButtonKind.Secondary)
       }
     }
   }

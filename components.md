@@ -1,45 +1,51 @@
 # Carbon Components Checklist
 
-| Component | Status | Remark |
-| :--- | :---: | :--- |
-| [Accordion](https://carbondesignsystem.com/components/accordion/usage) | [x] | |
-| [AI label](https://carbondesignsystem.com/components/ai-label/usage) | [x] | |
-| [Breadcrumb](https://carbondesignsystem.com/components/breadcrumb/usage) | [x] | |
-| [Button](https://carbondesignsystem.com/components/button/usage) | [x] | |
-| [Checkbox](https://carbondesignsystem.com/components/checkbox/usage) | [x] | |
-| [Code snippet](https://carbondesignsystem.com/components/code-snippet/usage) | [x] | |
-| [Contained list](https://carbondesignsystem.com/components/contained-list/usage) | [x] | |
-| [Content switcher](https://carbondesignsystem.com/components/content-switcher/usage) | [x] | |
-| [Data table](https://carbondesignsystem.com/components/data-table/usage) | [x] | |
-| [Date picker](https://carbondesignsystem.com/components/date-picker/usage) | [x] | |
-| [Dropdown](https://carbondesignsystem.com/components/dropdown/usage) | [x] | Implemented as Select |
-| [File uploader](https://carbondesignsystem.com/components/file-uploader/usage) | [x] | |
-| [Form](https://carbondesignsystem.com/components/form/usage) | [x] | |
-| [Inline loading](https://carbondesignsystem.com/components/inline-loading/usage) | [x] | |
-| [Link](https://carbondesignsystem.com/components/link/usage) | [x] | |
-| [List](https://carbondesignsystem.com/components/list/usage) | [x] | |
-| [Loading](https://carbondesignsystem.com/components/loading/usage) | [x] | |
-| [Menu](https://carbondesignsystem.com/components/menu/usage) | [x] | |
-| [Menu buttons](https://carbondesignsystem.com/components/menu-button/usage) | [x] | |
-| [Modal](https://carbondesignsystem.com/components/modal/usage) | [x] | |
-| [Multiselect](https://carbondesignsystem.com/components/multiselect/usage) | [x] | |
-| [Notification](https://carbondesignsystem.com/components/notification/usage) | [x] | |
-| [Number input](https://carbondesignsystem.com/components/number-input/usage) | [x] | |
-| [Pagination](https://carbondesignsystem.com/components/pagination/usage) | [x] | |
-| [Popover](https://carbondesignsystem.com/components/popover/usage) | [x] | |
-| [Progress bar](https://carbondesignsystem.com/components/progress-bar/usage) | [x] | |
-| [Progress indicator](https://carbondesignsystem.com/components/progress-indicator/usage) | [x] | |
-| [Radio button](https://carbondesignsystem.com/components/radio-button/usage) | [x] | |
-| [Search](https://carbondesignsystem.com/components/search/usage) | [x] | |
-| [Select](https://carbondesignsystem.com/components/select/usage) | [x] | |
-| [Slider](https://carbondesignsystem.com/components/slider/usage) | [x] | |
-| [Structured list](https://carbondesignsystem.com/components/structured-list/usage) | [x] | |
-| [Tabs](https://carbondesignsystem.com/components/tabs/usage) | [x] | |
-| [Tag](https://carbondesignsystem.com/components/tag/usage) | [x] | |
-| [Text input](https://carbondesignsystem.com/components/text-input/usage) | [x] | |
-| [Tile](https://carbondesignsystem.com/components/tile/usage) | [x] | |
-| [Toggle](https://carbondesignsystem.com/components/toggle/usage) | [x] | |
-| [Toggletip](https://carbondesignsystem.com/components/toggletip/usage) | [x] | |
-| [Tooltip](https://carbondesignsystem.com/components/tooltip/usage) | [x] | |
-| [Tree view](https://carbondesignsystem.com/components/tree-view/usage) | [x] | |
-| [UI shell](https://carbondesignsystem.com/components/ui-shell-header/usage) | [x] | Header implemented |
+Done criteria for each component:
+- **Spec**: Implementation matches the official [Carbon Design System](https://carbondesignsystem.com/building-blocks/core/components/overview) specification (guidelines, specifications, variants, states, sizing, and tokens).
+- **Snapshots**: Roborazzi snapshot tests cover the component and pass (`./gradlew testAndroidHostTest`).
+
+| Component | Spec | Snapshots | Done | Remark |
+| :--- | :---: | :---: | :---: | :--- |
+| [Accordion](https://carbondesignsystem.com/building-blocks/core/components/accordion) | [ ] | [ ] | [ ] | |
+| [AI label](https://carbondesignsystem.com/building-blocks/core/components/ai-label) | [ ] | [ ] | [ ] | |
+| [Breadcrumb](https://carbondesignsystem.com/building-blocks/core/components/breadcrumb) | [ ] | [ ] | [ ] | |
+| [Button](https://carbondesignsystem.com/building-blocks/core/components/button) | [ ] | [ ] | [ ] | Includes icon button, copy button, chat button |
+| [Checkbox](https://carbondesignsystem.com/building-blocks/core/components/checkbox) | [ ] | [ ] | [ ] | |
+| [Code snippet](https://carbondesignsystem.com/building-blocks/core/components/code-snippet) | [ ] | [ ] | [ ] | |
+| [Contained list](https://carbondesignsystem.com/building-blocks/core/components/contained-list) | [ ] | [ ] | [ ] | Currently in `List.kt` / `ListSnapshotTest.kt` |
+| [Content switcher](https://carbondesignsystem.com/building-blocks/core/components/content-switcher) | [ ] | [ ] | [ ] | |
+| [Data table](https://carbondesignsystem.com/building-blocks/core/components/data-table) | [ ] | [ ] | [ ] | |
+| [Date picker](https://carbondesignsystem.com/building-blocks/core/components/date-picker) | [ ] | [ ] | [ ] | Includes time picker |
+| [Dropdown](https://carbondesignsystem.com/building-blocks/core/components/dropdown) | [ ] | [ ] | [ ] | Currently implemented as `Select`; includes combo box |
+| [File uploader](https://carbondesignsystem.com/building-blocks/core/components/file-uploader) | [ ] | [ ] | [ ] | |
+| [Form](https://carbondesignsystem.com/building-blocks/core/components/form) | [ ] | [ ] | [ ] | |
+| [Inline loading](https://carbondesignsystem.com/building-blocks/core/components/inline-loading) | [ ] | [ ] | [ ] | Currently in `Loading.kt` / `LoadingSnapshotTest.kt` |
+| [Link](https://carbondesignsystem.com/building-blocks/core/components/link) | [ ] | [ ] | [ ] | |
+| [List](https://carbondesignsystem.com/building-blocks/core/components/list) | [ ] | [ ] | [ ] | Includes ordered & unordered lists |
+| [Loading](https://carbondesignsystem.com/building-blocks/core/components/loading) | [ ] | [ ] | [ ] | |
+| [Menu](https://carbondesignsystem.com/building-blocks/core/components/menu) | [ ] | [ ] | [ ] | |
+| [Menu buttons](https://carbondesignsystem.com/building-blocks/core/components/menu-buttons) | [ ] | [ ] | [ ] | Includes menu button, combo button, overflow menu |
+| [Modal](https://carbondesignsystem.com/building-blocks/core/components/modal) | [ ] | [ ] | [ ] | |
+| [Multiselect](https://carbondesignsystem.com/building-blocks/core/components/dropdown/guidelines#multiselect) | [ ] | [ ] | [ ] | Variant under Dropdown spec |
+| [Notification](https://carbondesignsystem.com/building-blocks/core/components/notification) | [ ] | [ ] | [ ] | Includes toast, inline, actionable, callout |
+| [Number input](https://carbondesignsystem.com/building-blocks/core/components/number-input) | [ ] | [ ] | [ ] | |
+| [Pagination](https://carbondesignsystem.com/building-blocks/core/components/pagination) | [ ] | [ ] | [ ] | Includes pagination nav |
+| [Popover](https://carbondesignsystem.com/building-blocks/core/components/popover) | [ ] | [ ] | [ ] | No snapshot test yet |
+| [Progress bar](https://carbondesignsystem.com/building-blocks/core/components/progress-bar) | [ ] | [ ] | [ ] | |
+| [Progress indicator](https://carbondesignsystem.com/building-blocks/core/components/progress-indicator) | [ ] | [ ] | [ ] | |
+| [Radio button](https://carbondesignsystem.com/building-blocks/core/components/radio-button) | [ ] | [ ] | [ ] | |
+| [Search](https://carbondesignsystem.com/building-blocks/core/components/search) | [ ] | [ ] | [ ] | |
+| [Select](https://carbondesignsystem.com/building-blocks/core/components/select) | [ ] | [ ] | [ ] | |
+| [Slider](https://carbondesignsystem.com/building-blocks/core/components/slider) | [ ] | [ ] | [ ] | |
+| [Structured list](https://carbondesignsystem.com/building-blocks/core/components/structured-list) | [ ] | [ ] | [ ] | |
+| [Tabs](https://carbondesignsystem.com/building-blocks/core/components/tabs) | [ ] | [ ] | [ ] | |
+| [Tag](https://carbondesignsystem.com/building-blocks/core/components/tag) | [ ] | [ ] | [ ] | Includes read-only, dismissible, selectable, operational |
+| [Text input](https://carbondesignsystem.com/building-blocks/core/components/text-input) | [ ] | [ ] | [ ] | Includes text area & password input |
+| [Tile](https://carbondesignsystem.com/building-blocks/core/components/tile) | [ ] | [ ] | [ ] | Includes base, clickable, selectable, expandable |
+| [Toggle](https://carbondesignsystem.com/building-blocks/core/components/toggle) | [ ] | [ ] | [ ] | |
+| [Toggletip](https://carbondesignsystem.com/building-blocks/core/components/toggletip) | [ ] | [ ] | [ ] | No snapshot test yet |
+| [Tooltip](https://carbondesignsystem.com/building-blocks/core/components/tooltip) | [ ] | [ ] | [ ] | Includes definition tooltip; no snapshot test yet |
+| [Tree view](https://carbondesignsystem.com/building-blocks/core/components/tree-view) | [ ] | [ ] | [ ] | |
+| [UI shell header](https://carbondesignsystem.com/building-blocks/core/components/ui-shell-header) | [ ] | [ ] | [ ] | Header implemented |
+| [UI shell left panel](https://carbondesignsystem.com/building-blocks/core/components/ui-shell-left-panel) | [ ] | [ ] | [ ] | Not implemented yet |
+| [UI shell right panel](https://carbondesignsystem.com/building-blocks/core/components/ui-shell-right-panel) | [ ] | [ ] | [ ] | Not implemented yet |

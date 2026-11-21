@@ -46,10 +46,10 @@ fun FileUploader(
 
     Button(
       text = buttonText,
-      onClick = onUploadClick,
-      type = ButtonType.Primary,
+      kind = ButtonKind.Primary,
       enabled = enabled,
       size = ControlSize.Large,
+      onClick = onUploadClick,
     )
   }
 }

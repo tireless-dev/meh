@@ -29,7 +29,7 @@ class SelectTest {
     composeTestRule.setContent {
       Select(
         selectedOption = "Option 1",
-        onExpandedChange = { clicked = true }
+        onExpandedChange = { clicked = true },
       )
     }
 
@@ -37,7 +37,6 @@ class SelectTest {
 
     assertTrue(clicked)
   }
-
 
   @Test
   fun select_displaysLabelErrorAndHelperText() {

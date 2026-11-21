@@ -46,7 +46,7 @@ fun Select(
       FormLabel(
         text = it,
         enabled = enabled,
-        modifier = Modifier.padding(bottom = MehTheme.spacing.spacing03)
+        modifier = Modifier.padding(bottom = MehTheme.spacing.spacing03),
       )
     }
 
@@ -114,7 +114,7 @@ fun Select(
       FormHelper(
         text = helper,
         enabled = enabled,
-        modifier = Modifier.padding(top = MehTheme.spacing.spacing02)
+        modifier = Modifier.padding(top = MehTheme.spacing.spacing02),
       )
     }
   }
