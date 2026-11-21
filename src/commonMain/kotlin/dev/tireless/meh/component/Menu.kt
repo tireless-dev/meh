@@ -14,6 +14,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import dev.tireless.meh.theme.ControlSize
 import dev.tireless.meh.theme.MehTheme
 
 @Composable
@@ -66,9 +67,11 @@ fun OverflowMenu(
   content: @Composable () -> Unit,
 ) {
   Box(modifier = modifier) {
-    MonoIconButton(
+    IconButton(
       icon = MehTheme.icons.OverflowMenuVertical,
       onClick = { onExpandedChange(!expanded) },
+      kind = ButtonKind.Ghost,
+      size = ControlSize.Small,
     )
     Menu(
       expanded = expanded,

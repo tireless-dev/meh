@@ -11,6 +11,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import dev.tireless.meh.theme.ControlSize
 import dev.tireless.meh.theme.MehTheme
 
 enum class CodeSnippetVariant {
@@ -49,9 +50,11 @@ fun CodeSnippet(
     )
 
     if (variant != CodeSnippetVariant.Inline && onCopyClick != null) {
-      MonoIconButton(
+      IconButton(
         icon = MehTheme.icons.Copy,
         onClick = onCopyClick,
+        kind = ButtonKind.Ghost,
+        size = ControlSize.Small,
       )
     }
   }

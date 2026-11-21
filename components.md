@@ -19,7 +19,7 @@ Done criteria for each component:
 | [Dropdown](https://carbondesignsystem.com/building-blocks/core/components/dropdown) | [ ] | [ ] | [ ] | Currently implemented as `Select`; includes combo box |
 | [File uploader](https://carbondesignsystem.com/building-blocks/core/components/file-uploader) | [ ] | [ ] | [ ] | |
 | [Form](https://carbondesignsystem.com/building-blocks/core/components/form) | [ ] | [ ] | [ ] | |
-| [Icon button](https://carbondesignsystem.com/building-blocks/core/components/button/guidelines#icon-only-buttons) | [ ] | [ ] | [ ] | Variant under Button spec |
+| [Icon button](https://carbondesignsystem.com/building-blocks/core/components/button/guidelines#icon-only-buttons) | [x] | [x] | [x] | Variant under Button spec |
 | [Inline loading](https://carbondesignsystem.com/building-blocks/core/components/inline-loading) | [ ] | [ ] | [ ] | Currently in `Loading.kt` / `LoadingSnapshotTest.kt` |
 | [Link](https://carbondesignsystem.com/building-blocks/core/components/link) | [ ] | [ ] | [ ] | |
 | [List](https://carbondesignsystem.com/building-blocks/core/components/list) | [ ] | [ ] | [ ] | Includes ordered & unordered lists |

@@ -15,6 +15,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
+import dev.tireless.meh.theme.ControlSize
 import dev.tireless.meh.theme.MehTheme
 import dev.tireless.meh.theme.ModalSize
 import dev.tireless.meh.theme.dp
@@ -58,9 +59,11 @@ fun Modal(
             style = MehTheme.typography.heading02,
             modifier = Modifier.weight(1f),
           )
-          MonoIconButton(
+          IconButton(
             icon = MehTheme.icons.Close,
             onClick = onDismissRequest,
+            kind = ButtonKind.Ghost,
+            size = ControlSize.Small,
           )
         }
 

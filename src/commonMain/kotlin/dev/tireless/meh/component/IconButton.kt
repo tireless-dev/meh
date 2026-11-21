@@ -2,182 +2,198 @@
 // Copyright 2026 tireless.dev
 package dev.tireless.meh.component
 
-import androidx.compose.animation.Crossfade
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.collectIsFocusedAsState
+import androidx.compose.foundation.interaction.collectIsHoveredAsState
+import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.height
-import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.runtime.Immutable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.semantics.Role
-import androidx.compose.ui.unit.Dp
+import androidx.compose.ui.semantics.contentDescription
+import androidx.compose.ui.semantics.selected
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.unit.dp
+import dev.tireless.meh.theme.Colors
 import dev.tireless.meh.theme.ControlSize
 import dev.tireless.meh.theme.IconSize
 import dev.tireless.meh.theme.MehTheme
 import dev.tireless.meh.theme.dp
 
-enum class HorizontalPaddingScale {
-  Default,
-  Dense,
-  Compact,
-  Thin,
-  Unspecified,
-}
-
 @Composable
 fun IconButton(
+  icon: ImageVector,
   onClick: () -> Unit,
   modifier: Modifier = Modifier,
+  label: String? = null,
   enabled: Boolean = true,
-  size: ControlSize = ControlSize.Unspecified,
-  scale: HorizontalPaddingScale = HorizontalPaddingScale.Default,
-  content: @Composable () -> Unit,
+  selected: Boolean = false,
+  kind: IconButtonKind = ButtonKind.Primary,
+  size: ControlSize = ControlSize.Large,
+  interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
 ) {
-  val padding =
-    when (scale) {
-      HorizontalPaddingScale.Default -> MehTheme.spacing.spacing05
-      HorizontalPaddingScale.Dense -> MehTheme.spacing.spacing04
-      HorizontalPaddingScale.Compact -> MehTheme.spacing.spacing03
-      HorizontalPaddingScale.Thin -> MehTheme.spacing.spacing01
-      HorizontalPaddingScale.Unspecified -> Dp.Unspecified
-    }
+  val active by interactionSource.collectIsPressedAsState()
+  val focused by interactionSource.collectIsFocusedAsState()
+  val hovered by interactionSource.collectIsHoveredAsState()
+
+  val colors = MehTheme.colors
+  val effectiveSize = when (size) {
+    ControlSize.XSmall, ControlSize.Small, ControlSize.Medium, ControlSize.Large -> size
+    ControlSize.XLarge, ControlSize.XXLarge, ControlSize.Unspecified -> ControlSize.Large
+  }
+
+  val buttonColors = resolveIconButtonColors(
+    kind = kind,
+    colors = colors,
+    enabled = enabled,
+    selected = selected,
+    hovered = hovered,
+    active = active,
+    focused = focused,
+  )
+
+  val ghost = kind == ButtonKind.Ghost
+
   Box(
     modifier =
-    if (size == ControlSize.Unspecified) {
-      modifier
-    } else {
-      modifier.height(size.dp)
-    }
-      then
-      Modifier.clickable(
-        onClick = onClick,
-        enabled = enabled,
-        role = Role.Button,
+    modifier
+      .size(effectiveSize.dp)
+      .background(buttonColors.container)
+      .then(
+        when {
+          focused && enabled -> Modifier.focusBorder(
+            focusColor = colors.focus,
+            focusInsetColor = colors.focusInset.takeIf {
+              !ghost && buttonColors.container != Color.Transparent
+            },
+          )
+
+          buttonColors.border != Color.Transparent -> Modifier.border(
+            width = 1.dp,
+            color = buttonColors.border,
+          )
+
+          else -> Modifier
+        },
       )
-      then
-      Modifier
-        .padding(horizontal = padding),
-    contentAlignment = Alignment.Center,
-  ) {
-    CompositionLocalProvider(content = content)
-  }
-}
-
-@Composable
-fun MonoIconButton(
-  onClick: () -> Unit,
-  icon: ImageVector,
-  modifier: Modifier = Modifier,
-  enabled: Boolean = true,
-  iconSize: IconSize = IconSize.Unspecified,
-  size: ControlSize = ControlSize.Small,
-  gap: HorizontalPaddingScale = HorizontalPaddingScale.Default,
-  color: Color = Color.Unspecified,
-) {
-  IconButton(
-    onClick = onClick,
-    modifier = modifier,
-    size = size,
-    scale = gap,
-    enabled = enabled,
-  ) {
-    Icon(
-      image = icon,
-      tint =
-      if (enabled) {
-        if (color == Color.Unspecified) MehTheme.colors.iconPrimary else color
-      } else {
-        MehTheme.colors.iconDisabled
-      },
-      size = if (iconSize == IconSize.Unspecified) IconSize.Medium else iconSize,
-    )
-  }
-}
-
-@Composable
-fun FocusableIconButton(
-  onClick: () -> Unit,
-  icon: ImageVector,
-  active: Boolean,
-  modifier: Modifier = Modifier,
-  enabled: Boolean = true,
-  size: ControlSize = ControlSize.Small,
-  gap: HorizontalPaddingScale = HorizontalPaddingScale.Default,
-) {
-  IconButton(
-    onClick = onClick,
-    modifier = modifier,
-    size = size,
-    scale = gap,
-  ) {
-    Icon(
-      image = icon,
-      tint =
-      if (enabled) {
-        if (active) MehTheme.colors.iconPrimary else MehTheme.colors.iconSecondary
-      } else {
-        MehTheme.colors.iconDisabled
-      },
-      size = IconSize.Medium,
-    )
-  }
-}
-
-@Composable
-fun <T> ToggleIconButton(
-  onClick: (T) -> Unit,
-  state: T,
-  on: Pair<T, ImageVector>,
-  off: Pair<T, ImageVector>,
-  modifier: Modifier = Modifier,
-  enabled: Boolean = true,
-  iconSize: IconSize = IconSize.Unspecified,
-  size: ControlSize = ControlSize.Small,
-  gap: HorizontalPaddingScale = HorizontalPaddingScale.Default,
-  offColor: Color = Color.Unspecified,
-) {
-  IconButton(
-    onClick = {
-      onClick(if (state == on.first) off.first else on.first)
-    },
-    modifier = modifier,
-    size = size,
-    scale = gap,
-    enabled = enabled,
-  ) {
-    Crossfade(targetState = state) { current ->
-      val icon = if (current == on.first) on.second else off.second
-      val color =
-        if (enabled) {
-          when (current) {
-            on.first -> {
-              MehTheme.colors.iconSecondary
+      .then(
+        if (label != null || (ghost && selected)) {
+          Modifier.semantics {
+            if (label != null) {
+              contentDescription = label
             }
-
-            off.first -> {
-              if (offColor == Color.Unspecified) {
-                MehTheme.colors.iconPrimary
-              } else {
-                offColor
-              }
-            }
-
-            else -> {
-              MehTheme.colors.iconDisabled
+            if (ghost && selected) {
+              this.selected = true
             }
           }
         } else {
-          MehTheme.colors.iconDisabled
-        }
-      Icon(
-        image = icon,
-        tint = color,
-        size = iconSize,
+          Modifier
+        },
+      )
+      .clickable(
+        enabled = enabled,
+        onClick = onClick,
+        role = Role.Button,
+        interactionSource = interactionSource,
+        indication = null,
+      ),
+    contentAlignment = Alignment.Center,
+  ) {
+    Icon(
+      image = icon,
+      size = IconSize.Small,
+      tint = buttonColors.icon,
+    )
+  }
+}
+
+@Immutable
+private data class IconButtonColors(
+  val icon: Color,
+  val container: Color,
+  val border: Color = Color.Transparent,
+)
+
+private fun resolveIconButtonColors(
+  kind: IconButtonKind,
+  colors: Colors,
+  enabled: Boolean,
+  selected: Boolean,
+  hovered: Boolean,
+  active: Boolean,
+  focused: Boolean,
+): IconButtonColors {
+  if (!enabled) {
+    return when (kind) {
+      ButtonKind.Primary, ButtonKind.Secondary -> IconButtonColors(
+        icon = colors.iconOnColorDisabled,
+        container = colors.buttonDisabled,
+      )
+
+      ButtonKind.Tertiary -> IconButtonColors(
+        icon = colors.iconDisabled,
+        container = Color.Transparent,
+        border = colors.buttonDisabled,
+      )
+
+      ButtonKind.Ghost -> IconButtonColors(
+        icon = colors.iconDisabled,
+        container = Color.Transparent,
       )
     }
+  }
+
+  return when (kind) {
+    ButtonKind.Primary -> IconButtonColors(
+      icon = colors.iconOnColor,
+      container = when {
+        active -> colors.buttonPrimaryActive
+        hovered -> colors.buttonPrimaryHover
+        else -> colors.buttonPrimary
+      },
+    )
+
+    ButtonKind.Secondary -> IconButtonColors(
+      icon = colors.iconOnColor,
+      container = when {
+        active -> colors.buttonSecondaryActive
+        hovered -> colors.buttonSecondaryHover
+        else -> colors.buttonSecondary
+      },
+    )
+
+    ButtonKind.Tertiary -> {
+      val filled = hovered || active || focused
+      IconButtonColors(
+        icon = if (filled) colors.iconInverse else colors.buttonTertiary,
+        container = when {
+          active -> colors.buttonTertiaryActive
+          hovered -> colors.buttonTertiaryHover
+          focused -> colors.buttonTertiary
+          else -> Color.Transparent
+        },
+        border = if (filled) Color.Transparent else colors.buttonTertiary,
+      )
+    }
+
+    ButtonKind.Ghost -> IconButtonColors(
+      icon = colors.iconPrimary,
+      container = when {
+        active -> colors.backgroundActive
+        hovered -> colors.backgroundHover
+        selected -> colors.backgroundSelected
+        else -> Color.Transparent
+      },
+    )
   }
 }

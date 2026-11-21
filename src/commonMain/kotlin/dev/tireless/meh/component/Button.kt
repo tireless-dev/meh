@@ -36,11 +36,13 @@ import dev.tireless.meh.theme.MehTheme
 import dev.tireless.meh.theme.Tone
 import dev.tireless.meh.theme.dp
 
+sealed interface IconButtonKind : ButtonKind
+
 sealed interface ButtonKind {
-  data object Primary : ButtonKind
-  data object Secondary : ButtonKind
-  data object Tertiary : ButtonKind
-  data object Ghost : ButtonKind
+  data object Primary : IconButtonKind
+  data object Secondary : IconButtonKind
+  data object Tertiary : IconButtonKind
+  data object Ghost : IconButtonKind
 
   sealed interface Danger : ButtonKind {
     data object Primary : Danger
@@ -263,7 +265,7 @@ private fun resolveButtonColors(
   }
 }
 
-private fun Modifier.focusBorder(
+internal fun Modifier.focusBorder(
   focusColor: Color,
   focusInsetColor: Color?,
 ): Modifier = drawBehind {

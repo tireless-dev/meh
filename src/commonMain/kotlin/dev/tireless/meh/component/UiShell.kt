@@ -34,10 +34,10 @@ fun Header(
     verticalAlignment = Alignment.CenterVertically,
   ) {
     if (onMenuClick != null) {
-      MonoIconButton(
+      IconButton(
         icon = MehTheme.icons.Menu,
         onClick = onMenuClick,
-        color = Color.White,
+        kind = ButtonKind.Ghost,
       )
       Spacer(Modifier.size(MehTheme.spacing.spacing05))
     }

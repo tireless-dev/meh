@@ -99,9 +99,10 @@ fun FileUploaderItem(
 
     if (onDeleteClick != null && status != LoadingStatus.Active) {
       Spacer(Modifier.size(MehTheme.spacing.spacing04))
-      MonoIconButton(
+      IconButton(
         icon = MehTheme.icons.Close,
         onClick = onDeleteClick,
+        kind = ButtonKind.Ghost,
         size = ControlSize.Small,
       )
     }

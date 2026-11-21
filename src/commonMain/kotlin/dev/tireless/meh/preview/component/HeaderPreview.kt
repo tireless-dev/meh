@@ -4,8 +4,9 @@ package dev.tireless.meh.preview.component
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
+import dev.tireless.meh.component.ButtonKind
 import dev.tireless.meh.component.Header
-import dev.tireless.meh.component.MonoIconButton
+import dev.tireless.meh.component.IconButton
 import dev.tireless.meh.preview.PreviewTheme
 import dev.tireless.meh.theme.MehTheme
 
@@ -17,8 +18,8 @@ internal fun HeaderPreview() {
       title = "Application Name",
       onMenuClick = {},
       actions = {
-        MonoIconButton(icon = MehTheme.icons.Search, onClick = {})
-        MonoIconButton(icon = MehTheme.icons.User, onClick = {})
+        IconButton(icon = MehTheme.icons.Search, onClick = {}, kind = ButtonKind.Ghost)
+        IconButton(icon = MehTheme.icons.User, onClick = {}, kind = ButtonKind.Ghost)
       },
     )
   }

@@ -5,90 +5,113 @@ package dev.tireless.meh.preview.component
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.padding
 import androidx.compose.runtime.Composable
-import androidx.compose.ui.Modifier
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.tooling.preview.AndroidUiModes.UI_MODE_NIGHT_YES
+import androidx.compose.ui.tooling.preview.AndroidUiModes.UI_MODE_TYPE_NORMAL
 import androidx.compose.ui.tooling.preview.Preview
-import dev.tireless.meh.component.FocusableIconButton
-import dev.tireless.meh.component.HorizontalPaddingScale
-import dev.tireless.meh.component.MonoIconButton
-import dev.tireless.meh.component.ToggleIconButton
-import dev.tireless.meh.icon.Add
-import dev.tireless.meh.icon.AddAlt
-import dev.tireless.meh.icon.Close
-import dev.tireless.meh.icon.CloseFilled
-import dev.tireless.meh.icon.CloseOutline
+import dev.tireless.meh.component.ButtonKind
+import dev.tireless.meh.component.IconButton
+import dev.tireless.meh.component.IconButtonKind
+import dev.tireless.meh.preview.PreviewInteractionState
 import dev.tireless.meh.preview.PreviewTheme
+import dev.tireless.meh.preview.rememberPreviewInteractionSource
 import dev.tireless.meh.theme.ControlSize
-import dev.tireless.meh.theme.IconSize
+import dev.tireless.meh.theme.Icons
 import dev.tireless.meh.theme.MehTheme
 
-@Preview(name = "IconButton – Mono", showBackground = true)
+@Preview(name = "Light")
+@Preview(name = "Dark", uiMode = UI_MODE_NIGHT_YES or UI_MODE_TYPE_NORMAL)
 @Composable
-internal fun IconButtonPreviewMono() {
-  PreviewTheme {
-    val spacing = MehTheme.spacing
-    Row(
-      modifier =
-      Modifier
-        .fillMaxWidth()
-        .padding(horizontal = spacing.spacing05, vertical = spacing.spacing04),
-      horizontalArrangement = Arrangement.spacedBy(spacing.spacing03),
-    ) {
-      MonoIconButton(onClick = {}, icon = Add, size = ControlSize.Small)
-      MonoIconButton(
-        onClick = {},
-        icon = Close,
-        size = ControlSize.Medium,
-        gap = HorizontalPaddingScale.Dense,
-      )
-      MonoIconButton(
-        onClick = {},
-        icon = CloseOutline,
-        iconSize = IconSize.Large,
-        size = ControlSize.Large,
-        gap = HorizontalPaddingScale.Compact,
-      )
-      MonoIconButton(onClick = {}, icon = CloseFilled, enabled = false, size = ControlSize.Small)
-    }
-  }
-}
-
-@Preview(name = "IconButton – States", showBackground = true)
-@Composable
-internal fun IconButtonPreviewStates() {
+internal fun IconButtonKindsPreview() {
   PreviewTheme {
     val spacing = MehTheme.spacing
     Column(
-      modifier =
-      Modifier
-        .fillMaxWidth()
-        .padding(horizontal = spacing.spacing05, vertical = spacing.spacing04),
       verticalArrangement = Arrangement.spacedBy(spacing.spacing03),
     ) {
-      Row(horizontalArrangement = Arrangement.spacedBy(spacing.spacing03)) {
-        FocusableIconButton(onClick = {}, icon = Add, active = true)
-        FocusableIconButton(onClick = {}, icon = Add, active = false)
-      }
-      Row(horizontalArrangement = Arrangement.spacedBy(spacing.spacing03)) {
-        ToggleIconButton(
-          onClick = {},
-          state = true,
-          on = true to Close,
-          off = false to AddAlt,
-          size = ControlSize.Medium,
-          iconSize = IconSize.Medium,
-        )
-        ToggleIconButton(
-          onClick = {},
-          state = false,
-          on = true to Close,
-          off = false to AddAlt,
-          size = ControlSize.Medium,
-          iconSize = IconSize.Medium,
-        )
+      iconButtonKinds.forEach { (name, kind) ->
+        Row(
+          horizontalArrangement = Arrangement.spacedBy(spacing.spacing03),
+          verticalAlignment = Alignment.CenterVertically,
+        ) {
+          IconButton(
+            icon = Icons.Add,
+            label = name,
+            kind = kind,
+            onClick = {},
+            interactionSource = rememberPreviewInteractionSource(),
+          )
+          IconButton(
+            icon = Icons.Add,
+            label = "$name (Disabled)",
+            kind = kind,
+            onClick = {},
+            enabled = false,
+          )
+          PreviewInteractionState.entries.forEach { state ->
+            IconButton(
+              icon = Icons.Add,
+              label = "$name (${state.name})",
+              kind = kind,
+              onClick = {},
+              interactionSource = rememberPreviewInteractionSource(state),
+            )
+          }
+          if (kind == ButtonKind.Ghost) {
+            IconButton(
+              icon = Icons.Add,
+              label = "$name (Selected)",
+              kind = kind,
+              selected = true,
+              onClick = {},
+              interactionSource = rememberPreviewInteractionSource(),
+            )
+          }
+        }
       }
     }
   }
 }
+
+@Preview
+@Composable
+internal fun IconButtonSizesPreview() {
+  PreviewTheme {
+    val spacing = MehTheme.spacing
+    Column(
+      verticalArrangement = Arrangement.spacedBy(spacing.spacing03),
+    ) {
+      iconButtonSizeSpecs.forEach { (label, size) ->
+        Row(
+          horizontalArrangement = Arrangement.spacedBy(spacing.spacing03),
+          verticalAlignment = Alignment.CenterVertically,
+        ) {
+          iconButtonKinds.forEach { (kindName, kind) ->
+            IconButton(
+              icon = Icons.Add,
+              label = "$label $kindName",
+              kind = kind,
+              size = size,
+              onClick = {},
+              interactionSource = rememberPreviewInteractionSource(),
+            )
+          }
+        }
+      }
+    }
+  }
+}
+
+private val iconButtonKinds: List<Pair<String, IconButtonKind>> = listOf(
+  "Primary" to ButtonKind.Primary,
+  "Secondary" to ButtonKind.Secondary,
+  "Tertiary" to ButtonKind.Tertiary,
+  "Ghost" to ButtonKind.Ghost,
+)
+
+private val iconButtonSizeSpecs = listOf(
+  "XSmall" to ControlSize.XSmall,
+  "Small" to ControlSize.Small,
+  "Medium" to ControlSize.Medium,
+  "Large" to ControlSize.Large,
+)

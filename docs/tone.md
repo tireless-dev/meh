@@ -10,11 +10,11 @@ Out of the Carbon v11 core component set, only **2** component families have an 
 
 | Component | Affected Variants | `Productive` → `Expressive` Changes |
 | :--- | :--- | :--- |
-| **Button** | All 7 button kinds (`Primary`, `Secondary`, `Tertiary`, `Ghost`, `Danger.Primary`, `Danger.Tertiary`, `Danger.Ghost`) **only at `ControlSize.Large` (`48dp`)** (`XSmall`/`Small`/`Medium` and full-bleed `XLarge`/`XXLarge` remain productive); **Icon-only Button** (`Large` `48dp`); **ButtonSet** | Label: `Typography.bodyCompact01` (`14sp / 18sp`) → `Typography.bodyCompact02` (`16sp / 22sp`)<br>Icon: `IconSize.Small` (`16dp`) → `IconSize.Expressive` (`20dp`)<br>ButtonSet item max width: `196dp` → `320dp` |
+| **Button** | All 7 button kinds (`Primary`, `Secondary`, `Tertiary`, `Ghost`, `Danger.Primary`, `Danger.Tertiary`, `Danger.Ghost`) **only at `ControlSize.Large` (`48dp`)** (`XSmall`/`Small`/`Medium` and full-bleed `XLarge`/`XXLarge` remain productive); **ButtonSet** | Label: `Typography.bodyCompact01` (`14sp / 18sp`) → `Typography.bodyCompact02` (`16sp / 22sp`)<br>Icon: `IconSize.Small` (`16dp`) → `IconSize.Expressive` (`20dp`)<br>ButtonSet item max width: `196dp` → `320dp` |
 | **List** | `OrderedList` and `UnorderedList` (including nested sublists). *Does not apply to `ContainedList` or `StructuredList`.* | Item text: `Typography.body01` (`14sp / 20sp`) → `Typography.body02` (`16sp / 24sp`) |
 
 Notes:
-- Copy button and Chat button do not have expressive variants.
+- `IconButton`, Copy button, and Chat button do not have expressive variants.
 - On `Button`, the component-level override is `expressive: Boolean = MehTheme.tone == Tone.Expressive`, and only takes effect when `size == ControlSize.Large` (or `ControlSize.Unspecified`, which resolves to `Large`).
 
 ## Foundations Affected by `Tone`

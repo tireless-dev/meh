@@ -8,8 +8,8 @@ import com.github.takahirom.roborazzi.captureRoboImage
 import dev.tireless.meh.preview.component.ButtonKindsPreview
 import dev.tireless.meh.preview.component.ButtonOverflowPreview
 import dev.tireless.meh.preview.component.ButtonSizesPreview
-import dev.tireless.meh.preview.component.IconButtonPreviewMono
-import dev.tireless.meh.preview.component.IconButtonPreviewStates
+import dev.tireless.meh.preview.component.IconButtonKindsPreview
+import dev.tireless.meh.preview.component.IconButtonSizesPreview
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -62,17 +62,26 @@ class ButtonSnapshotTest {
   }
 
   @Test
-  fun iconButtonMono() {
+  fun iconButtonKindsLight() {
     composeTestRule.setContent {
-      IconButtonPreviewMono()
+      IconButtonKindsPreview()
     }
     composeTestRule.onRoot().captureRoboImage()
   }
 
   @Test
-  fun iconButtonStates() {
+  @Config(qualifiers = "w400dp-h800dp-night-xxhdpi")
+  fun iconButtonKindsDark() {
     composeTestRule.setContent {
-      IconButtonPreviewStates()
+      IconButtonKindsPreview()
+    }
+    composeTestRule.onRoot().captureRoboImage()
+  }
+
+  @Test
+  fun iconButtonSizes() {
+    composeTestRule.setContent {
+      IconButtonSizesPreview()
     }
     composeTestRule.onRoot().captureRoboImage()
   }

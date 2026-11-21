@@ -82,9 +82,10 @@ fun InlineNotification(
       }
 
       if (onClose != null) {
-        MonoIconButton(
+        IconButton(
           icon = MehTheme.icons.Close,
           onClick = onClose,
+          kind = ButtonKind.Ghost,
           size = ControlSize.Small,
         )
       }
@@ -139,11 +140,11 @@ fun ToastNotification(
     }
 
     if (onClose != null) {
-      MonoIconButton(
+      IconButton(
         icon = MehTheme.icons.Close,
         onClick = onClose,
+        kind = ButtonKind.Ghost,
         size = ControlSize.Small,
-        color = Color.White,
       )
     }
   }
