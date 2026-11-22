@@ -46,6 +46,14 @@ enum class LinkSize(
   Large(22),
 }
 
+enum class AccordionSize(
+  override val value: Int,
+) : IntSizeToken {
+  Small(32),
+  Medium(40),
+  Large(48),
+}
+
 enum class BreadcrumbSize(
   override val value: Int,
 ) : IntSizeToken {
@@ -117,6 +125,13 @@ object LinkTokens {
 }
 
 @Immutable
+object AccordionTokens {
+  val small = AccordionSize.Small.dp
+  val medium = AccordionSize.Medium.dp
+  val large = AccordionSize.Large.dp
+}
+
+@Immutable
 object BreadcrumbTokens {
   val small = BreadcrumbSize.Small.dp
   val medium = BreadcrumbSize.Medium.dp
@@ -156,6 +171,7 @@ object Size {
   val toggles = ToggleTokens
   val tags = TagTokens
   val links = LinkTokens
+  val accordions = AccordionTokens
   val breadcrumbs = BreadcrumbTokens
   val loadings = LoadingTokens
   val progressBars = ProgressBarTokens
