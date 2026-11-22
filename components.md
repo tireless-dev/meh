@@ -10,7 +10,7 @@ Done criteria for each component:
 | [AI label](https://carbondesignsystem.com/building-blocks/core/components/ai-label) | [ ] | [ ] | [ ] | |
 | [Breadcrumb](https://carbondesignsystem.com/building-blocks/core/components/breadcrumb) | [ ] | [ ] | [ ] | |
 | [Button](https://carbondesignsystem.com/building-blocks/core/components/button) | [x] | [x] | [x] | |
-| [Checkbox](https://carbondesignsystem.com/building-blocks/core/components/checkbox) | [ ] | [ ] | [ ] | |
+| [Checkbox](https://carbondesignsystem.com/building-blocks/core/components/checkbox) | [x] | [x] | [x] | Includes `CheckboxGroup` |
 | [Code snippet](https://carbondesignsystem.com/building-blocks/core/components/code-snippet) | [ ] | [ ] | [ ] | |
 | [Contained list](https://carbondesignsystem.com/building-blocks/core/components/contained-list) | [ ] | [ ] | [ ] | Currently in `List.kt` / `ListSnapshotTest.kt` |
 | [Content switcher](https://carbondesignsystem.com/building-blocks/core/components/content-switcher) | [ ] | [ ] | [ ] | |
