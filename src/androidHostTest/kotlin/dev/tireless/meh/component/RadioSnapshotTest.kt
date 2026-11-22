@@ -5,8 +5,8 @@ package dev.tireless.meh.component
 import androidx.compose.ui.test.junit4.v2.createComposeRule
 import androidx.compose.ui.test.onRoot
 import com.github.takahirom.roborazzi.captureRoboImage
-import dev.tireless.meh.preview.component.RadioPreviewHorizontal
-import dev.tireless.meh.preview.component.RadioPreviewVertical
+import dev.tireless.meh.preview.component.RadioButtonGroupPreview
+import dev.tireless.meh.preview.component.RadioButtonStatesPreview
 import org.junit.Rule
 import org.junit.Test
 import org.junit.runner.RunWith
@@ -16,24 +16,43 @@ import org.robolectric.annotation.GraphicsMode
 
 @RunWith(RobolectricTestRunner::class)
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
-@Config(sdk = [35], qualifiers = "w400dp-h800dp-xxhdpi")
+@Config(sdk = [35], qualifiers = "w720dp-h600dp-xxhdpi")
 class RadioSnapshotTest {
 
   @get:Rule
   val composeTestRule = createComposeRule()
 
   @Test
-  fun radioHorizontal() {
+  @Config(qualifiers = "w640dp-h600dp-xxhdpi")
+  fun radioButtonStatesLight() {
     composeTestRule.setContent {
-      RadioPreviewHorizontal()
+      RadioButtonStatesPreview()
     }
     composeTestRule.onRoot().captureRoboImage()
   }
 
   @Test
-  fun radioVertical() {
+  @Config(qualifiers = "w640dp-h600dp-night-xxhdpi")
+  fun radioButtonStatesDark() {
     composeTestRule.setContent {
-      RadioPreviewVertical()
+      RadioButtonStatesPreview()
+    }
+    composeTestRule.onRoot().captureRoboImage()
+  }
+
+  @Test
+  fun radioButtonGroupLight() {
+    composeTestRule.setContent {
+      RadioButtonGroupPreview()
+    }
+    composeTestRule.onRoot().captureRoboImage()
+  }
+
+  @Test
+  @Config(qualifiers = "w720dp-h600dp-night-xxhdpi")
+  fun radioButtonGroupDark() {
+    composeTestRule.setContent {
+      RadioButtonGroupPreview()
     }
     composeTestRule.onRoot().captureRoboImage()
   }

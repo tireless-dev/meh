@@ -34,7 +34,7 @@ Done criteria for each component:
 | [Popover](https://carbondesignsystem.com/building-blocks/core/components/popover) | [ ] | [ ] | [ ] | No snapshot test yet |
 | [Progress bar](https://carbondesignsystem.com/building-blocks/core/components/progress-bar) | [ ] | [ ] | [ ] | |
 | [Progress indicator](https://carbondesignsystem.com/building-blocks/core/components/progress-indicator) | [ ] | [ ] | [ ] | |
-| [Radio button](https://carbondesignsystem.com/building-blocks/core/components/radio-button) | [ ] | [ ] | [ ] | |
+| [Radio button](https://carbondesignsystem.com/building-blocks/core/components/radio-button) | [x] | [x] | [x] | Includes `RadioButtonGroup` |
 | [Search](https://carbondesignsystem.com/building-blocks/core/components/search) | [ ] | [ ] | [ ] | |
 | [Select](https://carbondesignsystem.com/building-blocks/core/components/select) | [ ] | [ ] | [ ] | |
 | [Slider](https://carbondesignsystem.com/building-blocks/core/components/slider) | [ ] | [ ] | [ ] | |
