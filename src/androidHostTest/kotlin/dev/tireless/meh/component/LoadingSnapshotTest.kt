@@ -15,14 +15,23 @@ import org.robolectric.annotation.GraphicsMode
 
 @RunWith(RobolectricTestRunner::class)
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
-@Config(sdk = [35], qualifiers = "w400dp-h800dp-xxhdpi")
+@Config(sdk = [35], qualifiers = "w640dp-h500dp-xxhdpi")
 class LoadingSnapshotTest {
 
   @get:Rule
   val composeTestRule = createComposeRule()
 
   @Test
-  fun loading() {
+  fun loadingLight() {
+    composeTestRule.setContent {
+      LoadingPreview()
+    }
+    composeTestRule.onRoot().captureRoboImage()
+  }
+
+  @Test
+  @Config(qualifiers = "w640dp-h500dp-night-xxhdpi")
+  fun loadingDark() {
     composeTestRule.setContent {
       LoadingPreview()
     }

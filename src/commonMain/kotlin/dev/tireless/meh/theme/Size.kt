@@ -46,6 +46,20 @@ enum class LinkSize(
   Large(22),
 }
 
+enum class LoadingSize(
+  override val value: Int,
+) : IntSizeToken {
+  Small(16),
+  Large(88),
+}
+
+enum class ProgressBarSize(
+  override val value: Int,
+) : IntSizeToken {
+  Small(4),
+  Big(8),
+}
+
 enum class IconSize(
   override val value: Int,
 ) : IntSizeToken {
@@ -96,6 +110,18 @@ object LinkTokens {
 }
 
 @Immutable
+object LoadingTokens {
+  val small = LoadingSize.Small.dp
+  val large = LoadingSize.Large.dp
+}
+
+@Immutable
+object ProgressBarTokens {
+  val small = ProgressBarSize.Small.dp
+  val big = ProgressBarSize.Big.dp
+}
+
+@Immutable
 object IconTokens {
   val unspecified = IconSize.Unspecified.dp
   val xsmall = IconSize.XSmall.dp
@@ -117,6 +143,8 @@ object Size {
   val toggles = ToggleTokens
   val tags = TagTokens
   val links = LinkTokens
+  val loadings = LoadingTokens
+  val progressBars = ProgressBarTokens
   val icons = IconTokens
   val modal = ModalTokens
 }

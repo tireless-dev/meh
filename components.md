@@ -20,10 +20,10 @@ Done criteria for each component:
 | [File uploader](https://carbondesignsystem.com/building-blocks/core/components/file-uploader) | [ ] | [ ] | [ ] | |
 | [Form](https://carbondesignsystem.com/building-blocks/core/components/form) | [ ] | [ ] | [ ] | |
 | [Icon button](https://carbondesignsystem.com/building-blocks/core/components/button/guidelines#icon-only-buttons) | [x] | [x] | [x] | Variant under Button spec |
-| [Inline loading](https://carbondesignsystem.com/building-blocks/core/components/inline-loading) | [ ] | [ ] | [ ] | Currently in `Loading.kt` / `LoadingSnapshotTest.kt` |
+| [Inline loading](https://carbondesignsystem.com/building-blocks/core/components/inline-loading) | [x] | [x] | [x] | Currently in `Loading.kt` / `LoadingSnapshotTest.kt` |
 | [Link](https://carbondesignsystem.com/building-blocks/core/components/link) | [x] | [x] | [x] | |
 | [List](https://carbondesignsystem.com/building-blocks/core/components/list) | [ ] | [ ] | [ ] | Includes ordered & unordered lists |
-| [Loading](https://carbondesignsystem.com/building-blocks/core/components/loading) | [ ] | [ ] | [ ] | |
+| [Loading](https://carbondesignsystem.com/building-blocks/core/components/loading) | [x] | [x] | [x] | |
 | [Menu](https://carbondesignsystem.com/building-blocks/core/components/menu) | [ ] | [ ] | [ ] | |
 | [Menu buttons](https://carbondesignsystem.com/building-blocks/core/components/menu-buttons) | [ ] | [ ] | [ ] | Includes menu button, combo button, overflow menu |
 | [Modal](https://carbondesignsystem.com/building-blocks/core/components/modal) | [ ] | [ ] | [ ] | |
@@ -32,7 +32,7 @@ Done criteria for each component:
 | [Number input](https://carbondesignsystem.com/building-blocks/core/components/number-input) | [ ] | [ ] | [ ] | |
 | [Pagination](https://carbondesignsystem.com/building-blocks/core/components/pagination) | [ ] | [ ] | [ ] | Includes pagination nav |
 | [Popover](https://carbondesignsystem.com/building-blocks/core/components/popover) | [ ] | [ ] | [ ] | No snapshot test yet |
-| [Progress bar](https://carbondesignsystem.com/building-blocks/core/components/progress-bar) | [ ] | [ ] | [ ] | |
+| [Progress bar](https://carbondesignsystem.com/building-blocks/core/components/progress-bar) | [x] | [x] | [x] | |
 | [Progress indicator](https://carbondesignsystem.com/building-blocks/core/components/progress-indicator) | [ ] | [ ] | [ ] | |
 | [Radio button](https://carbondesignsystem.com/building-blocks/core/components/radio-button) | [x] | [x] | [x] | Includes `RadioButtonGroup` |
 | [Search](https://carbondesignsystem.com/building-blocks/core/components/search) | [ ] | [ ] | [ ] | |
