@@ -21,7 +21,7 @@ Done criteria for each component:
 | [Form](https://carbondesignsystem.com/building-blocks/core/components/form) | [ ] | [ ] | [ ] | |
 | [Icon button](https://carbondesignsystem.com/building-blocks/core/components/button/guidelines#icon-only-buttons) | [x] | [x] | [x] | Variant under Button spec |
 | [Inline loading](https://carbondesignsystem.com/building-blocks/core/components/inline-loading) | [ ] | [ ] | [ ] | Currently in `Loading.kt` / `LoadingSnapshotTest.kt` |
-| [Link](https://carbondesignsystem.com/building-blocks/core/components/link) | [ ] | [ ] | [ ] | |
+| [Link](https://carbondesignsystem.com/building-blocks/core/components/link) | [x] | [x] | [x] | |
 | [List](https://carbondesignsystem.com/building-blocks/core/components/list) | [ ] | [ ] | [ ] | Includes ordered & unordered lists |
 | [Loading](https://carbondesignsystem.com/building-blocks/core/components/loading) | [ ] | [ ] | [ ] | |
 | [Menu](https://carbondesignsystem.com/building-blocks/core/components/menu) | [ ] | [ ] | [ ] | |

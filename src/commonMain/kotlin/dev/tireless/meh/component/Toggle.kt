@@ -51,14 +51,6 @@ private data class ResolvedToggleColors(
   val sideLabel: Color,
 )
 
-/**
- * Carbon Design System Toggle (switch) control.
- *
- * A toggle is used to quickly switch between two possible states (`Off` and `On`).
- * Supports `Default` (48x24dp) and `Small` (32x16dp, with checkmark icon when toggled)
- * sizes, optional top label, state text (`labelOff` / `labelOn`), disabled, and
- * read-only states.
- */
 @Composable
 fun Toggle(
   toggled: Boolean,

@@ -38,6 +38,14 @@ enum class TagSize(
   Large(32),
 }
 
+enum class LinkSize(
+  override val value: Int,
+) : IntSizeToken {
+  Small(16),
+  Medium(18),
+  Large(22),
+}
+
 enum class IconSize(
   override val value: Int,
 ) : IntSizeToken {
@@ -81,6 +89,13 @@ object TagTokens {
 }
 
 @Immutable
+object LinkTokens {
+  val small = LinkSize.Small.dp
+  val medium = LinkSize.Medium.dp
+  val large = LinkSize.Large.dp
+}
+
+@Immutable
 object IconTokens {
   val unspecified = IconSize.Unspecified.dp
   val xsmall = IconSize.XSmall.dp
@@ -101,6 +116,7 @@ object Size {
   val controls = ControlTokens
   val toggles = ToggleTokens
   val tags = TagTokens
+  val links = LinkTokens
   val icons = IconTokens
   val modal = ModalTokens
 }
