@@ -15,14 +15,23 @@ import org.robolectric.annotation.GraphicsMode
 
 @RunWith(RobolectricTestRunner::class)
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
-@Config(sdk = [35], qualifiers = "w400dp-h800dp-xxhdpi")
+@Config(sdk = [35], qualifiers = "w640dp-h500dp-xxhdpi")
 class BreadcrumbSnapshotTest {
 
   @get:Rule
   val composeTestRule = createComposeRule()
 
   @Test
-  fun breadcrumb() {
+  fun breadcrumbLight() {
+    composeTestRule.setContent {
+      BreadcrumbPreview()
+    }
+    composeTestRule.onRoot().captureRoboImage()
+  }
+
+  @Test
+  @Config(qualifiers = "w640dp-h500dp-night-xxhdpi")
+  fun breadcrumbDark() {
     composeTestRule.setContent {
       BreadcrumbPreview()
     }

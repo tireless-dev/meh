@@ -8,7 +8,7 @@ Done criteria for each component:
 | :--- | :---: | :---: | :---: | :--- |
 | [Accordion](https://carbondesignsystem.com/building-blocks/core/components/accordion) | [ ] | [ ] | [ ] | |
 | [AI label](https://carbondesignsystem.com/building-blocks/core/components/ai-label) | [ ] | [ ] | [ ] | |
-| [Breadcrumb](https://carbondesignsystem.com/building-blocks/core/components/breadcrumb) | [ ] | [ ] | [ ] | |
+| [Breadcrumb](https://carbondesignsystem.com/building-blocks/core/components/breadcrumb) | [x] | [x] | [x] | |
 | [Button](https://carbondesignsystem.com/building-blocks/core/components/button) | [x] | [x] | [x] | |
 | [Checkbox](https://carbondesignsystem.com/building-blocks/core/components/checkbox) | [x] | [x] | [x] | Includes `CheckboxGroup` |
 | [Code snippet](https://carbondesignsystem.com/building-blocks/core/components/code-snippet) | [ ] | [ ] | [ ] | |
