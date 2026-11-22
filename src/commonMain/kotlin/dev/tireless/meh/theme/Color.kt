@@ -23,43 +23,79 @@ val gray20 = Color(0xffe0e0e0)
 val gray20Hover = Color(0xffd1d1d1)
 val gray10 = Color(0xfff4f4f4)
 val gray10Hover = Color(0xffe8e8e8)
+val coolGray100 = Color(0xff121619)
+val coolGray70 = Color(0xff4d5358)
+val coolGray70Hover = Color(0xff5d646a)
+val coolGray50 = Color(0xff878d96)
+val coolGray40 = Color(0xffa2a9b0)
+val coolGray20 = Color(0xffdde1e6)
+val coolGray20Hover = Color(0xffcdd3da)
+val coolGray10 = Color(0xfff2f4f8)
+val warmGray100 = Color(0xff171414)
+val warmGray70 = Color(0xff565151)
+val warmGray70Hover = Color(0xff696363)
+val warmGray50 = Color(0xff8f8b8b)
+val warmGray40 = Color(0xffada8a8)
+val warmGray20 = Color(0xffe5e0df)
+val warmGray20Hover = Color(0xffd8d0cf)
+val warmGray10 = Color(0xfff7f3f2)
 val white = Color(0xffffffff)
 val red80 = Color(0xff750e13)
 val red70 = Color(0xffa2191f)
+val red70Hover = Color(0xffc21e25)
 val red60 = Color(0xffda1e28)
 val red50 = Color(0xfffa4d56)
 val red40 = Color(0xffff8389)
 val red30 = Color(0xffffb3b8)
 val red20 = Color(0xffffd7d9)
+val red20Hover = Color(0xffffc2c5)
 val orange40 = Color(0xffff832b)
 val green80 = Color(0xff044317)
 val green70 = Color(0xff0e6027)
+val green70Hover = Color(0xff11742f)
 val green50 = Color(0xff24a148)
 val green40 = Color(0xff42be65)
 val green20 = Color(0xffa7f0ba)
+val green20Hover = Color(0xff74e792)
 val yellow30 = Color(0xfff1c21b)
 val blue80 = Color(0xff002d9c)
 val blue70 = Color(0xff0043ce)
+val blue70Hover = Color(0xff0053ff)
 val blue60 = Color(0xff0f62fe)
 val blue60Hover = Color(0xff0050e6)
 val blue50 = Color(0xff4589ff)
 val blue40 = Color(0xff78a9ff)
 val blue30 = Color(0xffa6c8ff)
 val blue20 = Color(0xffd0e2ff)
+val blue20Hover = Color(0xffb8d3ff)
 val magenta20 = Color(0xffffd6e8)
+val magenta20Hover = Color(0xffffbdda)
+val magenta40 = Color(0xffff7eb6)
+val magenta50 = Color(0xffee5396)
 val magenta70 = Color(0xff9f1853)
+val magenta70Hover = Color(0xffbf1d63)
 val magenta80 = Color(0xff740937)
 val purple20 = Color(0xffe8daff)
+val purple20Hover = Color(0xffdcc7ff)
 val purple40 = Color(0xffbe95ff)
 val purple50 = Color(0xffa56eff)
 val purple60 = Color(0xff8a3ffc)
 val purple70 = Color(0xff6929c4)
+val purple70Hover = Color(0xff7c3dd6)
 val purple80 = Color(0xff491d8b)
 val cyan20 = Color(0xffbae6ff)
+val cyan20Hover = Color(0xff99daff)
+val cyan40 = Color(0xff33b1ff)
+val cyan50 = Color(0xff1192e8)
 val cyan70 = Color(0xff00539a)
+val cyan70Hover = Color(0xff0066bd)
 val cyan80 = Color(0xff003a6d)
 val teal20 = Color(0xff9ef0f0)
+val teal20Hover = Color(0xff57e5e5)
+val teal40 = Color(0xff08bdba)
+val teal50 = Color(0xff009d9a)
 val teal70 = Color(0xff005d5d)
+val teal70Hover = Color(0xff007070)
 val teal80 = Color(0xff004144)
 
 @Immutable
@@ -210,6 +246,8 @@ interface Colors {
 
   // tags
   val tagGray: ColorPair
+  val tagCoolGray: ColorPair
+  val tagWarmGray: ColorPair
   val tagBlue: ColorPair
   val tagGreen: ColorPair
   val tagRed: ColorPair
@@ -223,6 +261,8 @@ interface Colors {
 data class ColorPair(
   val background: Color,
   val text: Color,
+  val hover: Color,
+  val border: Color,
 )
 
 @Immutable
@@ -372,14 +412,16 @@ object WhiteColors : Colors {
   override val buttonDisabled = gray30
 
   // tags
-  override val tagGray = ColorPair(gray20, gray100)
-  override val tagBlue = ColorPair(blue20, blue70)
-  override val tagGreen = ColorPair(green20, green70)
-  override val tagRed = ColorPair(red20, red70)
-  override val tagMagenta = ColorPair(magenta20, magenta70)
-  override val tagPurple = ColorPair(purple20, purple70)
-  override val tagCyan = ColorPair(cyan20, cyan70)
-  override val tagTeal = ColorPair(teal20, teal70)
+  override val tagGray = ColorPair(gray20, gray100, gray20Hover, gray40)
+  override val tagCoolGray = ColorPair(coolGray20, coolGray100, coolGray20Hover, coolGray40)
+  override val tagWarmGray = ColorPair(warmGray20, warmGray100, warmGray20Hover, warmGray40)
+  override val tagBlue = ColorPair(blue20, blue70, blue20Hover, blue40)
+  override val tagGreen = ColorPair(green20, green70, green20Hover, green40)
+  override val tagRed = ColorPair(red20, red70, red20Hover, red40)
+  override val tagMagenta = ColorPair(magenta20, magenta70, magenta20Hover, magenta40)
+  override val tagPurple = ColorPair(purple20, purple70, purple20Hover, purple40)
+  override val tagCyan = ColorPair(cyan20, cyan70, cyan20Hover, cyan40)
+  override val tagTeal = ColorPair(teal20, teal70, teal20Hover, teal40)
 }
 
 @Immutable
@@ -529,14 +571,16 @@ object Gray90Colors : Colors {
   override val buttonDisabled = gray50.copy(alpha = 0.3f)
 
   // tags
-  override val tagGray = ColorPair(gray70, gray10)
-  override val tagBlue = ColorPair(blue70, blue20)
-  override val tagGreen = ColorPair(green70, green20)
-  override val tagRed = ColorPair(red70, red20)
-  override val tagMagenta = ColorPair(magenta70, magenta20)
-  override val tagPurple = ColorPair(purple70, purple20)
-  override val tagCyan = ColorPair(cyan70, cyan20)
-  override val tagTeal = ColorPair(teal70, teal20)
+  override val tagGray = ColorPair(gray70, gray10, gray70Hover, gray50)
+  override val tagCoolGray = ColorPair(coolGray70, coolGray10, coolGray70Hover, coolGray50)
+  override val tagWarmGray = ColorPair(warmGray70, warmGray10, warmGray70Hover, warmGray50)
+  override val tagBlue = ColorPair(blue70, blue20, blue70Hover, blue50)
+  override val tagGreen = ColorPair(green70, green20, green70Hover, green50)
+  override val tagRed = ColorPair(red70, red20, red70Hover, red50)
+  override val tagMagenta = ColorPair(magenta70, magenta20, magenta70Hover, magenta50)
+  override val tagPurple = ColorPair(purple70, purple20, purple70Hover, purple50)
+  override val tagCyan = ColorPair(cyan70, cyan20, cyan70Hover, cyan50)
+  override val tagTeal = ColorPair(teal70, teal20, teal70Hover, teal50)
 }
 
 val whiteColors: Colors = WhiteColors

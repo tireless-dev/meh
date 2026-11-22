@@ -33,8 +33,9 @@ enum class ToggleSize(
 enum class TagSize(
   override val value: Int,
 ) : IntSizeToken {
-  Default(24),
   Small(18),
+  Medium(24),
+  Large(32),
 }
 
 enum class IconSize(
@@ -74,8 +75,9 @@ object ToggleTokens {
 
 @Immutable
 object TagTokens {
-  val default = TagSize.Default.dp
   val small = TagSize.Small.dp
+  val medium = TagSize.Medium.dp
+  val large = TagSize.Large.dp
 }
 
 @Immutable

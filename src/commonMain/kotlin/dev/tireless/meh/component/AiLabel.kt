@@ -24,7 +24,7 @@ import dev.tireless.meh.theme.dp
 @Composable
 fun AiLabel(
   modifier: Modifier = Modifier,
-  size: TagSize = TagSize.Default,
+  size: TagSize = TagSize.Medium,
 ) {
   // Carbon AI Label uses a specific gradient
   val aiGradient = Brush.linearGradient(
