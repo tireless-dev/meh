@@ -43,7 +43,7 @@ Done criteria for each component:
 | [Tag](https://carbondesignsystem.com/building-blocks/core/components/tag) | [x] | [x] | [x] | Includes read-only, dismissible, selectable, operational |
 | [Text input](https://carbondesignsystem.com/building-blocks/core/components/text-input) | [ ] | [ ] | [ ] | Includes text area & password input |
 | [Tile](https://carbondesignsystem.com/building-blocks/core/components/tile) | [ ] | [ ] | [ ] | Includes base, clickable, selectable, expandable |
-| [Toggle](https://carbondesignsystem.com/building-blocks/core/components/toggle) | [ ] | [ ] | [ ] | |
+| [Toggle](https://carbondesignsystem.com/building-blocks/core/components/toggle) | [x] | [x] | [x] | |
 | [Toggletip](https://carbondesignsystem.com/building-blocks/core/components/toggletip) | [ ] | [ ] | [ ] | No snapshot test yet |
 | [Tooltip](https://carbondesignsystem.com/building-blocks/core/components/tooltip) | [ ] | [ ] | [ ] | Includes definition tooltip; no snapshot test yet |
 | [Tree view](https://carbondesignsystem.com/building-blocks/core/components/tree-view) | [ ] | [ ] | [ ] | |
