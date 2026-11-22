@@ -15,14 +15,23 @@ import org.robolectric.annotation.GraphicsMode
 
 @RunWith(RobolectricTestRunner::class)
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
-@Config(sdk = [35], qualifiers = "w400dp-h800dp-xxhdpi")
+@Config(sdk = [35], qualifiers = "w720dp-h600dp-xxhdpi")
 class ProgressIndicatorSnapshotTest {
 
   @get:Rule
   val composeTestRule = createComposeRule()
 
   @Test
-  fun progressIndicator() {
+  fun progressIndicatorLight() {
+    composeTestRule.setContent {
+      ProgressIndicatorPreview()
+    }
+    composeTestRule.onRoot().captureRoboImage()
+  }
+
+  @Test
+  @Config(qualifiers = "w720dp-h600dp-night-xxhdpi")
+  fun progressIndicatorDark() {
     composeTestRule.setContent {
       ProgressIndicatorPreview()
     }

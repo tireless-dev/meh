@@ -33,7 +33,7 @@ Done criteria for each component:
 | [Pagination](https://carbondesignsystem.com/building-blocks/core/components/pagination) | [ ] | [ ] | [ ] | Includes pagination nav |
 | [Popover](https://carbondesignsystem.com/building-blocks/core/components/popover) | [ ] | [ ] | [ ] | No snapshot test yet |
 | [Progress bar](https://carbondesignsystem.com/building-blocks/core/components/progress-bar) | [x] | [x] | [x] | |
-| [Progress indicator](https://carbondesignsystem.com/building-blocks/core/components/progress-indicator) | [ ] | [ ] | [ ] | |
+| [Progress indicator](https://carbondesignsystem.com/building-blocks/core/components/progress-indicator) | [x] | [x] | [x] | |
 | [Radio button](https://carbondesignsystem.com/building-blocks/core/components/radio-button) | [x] | [x] | [x] | Includes `RadioButtonGroup` |
 | [Search](https://carbondesignsystem.com/building-blocks/core/components/search) | [ ] | [ ] | [ ] | |
 | [Select](https://carbondesignsystem.com/building-blocks/core/components/select) | [ ] | [ ] | [ ] | |
