@@ -31,7 +31,7 @@ Done criteria for each component:
 | [Notification](https://carbondesignsystem.com/building-blocks/core/components/notification) | [ ] | [ ] | [ ] | Includes toast, inline, actionable, callout |
 | [Number input](https://carbondesignsystem.com/building-blocks/core/components/number-input) | [ ] | [ ] | [ ] | |
 | [Pagination](https://carbondesignsystem.com/building-blocks/core/components/pagination) | [ ] | [ ] | [ ] | Includes pagination nav |
-| [Popover](https://carbondesignsystem.com/building-blocks/core/components/popover) | [ ] | [ ] | [ ] | No snapshot test yet |
+| [Popover](https://carbondesignsystem.com/building-blocks/core/components/popover) | [x] | [x] | [x] | |
 | [Progress bar](https://carbondesignsystem.com/building-blocks/core/components/progress-bar) | [x] | [x] | [x] | |
 | [Progress indicator](https://carbondesignsystem.com/building-blocks/core/components/progress-indicator) | [x] | [x] | [x] | |
 | [Radio button](https://carbondesignsystem.com/building-blocks/core/components/radio-button) | [x] | [x] | [x] | Includes `RadioButtonGroup` |
