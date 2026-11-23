@@ -44,8 +44,8 @@ Done criteria for each component:
 | [Text input](https://carbondesignsystem.com/building-blocks/core/components/text-input) | [ ] | [ ] | [ ] | Includes text area & password input |
 | [Tile](https://carbondesignsystem.com/building-blocks/core/components/tile) | [ ] | [ ] | [ ] | Includes base, clickable, selectable, expandable |
 | [Toggle](https://carbondesignsystem.com/building-blocks/core/components/toggle) | [x] | [x] | [x] | |
-| [Toggletip](https://carbondesignsystem.com/building-blocks/core/components/toggletip) | [ ] | [ ] | [ ] | No snapshot test yet |
-| [Tooltip](https://carbondesignsystem.com/building-blocks/core/components/tooltip) | [ ] | [ ] | [ ] | Includes definition tooltip; no snapshot test yet |
+| [Toggletip](https://carbondesignsystem.com/building-blocks/core/components/toggletip) | [x] | [x] | [x] | |
+| [Tooltip](https://carbondesignsystem.com/building-blocks/core/components/tooltip) | [x] | [x] | [x] | Includes definition tooltip |
 | [Tree view](https://carbondesignsystem.com/building-blocks/core/components/tree-view) | [ ] | [ ] | [ ] | |
 | [UI shell header](https://carbondesignsystem.com/building-blocks/core/components/ui-shell-header) | [ ] | [ ] | [ ] | Header implemented |
 | [UI shell left panel](https://carbondesignsystem.com/building-blocks/core/components/ui-shell-left-panel) | [ ] | [ ] | [ ] | Not implemented yet |
