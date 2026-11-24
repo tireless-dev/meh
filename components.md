@@ -24,8 +24,8 @@ Done criteria for each component:
 | [Link](https://carbondesignsystem.com/building-blocks/core/components/link) | [x] | [x] | [x] | |
 | [List](https://carbondesignsystem.com/building-blocks/core/components/list) | [ ] | [ ] | [ ] | Includes ordered & unordered lists |
 | [Loading](https://carbondesignsystem.com/building-blocks/core/components/loading) | [x] | [x] | [x] | |
-| [Menu](https://carbondesignsystem.com/building-blocks/core/components/menu) | [ ] | [ ] | [ ] | |
-| [Menu buttons](https://carbondesignsystem.com/building-blocks/core/components/menu-buttons) | [ ] | [ ] | [ ] | Includes menu button, combo button, overflow menu |
+| [Menu](https://carbondesignsystem.com/building-blocks/core/components/menu) | [x] | [x] | [x] | |
+| [Menu buttons](https://carbondesignsystem.com/building-blocks/core/components/menu-buttons) | [x] | [x] | [x] | Includes menu button, combo button, overflow menu |
 | [Modal](https://carbondesignsystem.com/building-blocks/core/components/modal) | [ ] | [ ] | [ ] | |
 | [Multiselect](https://carbondesignsystem.com/building-blocks/core/components/dropdown/guidelines#multiselect) | [ ] | [ ] | [ ] | Variant under Dropdown spec |
 | [Notification](https://carbondesignsystem.com/building-blocks/core/components/notification) | [ ] | [ ] | [ ] | Includes toast, inline, actionable, callout |

@@ -15,14 +15,23 @@ import org.robolectric.annotation.GraphicsMode
 
 @RunWith(RobolectricTestRunner::class)
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
-@Config(sdk = [35], qualifiers = "w400dp-h800dp-xxhdpi")
+@Config(sdk = [35], qualifiers = "w760dp-h680dp-xxhdpi")
 class MenuButtonSnapshotTest {
 
   @get:Rule
   val composeTestRule = createComposeRule()
 
   @Test
-  fun menuButton() {
+  fun menuButtonLight() {
+    composeTestRule.setContent {
+      MenuButtonPreview()
+    }
+    composeTestRule.onRoot().captureRoboImage()
+  }
+
+  @Test
+  @Config(qualifiers = "w760dp-h680dp-night-xxhdpi")
+  fun menuButtonDark() {
     composeTestRule.setContent {
       MenuButtonPreview()
     }
