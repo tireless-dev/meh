@@ -75,6 +75,15 @@ enum class ProgressBarSize(
   Big(8),
 }
 
+enum class TabSize(
+  override val value: Int,
+) : IntSizeToken {
+  Small(32),
+  Medium(40),
+  Large(48),
+  XLarge(64),
+}
+
 enum class IconSize(
   override val value: Int,
 ) : IntSizeToken {
@@ -150,6 +159,14 @@ object ProgressBarTokens {
 }
 
 @Immutable
+object TabTokens {
+  val small = TabSize.Small.dp
+  val medium = TabSize.Medium.dp
+  val large = TabSize.Large.dp
+  val xlarge = TabSize.XLarge.dp
+}
+
+@Immutable
 object IconTokens {
   val unspecified = IconSize.Unspecified.dp
   val xsmall = IconSize.XSmall.dp
@@ -175,6 +192,7 @@ object Size {
   val breadcrumbs = BreadcrumbTokens
   val loadings = LoadingTokens
   val progressBars = ProgressBarTokens
+  val tabs = TabTokens
   val icons = IconTokens
   val modal = ModalTokens
 }

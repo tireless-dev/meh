@@ -15,14 +15,23 @@ import org.robolectric.annotation.GraphicsMode
 
 @RunWith(RobolectricTestRunner::class)
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
-@Config(sdk = [35], qualifiers = "w400dp-h800dp-xxhdpi")
+@Config(sdk = [35], qualifiers = "w760dp-h900dp-xxhdpi")
 class TabsSnapshotTest {
 
   @get:Rule
   val composeTestRule = createComposeRule()
 
   @Test
-  fun tabs() {
+  fun tabsLight() {
+    composeTestRule.setContent {
+      TabsPreview()
+    }
+    composeTestRule.onRoot().captureRoboImage()
+  }
+
+  @Test
+  @Config(qualifiers = "w760dp-h900dp-night-xxhdpi")
+  fun tabsDark() {
     composeTestRule.setContent {
       TabsPreview()
     }

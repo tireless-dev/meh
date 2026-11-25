@@ -39,7 +39,7 @@ Done criteria for each component:
 | [Select](https://carbondesignsystem.com/building-blocks/core/components/select) | [ ] | [ ] | [ ] | |
 | [Slider](https://carbondesignsystem.com/building-blocks/core/components/slider) | [ ] | [ ] | [ ] | |
 | [Structured list](https://carbondesignsystem.com/building-blocks/core/components/structured-list) | [ ] | [ ] | [ ] | |
-| [Tabs](https://carbondesignsystem.com/building-blocks/core/components/tabs) | [ ] | [ ] | [ ] | |
+| [Tabs](https://carbondesignsystem.com/building-blocks/core/components/tabs) | [x] | [x] | [x] | |
 | [Tag](https://carbondesignsystem.com/building-blocks/core/components/tag) | [x] | [x] | [x] | Includes read-only, dismissible, selectable, operational |
 | [Text input](https://carbondesignsystem.com/building-blocks/core/components/text-input) | [ ] | [ ] | [ ] | Includes text area & password input |
 | [Tile](https://carbondesignsystem.com/building-blocks/core/components/tile) | [ ] | [ ] | [ ] | Includes base, clickable, selectable, expandable |
