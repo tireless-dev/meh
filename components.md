@@ -11,9 +11,9 @@ Done criteria for each component:
 | [Breadcrumb](https://carbondesignsystem.com/building-blocks/core/components/breadcrumb) | [x] | [x] | [x] | |
 | [Button](https://carbondesignsystem.com/building-blocks/core/components/button) | [x] | [x] | [x] | |
 | [Checkbox](https://carbondesignsystem.com/building-blocks/core/components/checkbox) | [x] | [x] | [x] | Includes `CheckboxGroup` |
-| [Code snippet](https://carbondesignsystem.com/building-blocks/core/components/code-snippet) | [ ] | [ ] | [ ] | |
+| [Code snippet](https://carbondesignsystem.com/building-blocks/core/components/code-snippet) | [x] | [x] | [x] | |
 | [Contained list](https://carbondesignsystem.com/building-blocks/core/components/contained-list) | [ ] | [ ] | [ ] | Currently in `List.kt` / `ListSnapshotTest.kt` |
-| [Content switcher](https://carbondesignsystem.com/building-blocks/core/components/content-switcher) | [ ] | [ ] | [ ] | |
+| [Content switcher](https://carbondesignsystem.com/building-blocks/core/components/content-switcher) | [x] | [x] | [x] | |
 | [Data table](https://carbondesignsystem.com/building-blocks/core/components/data-table) | [ ] | [ ] | [ ] | |
 | [Date picker](https://carbondesignsystem.com/building-blocks/core/components/date-picker) | [ ] | [ ] | [ ] | Includes time picker |
 | [Dropdown](https://carbondesignsystem.com/building-blocks/core/components/dropdown) | [ ] | [ ] | [ ] | Currently implemented as `Select`; includes combo box |

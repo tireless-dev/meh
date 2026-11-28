@@ -123,4 +123,24 @@ object Typography {
         fontFamily = fontFamily,
         fontWeight = FontWeight.Normal,
       )
+
+  val code01: TextStyle
+    @Composable @ReadOnlyComposable
+    get() =
+      TextStyle(
+        fontSize = 12.sp,
+        lineHeight = 16.sp,
+        fontFamily = FontFamily.Monospace,
+        fontWeight = FontWeight.Normal,
+      )
+
+  val code02: TextStyle
+    @Composable @ReadOnlyComposable
+    get() =
+      TextStyle(
+        fontSize = 14.sp,
+        lineHeight = 20.sp,
+        fontFamily = FontFamily.Monospace,
+        fontWeight = FontWeight.Normal,
+      )
 }
