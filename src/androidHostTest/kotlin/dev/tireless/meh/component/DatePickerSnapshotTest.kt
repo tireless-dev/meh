@@ -15,14 +15,23 @@ import org.robolectric.annotation.GraphicsMode
 
 @RunWith(RobolectricTestRunner::class)
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
-@Config(sdk = [35], qualifiers = "w400dp-h800dp-xxhdpi")
+@Config(sdk = [35], qualifiers = "w760dp-h480dp-xxhdpi")
 class DatePickerSnapshotTest {
 
   @get:Rule
   val composeTestRule = createComposeRule()
 
   @Test
-  fun datePicker() {
+  fun datePickerLight() {
+    composeTestRule.setContent {
+      DatePickerPreview()
+    }
+    composeTestRule.onRoot().captureRoboImage()
+  }
+
+  @Test
+  @Config(qualifiers = "w760dp-h480dp-night-xxhdpi")
+  fun datePickerDark() {
     composeTestRule.setContent {
       DatePickerPreview()
     }

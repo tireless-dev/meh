@@ -15,10 +15,10 @@ Done criteria for each component:
 | [Contained list](https://carbondesignsystem.com/building-blocks/core/components/contained-list) | [x] | [x] | [x] | Currently in `List.kt` / `ListSnapshotTest.kt` |
 | [Content switcher](https://carbondesignsystem.com/building-blocks/core/components/content-switcher) | [x] | [x] | [x] | |
 | [Data table](https://carbondesignsystem.com/building-blocks/core/components/data-table) | [ ] | [ ] | [ ] | |
-| [Date picker](https://carbondesignsystem.com/building-blocks/core/components/date-picker) | [ ] | [ ] | [ ] | Includes time picker |
+| [Date picker](https://carbondesignsystem.com/building-blocks/core/components/date-picker) | [x] | [x] | [x] | Includes time picker |
 | [Dropdown](https://carbondesignsystem.com/building-blocks/core/components/dropdown) | [x] | [x] | [x] | Implemented in `Select.kt`; includes `ComboBox` |
 | [File uploader](https://carbondesignsystem.com/building-blocks/core/components/file-uploader) | [x] | [x] | [x] | |
-| [Form](https://carbondesignsystem.com/building-blocks/core/components/form) | [ ] | [ ] | [ ] | |
+| [Form](https://carbondesignsystem.com/building-blocks/core/components/form) | [x] | [x] | [x] | |
 | [Icon button](https://carbondesignsystem.com/building-blocks/core/components/button/guidelines#icon-only-buttons) | [x] | [x] | [x] | Variant under Button spec |
 | [Inline loading](https://carbondesignsystem.com/building-blocks/core/components/inline-loading) | [x] | [x] | [x] | Currently in `Loading.kt` / `LoadingSnapshotTest.kt` |
 | [Link](https://carbondesignsystem.com/building-blocks/core/components/link) | [x] | [x] | [x] | |
