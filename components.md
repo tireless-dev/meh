@@ -28,7 +28,7 @@ Done criteria for each component:
 | [Menu buttons](https://carbondesignsystem.com/building-blocks/core/components/menu-buttons) | [x] | [x] | [x] | Includes menu button, combo button, overflow menu |
 | [Modal](https://carbondesignsystem.com/building-blocks/core/components/modal) | [ ] | [ ] | [ ] | |
 | [Multiselect](https://carbondesignsystem.com/building-blocks/core/components/dropdown/guidelines#multiselect) | [ ] | [ ] | [ ] | Variant under Dropdown spec |
-| [Notification](https://carbondesignsystem.com/building-blocks/core/components/notification) | [ ] | [ ] | [ ] | Includes toast, inline, actionable, callout |
+| [Notification](https://carbondesignsystem.com/building-blocks/core/components/notification) | [x] | [x] | [x] | Includes toast, inline, actionable, callout |
 | [Number input](https://carbondesignsystem.com/building-blocks/core/components/number-input) | [x] | [x] | [x] | |
 | [Pagination](https://carbondesignsystem.com/building-blocks/core/components/pagination) | [ ] | [ ] | [ ] | Includes pagination nav |
 | [Popover](https://carbondesignsystem.com/building-blocks/core/components/popover) | [x] | [x] | [x] | |
