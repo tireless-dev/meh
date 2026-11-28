@@ -26,7 +26,7 @@ Done criteria for each component:
 | [Loading](https://carbondesignsystem.com/building-blocks/core/components/loading) | [x] | [x] | [x] | |
 | [Menu](https://carbondesignsystem.com/building-blocks/core/components/menu) | [x] | [x] | [x] | |
 | [Menu buttons](https://carbondesignsystem.com/building-blocks/core/components/menu-buttons) | [x] | [x] | [x] | Includes menu button, combo button, overflow menu |
-| [Modal](https://carbondesignsystem.com/building-blocks/core/components/modal) | [ ] | [ ] | [ ] | |
+| [Modal](https://carbondesignsystem.com/building-blocks/core/components/modal) | [x] | [x] | [x] | |
 | [Multiselect](https://carbondesignsystem.com/building-blocks/core/components/dropdown/guidelines#multiselect) | [ ] | [ ] | [ ] | Variant under Dropdown spec |
 | [Notification](https://carbondesignsystem.com/building-blocks/core/components/notification) | [x] | [x] | [x] | Includes toast, inline, actionable, callout |
 | [Number input](https://carbondesignsystem.com/building-blocks/core/components/number-input) | [x] | [x] | [x] | |

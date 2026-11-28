@@ -98,6 +98,10 @@ enum class IconSize(
 enum class ModalSize(
   override val value: Int,
 ) : IntSizeToken {
+  XSmall(320),
+  Small(448),
+  Medium(600),
+  Large(768),
   Wide(600),
   Fit(320),
 }
