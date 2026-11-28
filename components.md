@@ -37,7 +37,7 @@ Done criteria for each component:
 | [Radio button](https://carbondesignsystem.com/building-blocks/core/components/radio-button) | [x] | [x] | [x] | Includes `RadioButtonGroup` |
 | [Search](https://carbondesignsystem.com/building-blocks/core/components/search) | [x] | [x] | [x] | |
 | [Select](https://carbondesignsystem.com/building-blocks/core/components/select) | [ ] | [ ] | [ ] | |
-| [Slider](https://carbondesignsystem.com/building-blocks/core/components/slider) | [ ] | [ ] | [ ] | |
+| [Slider](https://carbondesignsystem.com/building-blocks/core/components/slider) | [x] | [x] | [x] | |
 | [Structured list](https://carbondesignsystem.com/building-blocks/core/components/structured-list) | [ ] | [ ] | [ ] | |
 | [Tabs](https://carbondesignsystem.com/building-blocks/core/components/tabs) | [x] | [x] | [x] | |
 | [Tag](https://carbondesignsystem.com/building-blocks/core/components/tag) | [x] | [x] | [x] | Includes read-only, dismissible, selectable, operational |

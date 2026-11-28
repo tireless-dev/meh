@@ -15,14 +15,23 @@ import org.robolectric.annotation.GraphicsMode
 
 @RunWith(RobolectricTestRunner::class)
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
-@Config(sdk = [35], qualifiers = "w400dp-h800dp-xxhdpi")
+@Config(sdk = [35], qualifiers = "w760dp-h560dp-xxhdpi")
 class SliderSnapshotTest {
 
   @get:Rule
   val composeTestRule = createComposeRule()
 
   @Test
-  fun slider() {
+  fun sliderLight() {
+    composeTestRule.setContent {
+      SliderPreview()
+    }
+    composeTestRule.onRoot().captureRoboImage()
+  }
+
+  @Test
+  @Config(qualifiers = "w760dp-h560dp-night-xxhdpi")
+  fun sliderDark() {
     composeTestRule.setContent {
       SliderPreview()
     }
