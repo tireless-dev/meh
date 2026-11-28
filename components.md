@@ -12,7 +12,7 @@ Done criteria for each component:
 | [Button](https://carbondesignsystem.com/building-blocks/core/components/button) | [x] | [x] | [x] | |
 | [Checkbox](https://carbondesignsystem.com/building-blocks/core/components/checkbox) | [x] | [x] | [x] | Includes `CheckboxGroup` |
 | [Code snippet](https://carbondesignsystem.com/building-blocks/core/components/code-snippet) | [x] | [x] | [x] | |
-| [Contained list](https://carbondesignsystem.com/building-blocks/core/components/contained-list) | [ ] | [ ] | [ ] | Currently in `List.kt` / `ListSnapshotTest.kt` |
+| [Contained list](https://carbondesignsystem.com/building-blocks/core/components/contained-list) | [x] | [x] | [x] | Currently in `List.kt` / `ListSnapshotTest.kt` |
 | [Content switcher](https://carbondesignsystem.com/building-blocks/core/components/content-switcher) | [x] | [x] | [x] | |
 | [Data table](https://carbondesignsystem.com/building-blocks/core/components/data-table) | [ ] | [ ] | [ ] | |
 | [Date picker](https://carbondesignsystem.com/building-blocks/core/components/date-picker) | [ ] | [ ] | [ ] | Includes time picker |
@@ -22,7 +22,7 @@ Done criteria for each component:
 | [Icon button](https://carbondesignsystem.com/building-blocks/core/components/button/guidelines#icon-only-buttons) | [x] | [x] | [x] | Variant under Button spec |
 | [Inline loading](https://carbondesignsystem.com/building-blocks/core/components/inline-loading) | [x] | [x] | [x] | Currently in `Loading.kt` / `LoadingSnapshotTest.kt` |
 | [Link](https://carbondesignsystem.com/building-blocks/core/components/link) | [x] | [x] | [x] | |
-| [List](https://carbondesignsystem.com/building-blocks/core/components/list) | [ ] | [ ] | [ ] | Includes ordered & unordered lists |
+| [List](https://carbondesignsystem.com/building-blocks/core/components/list) | [x] | [x] | [x] | Includes ordered & unordered lists |
 | [Loading](https://carbondesignsystem.com/building-blocks/core/components/loading) | [x] | [x] | [x] | |
 | [Menu](https://carbondesignsystem.com/building-blocks/core/components/menu) | [x] | [x] | [x] | |
 | [Menu buttons](https://carbondesignsystem.com/building-blocks/core/components/menu-buttons) | [x] | [x] | [x] | Includes menu button, combo button, overflow menu |
@@ -38,7 +38,7 @@ Done criteria for each component:
 | [Search](https://carbondesignsystem.com/building-blocks/core/components/search) | [x] | [x] | [x] | |
 | [Select](https://carbondesignsystem.com/building-blocks/core/components/select) | [ ] | [ ] | [ ] | |
 | [Slider](https://carbondesignsystem.com/building-blocks/core/components/slider) | [x] | [x] | [x] | |
-| [Structured list](https://carbondesignsystem.com/building-blocks/core/components/structured-list) | [ ] | [ ] | [ ] | |
+| [Structured list](https://carbondesignsystem.com/building-blocks/core/components/structured-list) | [x] | [x] | [x] | |
 | [Tabs](https://carbondesignsystem.com/building-blocks/core/components/tabs) | [x] | [x] | [x] | |
 | [Tag](https://carbondesignsystem.com/building-blocks/core/components/tag) | [x] | [x] | [x] | Includes read-only, dismissible, selectable, operational |
 | [Text input](https://carbondesignsystem.com/building-blocks/core/components/text-input) | [x] | [x] | [x] | Includes text area & password input |
