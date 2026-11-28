@@ -17,7 +17,7 @@ Done criteria for each component:
 | [Data table](https://carbondesignsystem.com/building-blocks/core/components/data-table) | [ ] | [ ] | [ ] | |
 | [Date picker](https://carbondesignsystem.com/building-blocks/core/components/date-picker) | [ ] | [ ] | [ ] | Includes time picker |
 | [Dropdown](https://carbondesignsystem.com/building-blocks/core/components/dropdown) | [x] | [x] | [x] | Implemented in `Select.kt`; includes `ComboBox` |
-| [File uploader](https://carbondesignsystem.com/building-blocks/core/components/file-uploader) | [ ] | [ ] | [ ] | |
+| [File uploader](https://carbondesignsystem.com/building-blocks/core/components/file-uploader) | [x] | [x] | [x] | |
 | [Form](https://carbondesignsystem.com/building-blocks/core/components/form) | [ ] | [ ] | [ ] | |
 | [Icon button](https://carbondesignsystem.com/building-blocks/core/components/button/guidelines#icon-only-buttons) | [x] | [x] | [x] | Variant under Button spec |
 | [Inline loading](https://carbondesignsystem.com/building-blocks/core/components/inline-loading) | [x] | [x] | [x] | Currently in `Loading.kt` / `LoadingSnapshotTest.kt` |
@@ -30,7 +30,7 @@ Done criteria for each component:
 | [Multiselect](https://carbondesignsystem.com/building-blocks/core/components/dropdown/guidelines#multiselect) | [x] | [x] | [x] | Variant under Dropdown spec |
 | [Notification](https://carbondesignsystem.com/building-blocks/core/components/notification) | [x] | [x] | [x] | Includes toast, inline, actionable, callout |
 | [Number input](https://carbondesignsystem.com/building-blocks/core/components/number-input) | [x] | [x] | [x] | |
-| [Pagination](https://carbondesignsystem.com/building-blocks/core/components/pagination) | [ ] | [ ] | [ ] | Includes pagination nav |
+| [Pagination](https://carbondesignsystem.com/building-blocks/core/components/pagination) | [x] | [x] | [x] | Includes pagination nav |
 | [Popover](https://carbondesignsystem.com/building-blocks/core/components/popover) | [x] | [x] | [x] | |
 | [Progress bar](https://carbondesignsystem.com/building-blocks/core/components/progress-bar) | [x] | [x] | [x] | |
 | [Progress indicator](https://carbondesignsystem.com/building-blocks/core/components/progress-indicator) | [x] | [x] | [x] | |
