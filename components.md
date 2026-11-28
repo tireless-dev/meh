@@ -47,6 +47,6 @@ Done criteria for each component:
 | [Toggletip](https://carbondesignsystem.com/building-blocks/core/components/toggletip) | [x] | [x] | [x] | |
 | [Tooltip](https://carbondesignsystem.com/building-blocks/core/components/tooltip) | [x] | [x] | [x] | Includes definition tooltip |
 | [Tree view](https://carbondesignsystem.com/building-blocks/core/components/tree-view) | [x] | [x] | [x] | |
-| [UI shell header](https://carbondesignsystem.com/building-blocks/core/components/ui-shell-header) | [ ] | [ ] | [ ] | Header implemented |
-| [UI shell left panel](https://carbondesignsystem.com/building-blocks/core/components/ui-shell-left-panel) | [ ] | [ ] | [ ] | Not implemented yet |
-| [UI shell right panel](https://carbondesignsystem.com/building-blocks/core/components/ui-shell-right-panel) | [ ] | [ ] | [ ] | Not implemented yet |
+| [UI shell header](https://carbondesignsystem.com/building-blocks/core/components/ui-shell-header) | [x] | [x] | [x] | Includes `Header`, `HeaderNavItem`, `HeaderGlobalAction` |
+| [UI shell left panel](https://carbondesignsystem.com/building-blocks/core/components/ui-shell-left-panel) | [x] | [x] | [x] | Includes `SideNav`, `SideNavItem`, `SideNavMenu`, `SideNavMenuItem`, `SideNavDivider` |
+| [UI shell right panel](https://carbondesignsystem.com/building-blocks/core/components/ui-shell-right-panel) | [x] | [x] | [x] | Includes `HeaderPanel`, `SwitcherItem`, `SwitcherDivider` |
