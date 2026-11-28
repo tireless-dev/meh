@@ -15,14 +15,23 @@ import org.robolectric.annotation.GraphicsMode
 
 @RunWith(RobolectricTestRunner::class)
 @GraphicsMode(GraphicsMode.Mode.NATIVE)
-@Config(sdk = [35], qualifiers = "w400dp-h800dp-xxhdpi")
+@Config(sdk = [35], qualifiers = "w760dp-h360dp-xxhdpi")
 class TreeViewSnapshotTest {
 
   @get:Rule
   val composeTestRule = createComposeRule()
 
   @Test
-  fun treeView() {
+  fun treeViewLight() {
+    composeTestRule.setContent {
+      TreeViewPreview()
+    }
+    composeTestRule.onRoot().captureRoboImage()
+  }
+
+  @Test
+  @Config(qualifiers = "w760dp-h360dp-night-xxhdpi")
+  fun treeViewDark() {
     composeTestRule.setContent {
       TreeViewPreview()
     }

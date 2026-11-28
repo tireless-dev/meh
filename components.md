@@ -14,7 +14,7 @@ Done criteria for each component:
 | [Code snippet](https://carbondesignsystem.com/building-blocks/core/components/code-snippet) | [x] | [x] | [x] | |
 | [Contained list](https://carbondesignsystem.com/building-blocks/core/components/contained-list) | [x] | [x] | [x] | Currently in `List.kt` / `ListSnapshotTest.kt` |
 | [Content switcher](https://carbondesignsystem.com/building-blocks/core/components/content-switcher) | [x] | [x] | [x] | |
-| [Data table](https://carbondesignsystem.com/building-blocks/core/components/data-table) | [ ] | [ ] | [ ] | |
+| [Data table](https://carbondesignsystem.com/building-blocks/core/components/data-table) | [x] | [x] | [x] | |
 | [Date picker](https://carbondesignsystem.com/building-blocks/core/components/date-picker) | [x] | [x] | [x] | Includes time picker |
 | [Dropdown](https://carbondesignsystem.com/building-blocks/core/components/dropdown) | [x] | [x] | [x] | Implemented in `Select.kt`; includes `ComboBox` |
 | [File uploader](https://carbondesignsystem.com/building-blocks/core/components/file-uploader) | [x] | [x] | [x] | |
@@ -46,7 +46,7 @@ Done criteria for each component:
 | [Toggle](https://carbondesignsystem.com/building-blocks/core/components/toggle) | [x] | [x] | [x] | |
 | [Toggletip](https://carbondesignsystem.com/building-blocks/core/components/toggletip) | [x] | [x] | [x] | |
 | [Tooltip](https://carbondesignsystem.com/building-blocks/core/components/tooltip) | [x] | [x] | [x] | Includes definition tooltip |
-| [Tree view](https://carbondesignsystem.com/building-blocks/core/components/tree-view) | [ ] | [ ] | [ ] | |
+| [Tree view](https://carbondesignsystem.com/building-blocks/core/components/tree-view) | [x] | [x] | [x] | |
 | [UI shell header](https://carbondesignsystem.com/building-blocks/core/components/ui-shell-header) | [ ] | [ ] | [ ] | Header implemented |
 | [UI shell left panel](https://carbondesignsystem.com/building-blocks/core/components/ui-shell-left-panel) | [ ] | [ ] | [ ] | Not implemented yet |
 | [UI shell right panel](https://carbondesignsystem.com/building-blocks/core/components/ui-shell-right-panel) | [ ] | [ ] | [ ] | Not implemented yet |
