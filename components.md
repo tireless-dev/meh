@@ -29,13 +29,13 @@ Done criteria for each component:
 | [Modal](https://carbondesignsystem.com/building-blocks/core/components/modal) | [ ] | [ ] | [ ] | |
 | [Multiselect](https://carbondesignsystem.com/building-blocks/core/components/dropdown/guidelines#multiselect) | [ ] | [ ] | [ ] | Variant under Dropdown spec |
 | [Notification](https://carbondesignsystem.com/building-blocks/core/components/notification) | [ ] | [ ] | [ ] | Includes toast, inline, actionable, callout |
-| [Number input](https://carbondesignsystem.com/building-blocks/core/components/number-input) | [ ] | [ ] | [ ] | |
+| [Number input](https://carbondesignsystem.com/building-blocks/core/components/number-input) | [x] | [x] | [x] | |
 | [Pagination](https://carbondesignsystem.com/building-blocks/core/components/pagination) | [ ] | [ ] | [ ] | Includes pagination nav |
 | [Popover](https://carbondesignsystem.com/building-blocks/core/components/popover) | [x] | [x] | [x] | |
 | [Progress bar](https://carbondesignsystem.com/building-blocks/core/components/progress-bar) | [x] | [x] | [x] | |
 | [Progress indicator](https://carbondesignsystem.com/building-blocks/core/components/progress-indicator) | [x] | [x] | [x] | |
 | [Radio button](https://carbondesignsystem.com/building-blocks/core/components/radio-button) | [x] | [x] | [x] | Includes `RadioButtonGroup` |
-| [Search](https://carbondesignsystem.com/building-blocks/core/components/search) | [ ] | [ ] | [ ] | |
+| [Search](https://carbondesignsystem.com/building-blocks/core/components/search) | [x] | [x] | [x] | |
 | [Select](https://carbondesignsystem.com/building-blocks/core/components/select) | [ ] | [ ] | [ ] | |
 | [Slider](https://carbondesignsystem.com/building-blocks/core/components/slider) | [ ] | [ ] | [ ] | |
 | [Structured list](https://carbondesignsystem.com/building-blocks/core/components/structured-list) | [ ] | [ ] | [ ] | |
