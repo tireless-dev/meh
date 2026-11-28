@@ -7,7 +7,7 @@ Done criteria for each component:
 | Component | Spec | Snapshots | Done | Remark |
 | :--- | :---: | :---: | :---: | :--- |
 | [Accordion](https://carbondesignsystem.com/building-blocks/core/components/accordion) | [x] | [x] | [x] | |
-| [AI label](https://carbondesignsystem.com/building-blocks/core/components/ai-label) | [ ] | [ ] | [ ] | |
+| [AI label](https://carbondesignsystem.com/building-blocks/core/components/ai-label) | [x] | [x] | [x] | |
 | [Breadcrumb](https://carbondesignsystem.com/building-blocks/core/components/breadcrumb) | [x] | [x] | [x] | |
 | [Button](https://carbondesignsystem.com/building-blocks/core/components/button) | [x] | [x] | [x] | |
 | [Checkbox](https://carbondesignsystem.com/building-blocks/core/components/checkbox) | [x] | [x] | [x] | Includes `CheckboxGroup` |
