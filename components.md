@@ -16,7 +16,7 @@ Done criteria for each component:
 | [Content switcher](https://carbondesignsystem.com/building-blocks/core/components/content-switcher) | [x] | [x] | [x] | |
 | [Data table](https://carbondesignsystem.com/building-blocks/core/components/data-table) | [ ] | [ ] | [ ] | |
 | [Date picker](https://carbondesignsystem.com/building-blocks/core/components/date-picker) | [ ] | [ ] | [ ] | Includes time picker |
-| [Dropdown](https://carbondesignsystem.com/building-blocks/core/components/dropdown) | [ ] | [ ] | [ ] | Currently implemented as `Select`; includes combo box |
+| [Dropdown](https://carbondesignsystem.com/building-blocks/core/components/dropdown) | [x] | [x] | [x] | Implemented in `Select.kt`; includes `ComboBox` |
 | [File uploader](https://carbondesignsystem.com/building-blocks/core/components/file-uploader) | [ ] | [ ] | [ ] | |
 | [Form](https://carbondesignsystem.com/building-blocks/core/components/form) | [ ] | [ ] | [ ] | |
 | [Icon button](https://carbondesignsystem.com/building-blocks/core/components/button/guidelines#icon-only-buttons) | [x] | [x] | [x] | Variant under Button spec |
@@ -27,7 +27,7 @@ Done criteria for each component:
 | [Menu](https://carbondesignsystem.com/building-blocks/core/components/menu) | [x] | [x] | [x] | |
 | [Menu buttons](https://carbondesignsystem.com/building-blocks/core/components/menu-buttons) | [x] | [x] | [x] | Includes menu button, combo button, overflow menu |
 | [Modal](https://carbondesignsystem.com/building-blocks/core/components/modal) | [x] | [x] | [x] | |
-| [Multiselect](https://carbondesignsystem.com/building-blocks/core/components/dropdown/guidelines#multiselect) | [ ] | [ ] | [ ] | Variant under Dropdown spec |
+| [Multiselect](https://carbondesignsystem.com/building-blocks/core/components/dropdown/guidelines#multiselect) | [x] | [x] | [x] | Variant under Dropdown spec |
 | [Notification](https://carbondesignsystem.com/building-blocks/core/components/notification) | [x] | [x] | [x] | Includes toast, inline, actionable, callout |
 | [Number input](https://carbondesignsystem.com/building-blocks/core/components/number-input) | [x] | [x] | [x] | |
 | [Pagination](https://carbondesignsystem.com/building-blocks/core/components/pagination) | [ ] | [ ] | [ ] | Includes pagination nav |
@@ -36,7 +36,7 @@ Done criteria for each component:
 | [Progress indicator](https://carbondesignsystem.com/building-blocks/core/components/progress-indicator) | [x] | [x] | [x] | |
 | [Radio button](https://carbondesignsystem.com/building-blocks/core/components/radio-button) | [x] | [x] | [x] | Includes `RadioButtonGroup` |
 | [Search](https://carbondesignsystem.com/building-blocks/core/components/search) | [x] | [x] | [x] | |
-| [Select](https://carbondesignsystem.com/building-blocks/core/components/select) | [ ] | [ ] | [ ] | |
+| [Select](https://carbondesignsystem.com/building-blocks/core/components/select) | [x] | [x] | [x] | |
 | [Slider](https://carbondesignsystem.com/building-blocks/core/components/slider) | [x] | [x] | [x] | |
 | [Structured list](https://carbondesignsystem.com/building-blocks/core/components/structured-list) | [x] | [x] | [x] | |
 | [Tabs](https://carbondesignsystem.com/building-blocks/core/components/tabs) | [x] | [x] | [x] | |
